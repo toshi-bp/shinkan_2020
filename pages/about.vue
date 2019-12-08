@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    本文だよー
+    新館は楽しいよ
   </div>
 </template>
 
