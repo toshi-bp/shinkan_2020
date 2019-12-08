@@ -32,28 +32,28 @@ jobs:
           paths:
             - dist
 
-    deploy:
-      working_directory: ~/projects
+  deploy:
+    working_directory: ~/projects
 
-      # rsync(サーバー) を使用するため machine を有効化
-      machine:
-        enabled: true
-      steps:
-        # persist_to_projectsで保存したファイルの読み込み
-        - attach projects:
-            at: '.'
+    # rsync(サーバー) を使用するため machine を有効化
+    machine:
+      enabled: true
+    steps:
+      # persist_to_projectsで保存したファイルの読み込み
+      - attach projects:
+          at: '.'
 
-        # scpでも良い
-        - run: rsync -e "ssh -o StrictHostKeyCheking=no" -ahv --delete ./dist/ ${DEPLOY_DEST}
+      # scpでも良い
+      - run: rsync -e "ssh -o StrictHostKeyCheking=no" -ahv --delete ./dist/ ${DEPLOY_DEST}
 
-  workflows:
-    version: 2
-    deploy:
-      jobs:
-        - generate
-        - deploy:
-            requires:
-              - generate
-            filters:
-              branches:
-                only: master # master ブランチ以外では deploy を実行しない
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - generate
+      - deploy:
+          requires:
+            - generate
+          filters:
+            branches:
+              only: master # master ブランチ以外では deploy を実行しない
