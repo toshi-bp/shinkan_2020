@@ -23,7 +23,7 @@ jobs:
           key:
             v1-yarn-packages-{{ checksum "yarn.lock" }}
 
-      - run: yarn run lint
+      # - run: yarn run lint
       - run: yarn run generate
 
       # generate の生成物を次の deploy ジョブでも使用できるようにする
