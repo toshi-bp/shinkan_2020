@@ -1,0 +1,59 @@
+version: 2
+jobs:
+  generate:
+    working_directory: ~/workspace
+    docker:
+      - image: node:10.15.3
+    steps:
+      - checkout # レポジトリの取り込み
+
+      # node-modules のキャッシュが存在すれば復元
+      - restore_cache:
+          name: Restore yarn package cache
+          keys:
+            - v1-yarn-packages-{{ checksum "yarn.lock" }}
+
+      - run: yarn install --frozen-lockfile # yarn install
+
+      # node-modules をキャッシュ
+      - save_cache:
+          name: Save yarn package cache
+          paths:
+            - ~/.cache/yarn
+          key:
+            v1-yarn-packages-{{ checksum "yarn.lock" }}
+
+      # - run: yarn run lint
+      - run: yarn run generate
+
+      # generate の生成物を次の deploy ジョブでも使用できるようにする
+      - persist_to_workspace:
+          root: '.'
+          paths:
+            - dist
+
+  deploy:
+    working_directory: ~/workspace
+
+    # rsync を使用するため machine を有効化
+    machine:
+      enabled: true
+    steps:
+      # persist_to_workspaceで保存したファイルの読み込み
+      - attach_workspace:
+          at: '.'
+
+      # scp でも良い
+      - run: rsync -e "ssh -o StrictHostKeyChecking=no" -ahv --delete ./dist/ ${DEPLOY_DEST}
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - generate
+      - deploy:
+          requires:
+            - generate
+          filters:
+            branches:
+              only: master # master ブランチ以外では deploy を実行しない
