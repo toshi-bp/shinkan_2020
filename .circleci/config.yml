@@ -9,28 +9,28 @@ jobs:
 
       # node-modulesのキャッシュが存在すれば復元
       - restore_cache:
-        name: Restore yarn package cache
-        keys:
-          - v1-yarn-package-{{ chcksum "yarn.lock" }}
+          name: Restore yarn package cache
+          keys:
+            - v1-yarn-package-{{ chcksum "yarn.lock" }}
 
       - run: yarn install --frozen-lockfile #yarn install
 
       # node-modulesをキャッシュ
       - save_cache:
-        name: Save yarn package cache
-        paths:
-          - ~/.cache/yarn
-        key:
-          v1-yarn-packages-{{ checksum "yarn.lock" }}
+          name: Save yarn package cache
+          paths:
+            - ~/.cache/yarn
+          key:
+            v1-yarn-packages-{{ checksum "yarn.lock" }}
 
       # - run: yarn run lint
       - run: yarn run generate
 
       # generateの生成物を次のdeployジョブでも使用できるようにする
       - persist_to_projects:
-        root: '.'
-        paths:
-          - dist
+          root: '.'
+          paths:
+            - dist
 
     deploy:
       working_directory: ~/projects
