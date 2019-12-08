@@ -1,21 +1,21 @@
 version: 2
 jobs:
   generate:
-    working_directory: ~/projects
+    working_directory: ~/workspace
     docker:
       - image: node:10.15.3
     steps:
-      - checkout # レポジトリの読み込み
+      - checkout # レポジトリの取り込み
 
-      # node-modulesのキャッシュが存在すれば復元
+      # node-modules のキャッシュが存在すれば復元
       - restore_cache:
           name: Restore yarn package cache
           keys:
-            - v1-yarn-package-{{ chcksum "yarn.lock" }}
+            - v1-yarn-packages-{{ checksum "yarn.lock" }}
 
-      - run: yarn install --frozen-lockfile #yarn install
+      - run: yarn install --frozen-lockfile # yarn install
 
-      # node-modulesをキャッシュ
+      # node-modules をキャッシュ
       - save_cache:
           name: Save yarn package cache
           paths:
@@ -23,28 +23,28 @@ jobs:
           key:
             v1-yarn-packages-{{ checksum "yarn.lock" }}
 
-      # - run: yarn run lint
+      - run: yarn run lint
       - run: yarn run generate
 
-      # generateの生成物を次のdeployジョブでも使用できるようにする
-      - persist_to_projects:
+      # generate の生成物を次の deploy ジョブでも使用できるようにする
+      - persist_to_workspace:
           root: '.'
           paths:
             - dist
 
   deploy:
-    working_directory: ~/projects
+    working_directory: ~/workspace
 
-    # rsync(サーバー) を使用するため machine を有効化
+    # rsync を使用するため machine を有効化
     machine:
       enabled: true
     steps:
-      # persist_to_projectsで保存したファイルの読み込み
-      - attach projects:
+      # persist_to_workspaceで保存したファイルの読み込み
+      - attach_workspace:
           at: '.'
 
-      # scpでも良い
-      - run: rsync -e "ssh -o StrictHostKeyCheking=no" -ahv --delete ./dist/ ${DEPLOY_DEST}
+      # scp でも良い
+      - run: rsync -e "ssh -o StrictHostKeyChecking=no" -ahv --delete ./dist/ ${DEPLOY_DEST}
 
 workflows:
   version: 2
