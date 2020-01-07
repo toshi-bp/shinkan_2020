@@ -42,7 +42,7 @@ export default {
   */
   modules: [
     ['@nuxt.js/google-gtag',{
-      id: 'UA-107703960-3',
+      id: 'UA-155545473-1',
       config: {
         anonymize_ip: true,// anonymize IP
       },
