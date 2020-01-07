@@ -5,7 +5,7 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px
 );
-@import '~bbotstrap/scss/mixins/_breakpoints';
+@import '~bootstrap/scss/mixins/_breakpoints';
 
 //縁取り
 @mixin text-border($color: #fff) {
