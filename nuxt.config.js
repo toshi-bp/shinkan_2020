@@ -30,7 +30,7 @@ export default {
   */
   plugins: [
     '~/plugins/webfonts.js',
-    '~/plugins/emptyTouchStarHandler.js',
+    '~/plugins/emptyTouchStartHandler.js',
   ],
   /*
   ** Nuxt.js dev-modules
