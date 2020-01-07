@@ -1,0 +1,21 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+@import '~bbotstrap/scss/mixins/_breakpoints';
+
+//縁取り
+@mixin text-border($color: #fff) {
+  text-shadow:
+  #fff 1px 1px 0, #fff -1px -1px 0,/*右下、左上*/
+  #fff -1px 1px 0, #fff 1px -1px 0,/*右上、左下*/
+  #fff 0px 1px 0, #fff  0-1px 0,/*右、左*/
+  #fff -1px 0 0, #fff 1px 0 0;/*上、下*/
+}
+
+@mixin text-boder-2px($color: #fff){
+
+}

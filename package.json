@@ -1,7 +1,7 @@
 {
   "name": "shinkan_2020",
   "version": "1.0.0",
-  "description": "My stunning Nuxt.js project",
+  "description": "",
   "author": "nodashinkan2020",
   "private": true,
   "scripts": {
@@ -27,7 +27,9 @@
     "node-sass": "^4.13.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0",
-    "sass-loader": "^8.0.0"
+    "nuxt-fontawesome": "0.4.0",
+    "sass-loader": "^8.0.0",
+    "vue-client-only": "2.0.0"
   },
   "devDependencies": {}
 }
