@@ -18,7 +18,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#9ec928' },
   /*
   ** Global CSS
   */
@@ -29,6 +29,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/webfont.js',
+    '~/plugins/emptyTouchStarHandler.js',
   ],
   /*
   ** Nuxt.js dev-modules
@@ -39,7 +41,42 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    ['@nuxt.js/google-gtag',{
+      id: 'UA-107703960-3',
+      config: {
+        anonymize_ip: true,// anonymize IP
+      },
+      // debug: true, //enable to track in dev mode
+    }],
+    ['nuxt-fontawesome',{
+      component: 'fa',
+      imports: [
+        {
+          set: '@fontawesome/free-solid-svg-icons',
+          icons: ['fas']
+        },
+        {
+          set: '@fontawesome/free-brands-svg-icons',
+          icons: ['fab']
+        },
+      ],
+    }],
+    '@nuxtjs/style-resources',
+    '@nuxtjs/markdownit'
   ],
+  styleResources: {
+    scss: [
+      './assets/style/styleResources/*.scss',
+    ]
+  },
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    use: [
+      'markdown-it-attrs'
+    ]
+  },
   /*
   ** Build configuration
   */
