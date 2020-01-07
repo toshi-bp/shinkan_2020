@@ -52,11 +52,11 @@ export default {
       component: 'fa',
       imports: [
         {
-          set: '@fontawesome/free-solid-svg-icons',
+          set: '@fortawesome/free-solid-svg-icons',
           icons: ['fas']
         },
         {
-          set: '@fontawesome/free-brands-svg-icons',
+          set: '@fortawesome/free-brands-svg-icons',
           icons: ['fab']
         },
       ],
