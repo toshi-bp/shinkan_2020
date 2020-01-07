@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@nuxtjs/google-gtag": "^1.0.4",
     "node-sass": "^4.13.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0",
