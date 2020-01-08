@@ -17,5 +17,46 @@ $grid-breakpoints: (
 }
 
 @mixin text-boder-2px($color: #fff){
+  text-shadow:
+    $color 2px 0px, $color -2px 0px,
+    $color 0px -2px, $color 0px 2px,
+    $color 2px 2px , $color -2px 2px,
+    $color 2px -2px, $color -2px -2px,
+    $color 1px 2px,  $color -1px 2px,
+    $color 1px -2px, $color -1px -2px,
+    $color 2px 1px,  $color -2px 1px,
+    $color 2px -1px, $color -2px -1px;
+}
 
+//使うフォントによって内容要修正
+
+// Firefox では貂明朝に color 指定が効かないため、
+// この mixin を使って貂明朝を利用すること
+@mixin ten-mincho($color: $theme-color) {
+  font-family: $theme-font;
+  font-weight: normal !important;
+  color: transparent;
+  background: $color;
+  background-clip: text;
+
+  // IE で background-clip: text が効かないので、
+  // CSS ハックで、IE だけ color で文字色指定する
+  _:lang(x)::-ms-backdrop, & {
+    background: none;
+    color: $color;
+  }
+
+  // Edge で、稀に background-clip: text が効かないので、
+  // Edge についても color で文字色指定する
+  _:-ms-lang(x)::backdrop, & {
+    background: none;
+    color: $color;
+  }
+
+  // Chrome では color による文字色指定が効くので、一応、color による指定にする
+  // (background による CSS ハックは、印刷するとき正常に表示できないという副作用があるので…)
+  _:lang(x)::-internal-media-controls-overlay-cast-button, & {
+    background: none;
+    color: $color;
+  }
 }
