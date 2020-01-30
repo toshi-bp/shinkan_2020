@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    本文だよー
+    新館は楽しいよ
   </div>
 </template>
 
@@ -8,8 +8,5 @@
 
 </script>
 
-<style lang="scss" scoped>
-  .container{
-    margin:1rem;
-  }
+<style>
 </style>
