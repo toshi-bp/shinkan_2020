@@ -32,7 +32,7 @@ $grid-breakpoints: (
 
 // Firefox では貂明朝に color 指定が効かないため、
 // この mixin を使って貂明朝を利用すること
-@mixin ten-mincho($color: $theme-color) {
+@mixin vdl-linegr($color: $theme-color) {
   font-family: $theme-font;
   font-weight: normal !important;
   color: transparent;
