@@ -12,13 +12,20 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      //{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+  },
+  router: {
+    base: '/2020/',
+    trailingSlash: true,
+  },
+  generate: {
+    routes: ['404']
   },
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#9ec928' },
+  loading: { color: '#97c031' },
   /*
   ** Global CSS
   */

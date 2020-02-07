@@ -1,5 +1,5 @@
 if (process.client) {
-  // Web Font 後で変えるかも
+
   (function(d) {
     var config = {
       kitId: 'jhg1nav',
