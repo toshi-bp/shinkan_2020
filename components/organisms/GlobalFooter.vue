@@ -2,7 +2,7 @@
   <div>
     <footer class="footer">
     <div>
-      <img src="~/assets/image/symbol.png" class="footer__logo">
+      <img src="~/assets/image/symbol.svg" class="footer__logo">
       <p class="footer__welcome">入れ。</p>
     </div>
     <div class="footer__copyright">
@@ -31,23 +31,23 @@
    @include media-breakpoint-down(md){
     height: 10.5rem;
   }
-  
+
   &__logo{
-    width: 10rem;
-    margin: 2rem 0 1rem 2rem ;
+    width: 7rem;
+    margin: 2rem 0 1rem 1.5rem ;
     @include media-breakpoint-down(sm){
-     width: 6rem;
-     margin: 2rem 0 1rem 2rem ;
+     width: 5rem;
+     margin: 2rem 0 1rem 1.5rem ;
      }
    @include media-breakpoint-down(md){
-     width: 7rem;
+     width: 5rem;
      margin: 1.5rem 0 0.8rem 1.5rem ;
      }
   }
   &__copyright{
     color:#fff;
     font-family:$theme-font;
-    font-size:15px;    
+    font-size:15px;
     display:inline-block;
     margin: 0 0 1.15rem 2rem;
       @include media-breakpoint-down(sm){
@@ -62,7 +62,7 @@
   &__welcome{
     color:#fff;
     font-family:$theme-font;
-    font-size:30px;    
+    font-size:30px;
     display:inline-block;
     margin: 0 0 1.15rem 4rem;
       @include media-breakpoint-down(sm){
@@ -80,12 +80,12 @@
   right: 2rem;
   //margin:0 2rem 0 0;
   display:inline-block;
-  
+
     &__item{
     list-style:none;
     color:#fff;
     margin-bottom:1rem;
-    
+
     }
   }
 
@@ -96,7 +96,7 @@
     right: 0rem;
     //margin:0 2rem 0 0;
     display:inline-block;
-  
+
       &__item{
       list-style:none;
       color:#fff;
@@ -104,7 +104,7 @@
         }
      }
   }
-      
+
    @include media-breakpoint-down(md){
    &__list{
     position:absolute;
@@ -112,7 +112,7 @@
     right: 1.5rem;
     //margin:0 2rem 0 0;
     display:inline-block;
-  
+
       &__item{
       list-style:none;
       color:#fff;
