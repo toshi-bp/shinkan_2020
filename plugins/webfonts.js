@@ -1,4 +1,5 @@
 if (process.client) {
+
   (function(d) {
     var config = {
       kitId: 'jhg1nav',
