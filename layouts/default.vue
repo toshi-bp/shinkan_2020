@@ -2,7 +2,6 @@
   <div>
     <GlobalHeader />
     <nuxt />
-    <p>フッターだよ</p>
     <GlobalFooter />
   </div>
 </template>
