@@ -6,7 +6,10 @@
       <p class="footer__welcome">入れ。</p>
     </div>
     <div class="footer__copyright">
-      <p>2020年度野田地区新入生歓迎ガイダンス実行委員会</p>
+      <p>2020年度
+        
+        東京理科大学野田地区
+        <br>新入生歓迎ガイダンス実行委員会</p>
     </div>
     <div class="footer__list">
       <ul>
@@ -21,20 +24,20 @@
 <style lang="scss" scoped>
 .footer {
   position:relative;
-  height: 14rem;
+  height: 12rem;
   background: $color;
   // bottom:0 今後残すか考える;
   z-index: $z-index-global-footer;
   @include media-breakpoint-down(sm){
-    height: 20rem;
+    height: 40rem;
   }
    @include media-breakpoint-down(md){
-    height: 10.5rem;
+    height: 9.5rem;
   }
 
   &__logo{
     width: 7rem;
-    margin: 2rem 0 1rem 1.5rem ;
+    margin: 2rem 0 1rem 2rem ;
     @include media-breakpoint-down(sm){
      width: 5rem;
      margin: 2rem 0 1rem 1.5rem ;
@@ -45,39 +48,44 @@
      }
   }
   &__copyright{
+    position:absolute;
     color:#fff;
     font-family:$theme-font;
     font-size:15px;
     display:inline-block;
-    margin: 0 0 1.15rem 2rem;
+    top:2.3rem;
+    left:11em;
       @include media-breakpoint-down(sm){
         font-size:10px;
-        margin:0.6rem 0 0.6rem 1.5rem;
       }
        @include media-breakpoint-down(md){
-        font-size:12px;
-        margin:0rem 0 0.6rem 1.5rem;
+        padding-right:28%;
+        font-size:11px;
+        top:1.6rem;
+        left:7.5rem;
       }
   }
   &__welcome{
+    position:absolute;
     color:#fff;
     font-family:$theme-font;
     font-size:30px;
     display:inline-block;
-    margin: 0 0 1.15rem 4rem;
+    top:4rem;
+    left:30rem;
       @include media-breakpoint-down(sm){
         font-size:20px;
-        margin:0.6rem 0 0.6rem 1.5rem;
       }
        @include media-breakpoint-down(md){
         font-size:20px;
-        margin:0.7rem 0 0.6rem 1.5rem;
+        top:3rem;
+        left:20rem;
       }
  }
   &__list{
   position:absolute;
-  top:4rem;
-  right: 2rem;
+  top:6rem;
+  left:8rem;
   //margin:0 2rem 0 0;
   display:inline-block;
 
@@ -108,15 +116,15 @@
    @include media-breakpoint-down(md){
    &__list{
     position:absolute;
-    top:6.4rem;
-    right: 1.5rem;
+    top:4rem;
+    left: 5rem;
     //margin:0 2rem 0 0;
     display:inline-block;
 
       &__item{
       list-style:none;
       color:#fff;
-      margin-bottom:0.5rem;
+      margin-bottom:0.3rem;
       font-size:14px;
         }
      }
