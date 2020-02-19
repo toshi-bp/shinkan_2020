@@ -1,10 +1,10 @@
 <template>
-<div class="global-nav">
+  <div class="global-nav">
     <button class="global-nav__toggle" :class="{'--active': active}" @click="toggle">
       <fa :icon="active ? 'times' : 'bars'" fixed-width/>
-      <square class="global-nav__square"></square>
       <span class="global-nav__toggle__tooltip">メニュー</span>
     </button>
+    <square class="global-nav__toggle__square"></square>
     <div class="global-nav__bg" :class="{'--active': active}" @click="close"></div>
     <nav class="global-nav__body" :class="{'--active': active}">
       <ul class="global-nav__list">
@@ -75,7 +75,7 @@ export default {
     color: $theme-color;
     width: 3.5rem;
     height: 3.5rem;
-    box-shadow: 0 0 0.9rem rgba($color, 0.3);
+    box-shadow: 0 0 0.9rem rgba($color, 0.2);
     outline: none;
     transition: 0.2s ease background, 0.2s ease color;
 
@@ -92,6 +92,20 @@ export default {
       box-shadow: 0 0 0.9rem rgba($color, 0.3), 0 0 0 0.1rem rgba($theme-color, 0.5);
     }
 
+    &__square{
+      appearance: none;
+      position: fixed;
+      bottom: 4.1rem;
+      right: 4.3rem;
+      background: #ffffff;
+      border: solid $cream;
+      border-width: 2px;
+      width: 2rem;
+      height: 2rem;
+      box-shadow: 0 0 0.9rem rgba($color, 0.1);
+      z-index: 9450;
+    }
+
     &__tooltip {
       $font-size: 0.9rem;
       $translate-x: translateX(-50%);
@@ -104,7 +118,7 @@ export default {
       color: $color;
       background: #fff;
       padding: 0.25rem 0.75rem;
-      border-radius: 0.5rem;
+      //border-radius: 0.5rem;
       box-shadow: 0 0 0.3rem rgba($color, 0.3);
       border: 1px solid #{$theme-color};
       animation: 2.5s ease tooltip both;
@@ -153,17 +167,6 @@ export default {
     }
   }
 
-  //&__square{
-      //appearance: none;
-      //position: fixed;
-      //bottom: 3rem;
-      //right: 3rem;
-      //background: #ffffff;
-      //color: $yellow;
-      //width: 3.5rem;
-      //height: 3.5rem;
-      //box-shadow: 0 0 0.9rem rgba($color, 0.3);
-    //}
 
   &__body {
     position: fixed;
