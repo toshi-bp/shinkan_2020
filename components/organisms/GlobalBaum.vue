@@ -95,7 +95,7 @@ export default {
     &__square{
       appearance: none;
       position: fixed;
-      bottom: 4.1rem;
+      bottom: 4.2rem;
       right: 4.3rem;
       background: #ffffff;
       border: solid $cream;
