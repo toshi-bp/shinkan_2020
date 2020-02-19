@@ -7,8 +7,20 @@
       <span class="header__date__number">４</span>月<span class="header__date__number">11</span>日（土）
     </div>
     </header>
+    <GlobalBaum />
   </div>
 </template>
+
+<script>
+
+import GlobalBaum from "~/components/organisms/GlobalBaum.vue";
+
+export default {
+  components: {
+    GlobalBaum,
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .header {
@@ -29,7 +41,7 @@
   &__title{
     color:#fff;
     font-family:$theme-font;
-    font-size:24px;    
+    font-size:24px;
     display:inline-block;
     margin: 0.8rem 0 1.15rem 2rem;
     text-decoration: none;
@@ -45,7 +57,7 @@
   &__date{
     color:#fff;
     font-family:$theme-font;
-    font-size:16px;    
+    font-size:16px;
     display:inline-block;
     //float:right;
     margin: 0 0 1.15rem 2rem;

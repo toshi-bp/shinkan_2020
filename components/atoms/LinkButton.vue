@@ -30,5 +30,8 @@ export default {
 <style lang="scss" scoped>
 .link-button{
   display: inline-block;
+  padding: 0.8rem 2.5rem;
+  border: 2px solid $theme-color;
+  color: $them-color;
 }
 </style>
