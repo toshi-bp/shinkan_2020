@@ -1,6 +1,6 @@
 <template class="index">
   <div>
-    <div class="head">
+    <div class="theme">
      <img src="~/assets/image/symbol.svg" class="theme__logo">
      <h1 class="theme__concept">開いた向こうに、見えるもの</h1>
    </div>
@@ -56,22 +56,31 @@
   .container{
     margin:1rem;
   }
+
   .theme{
+    display:block;
+    text-align:center;
+    margin:7rem 0;
     &__logo{
-    width:25%;
+    width:20%;
     display:inline-block;
-    margin:4rem;
+    // margin:4rem;
     }
     &__concept{
-      font-size:2rem;
+      font-size:35px;
+      font-family: $theme-font;
+      color:$brown;
       display:inline-block;
-      margin:4rem;
+      padding-left:10rem;
+      // margin:4rem;
       }
   }
 .concept{
    &__tytle{
       margin-bottom:0.5rem;
       margin-left:3rem;
+      font-family: $theme-font;
+      color:$brown;
     }
 
    &__box{
@@ -110,6 +119,7 @@
       font-size:3rem;
       display:inline-block;
       color:#fff;
+      font-family: $theme-font;
     }
  
    &__msg{
@@ -121,6 +131,7 @@
       margin-bottom:-16px;
       text-align:center;
       color:#fff;
+      font-family: $sub-font;
     }
   }
 
@@ -133,6 +144,8 @@ span{
    &__tytle{
       margin-bottom:0.5rem;
       margin-left:3rem;
+      font-family: $theme-font;
+      color:$brown;
     }
 
    &__main{
@@ -157,6 +170,7 @@ span{
       margin-top:4rem;
       text-align:center;
       font-size:1.5rem;
+      font-family: $sub-font;
     }
    }
 
@@ -167,6 +181,7 @@ span{
       margin-top:4rem;
       text-align:center;
       font-size:1.5rem;
+      font-family: $sub-font;
     }
    }
  
