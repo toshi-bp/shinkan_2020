@@ -36,18 +36,21 @@
           <div class="information__main">
             <nuxt-link to="/circle/" class="information__box information__circle" >
               <p class="information__circle__tytle">サークル紹介</p>
+              <p class="information__circle__acticle">各サークルが講義棟の教室にて勧誘を行います。<br>00:00~00:00<br>@講義棟</p>
               <!-- 矢印マークのアイコンが欲しい -->
             </nuxt-link>
             <nuxt-link to="/group/" class="information__box information__group">
               <p class="information__group__tytle">団体紹介ステージ</p>
+              <p class="information__group__acticle">新歓参加団体がステージにて実演を行います。<br>00:00~00:00<br>@体育館</p>
             </nuxt-link>
           </div>
         </div>
-       </div>
        <div class="twitter">
+         <h2 class="twitter__tytle"><fa :icon="['fab', 'twitter']" fixed-width/>Twitter</h2>
         <a class="twitter-timeline" data-width="500" data-height="1000" href="https://twitter.com/tusnodashinkan?ref_src=twsrc%5Etfw">Tweets by tusnodashinkan</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
        </div>
-      </div>
+     </div>
+    </div>
   </div>
 
 </template>
@@ -74,6 +77,7 @@
     flex-wrap:wrap;
     @include media-breakpoint-down(sm){
     flex-direction:column;
+    margin:30% 0 60% 0;
      }
     &__logo{
     display:inline-block;
@@ -132,7 +136,7 @@
       left:0;
       height:15rem;
       width:84%;
-      background-color:$theme-color;
+      background-color:$yellow;
       opacity:0.6;
       display:inline-block;
       @include media-breakpoint-down(sm){
@@ -149,7 +153,7 @@
       width:84%;
       padding:2rem;
       margin-bottom:5rem;
-      background-color:$theme-color;
+      background-color:$yellow;
       opacity:0.6;
        @include media-breakpoint-down(sm){
        top:0;
@@ -218,24 +222,37 @@ span{
     &__box{
      height:16rem;
      width:42%;
-     background-color:$theme-color;
+     background-color:$blue;
      color:#fff;
      display:inline-block;
-     opacity:0.6;
+     opacity:1;
      margin-bottom:10%;
+     transition:all 0.2s;
      @include media-breakpoint-down(sm){
        width:100%;
        margin-bottom:1%;
      }
-    } 
+    }
+    
+    &__box:hover{
+      opacity:0.7;
+      text-decoration: none;
+    }
 
    &__circle{
     // position:absolute;
     &__tytle{
       margin-top:4rem;
       text-align:center;
-      font-size:1.5rem;
+      font-size:1.8rem;
       font-family: $sub-font;
+    }
+    &__article{
+      font-size:1.2rem;
+      text-align:center;
+      @include media-breakpoint-down(sm){
+       font-size:0.8rem;
+     }
     }
    }
 
@@ -246,21 +263,34 @@ span{
     &__tytle{
       margin-top:4rem;
       text-align:center;
-      font-size:1.5rem;
+      font-size:1.8rem;
       font-family: $sub-font;
+    }
+    &__article{
+      font-size:1.2rem;
+      text-align:center;
       @include media-breakpoint-down(sm){
-      
+       font-size:0.8rem;
      }
     }
+    
    }
  
   }
 
 .twitter{
-  text-align:center;
+  text-align:left;
+  margin-left:8%;
   margin-bottom:3rem;
+  &__tytle{
+      text-align:left;
+      margin-bottom:0.5rem;
+      font-family: $theme-font;
+      color:$brown;
+    }
 }
 .twitter-timeline{
+   color:$brown;
   @include media-breakpoint-down(sm){
     width: 300;
     height: 600;
