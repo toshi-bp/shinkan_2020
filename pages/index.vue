@@ -60,6 +60,8 @@
 <style lang="scss" scoped>
   .container{
     margin:0 auto;
+    width:100%;
+    text-align:center;
     @include media-breakpoint-down(sm){
      margin:0;
      }
@@ -68,7 +70,7 @@
   .theme{
     display:block;
     text-align:center;
-    margin:7.5rem 0;
+    margin:10% 0;
     flex-wrap:wrap;
     @include media-breakpoint-down(sm){
     flex-direction:column;
@@ -86,7 +88,7 @@
       color:$brown;
       display:inline-block;
       padding-left:10rem;
-      width:40%;
+      width:50%;
       @include media-breakpoint-down(sm){
       font-size:30px;
       width:70%;
@@ -104,17 +106,18 @@
 .concept{
     // display:flex;
    &__tytle{
+      text-align:left;
       margin-bottom:0.5rem;
-      margin-left:3rem;
+      margin-left:8%;
       font-family: $theme-font;
       color:$brown;
-    }
+      }
 
    &__box{
       position:relative;
-      width:100%;
       height:20rem;
-      margin-left:3rem;
+      margin-left:8%;
+      margin-bottom:5%;
       display:block;
       padding:0 auto;
       text-align:center;
@@ -125,33 +128,35 @@
 
    &__box1{
       position:absolute;
-      top:0rem;
-      left:0rem;
+      top:0;
+      left:0;
       height:15rem;
-      width:80%;
+      width:84%;
       background-color:$theme-color;
       opacity:0.6;
       display:inline-block;
       @include media-breakpoint-down(sm){
        width:100%;
+       opacity:0.5;
      }
     }
 
    &__box2{
       position:absolute;
-      top:2rem;
-      left:2rem;
-      @include media-breakpoint-down(sm){
-       top:0;
-       left:0;
-       width:100%;
-     }
+      top:10%;
+      left:6%;
       height:15rem;
-      width:80%;
+      width:84%;
       padding:2rem;
       margin-bottom:5rem;
       background-color:$theme-color;
-      opacity:0.6;      
+      opacity:0.6;
+       @include media-breakpoint-down(sm){
+       top:0;
+       left:0;
+       width:100%;
+       opacity:0.5;
+     }     
     }
 
    &__tobira{
@@ -196,15 +201,15 @@ span{
 .information{
   
    &__tytle{
+      text-align:left;
       margin-bottom:0.5rem;
-      margin-left:3rem;
+      margin-left:8%;
       font-family: $theme-font;
       color:$brown;
     }
 
    &__main{
-    height:19rem;
-    position:relative;
+    // position:relative;
     @include media-breakpoint-down(sm){
        flex-direction:column;
      }
@@ -212,16 +217,20 @@ span{
 
     &__box{
      height:16rem;
-     width:40%;
+     width:42%;
      background-color:$theme-color;
      color:#fff;
      display:inline-block;
      opacity:0.6;
+     margin-bottom:10%;
+     @include media-breakpoint-down(sm){
+       width:100%;
+       margin-bottom:1%;
+     }
     } 
 
    &__circle{
-    position:absolute;
-    margin-right:1%;
+    // position:absolute;
     &__tytle{
       margin-top:4rem;
       text-align:center;
@@ -231,13 +240,17 @@ span{
    }
 
    &__group{
-     position:absolute;
-     left:34.1rem;
+    //  position:absolute;
+    //  left:34.1rem; 
+    margin-bottom:10%;
     &__tytle{
       margin-top:4rem;
       text-align:center;
       font-size:1.5rem;
       font-family: $sub-font;
+      @include media-breakpoint-down(sm){
+      
+     }
     }
    }
  
