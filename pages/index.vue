@@ -2,7 +2,12 @@
   <div>
     <div class="theme">
      <img src="~/assets/image/symbol.svg" class="theme__logo">
-     <h1 class="theme__concept">開いた向こうに、見えるもの</h1>
+     <h1 class="theme__concept">
+       <div class="theme__concept__1">開いた向こうに、
+       </div>
+       <div class="theme__concept__2"> 見えるもの
+       </div>
+       </h1>
    </div>
    <div class="body">
      <div class="container">
@@ -40,9 +45,9 @@
         </div>
        </div>
        <div class="twitter">
-        <a class="twitter-timeline" data-width="800" data-height="1600" href="https://twitter.com/tusnodashinkan?ref_src=twsrc%5Etfw">Twitter by tusnodashinkan</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a class="twitter-timeline" data-width="500" data-height="1000" href="https://twitter.com/tusnodashinkan?ref_src=twsrc%5Etfw">Tweets by tusnodashinkan</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
        </div>
-     </div>
+      </div>
   </div>
 
 </template>
@@ -54,17 +59,26 @@
 
 <style lang="scss" scoped>
   .container{
-    margin:1rem;
+    margin:0 auto;
+    @include media-breakpoint-down(sm){
+     margin:0;
+     }
   }
 
   .theme{
     display:block;
     text-align:center;
-    margin:7rem 0;
+    margin:7.5rem 0;
+    flex-wrap:wrap;
+    @include media-breakpoint-down(sm){
+    flex-direction:column;
+     }
     &__logo{
-    width:20%;
     display:inline-block;
-    // margin:4rem;
+    width:20%;
+    @include media-breakpoint-down(sm){
+    width:40%;
+     }
     }
     &__concept{
       font-size:35px;
@@ -72,10 +86,23 @@
       color:$brown;
       display:inline-block;
       padding-left:10rem;
-      // margin:4rem;
+      width:40%;
+      @include media-breakpoint-down(sm){
+      font-size:30px;
+      width:70%;
+      margin:0 auto;
+      padding:0;
       }
+      &__1{
+        display:inline-block;
+      }
+      &__2{
+        display:inline-block;
+      }
+    }
   }
 .concept{
+    // display:flex;
    &__tytle{
       margin-bottom:0.5rem;
       margin-left:3rem;
@@ -85,8 +112,15 @@
 
    &__box{
       position:relative;
+      width:100%;
       height:20rem;
       margin-left:3rem;
+      display:block;
+      padding:0 auto;
+      text-align:center;
+      @include media-breakpoint-down(sm){
+        margin-left: 0;
+      }
     }
 
    &__box1{
@@ -94,18 +128,26 @@
       top:0rem;
       left:0rem;
       height:15rem;
-      width:60rem;
+      width:80%;
       background-color:$theme-color;
       opacity:0.6;
-       display:inline-block;
+      display:inline-block;
+      @include media-breakpoint-down(sm){
+       width:100%;
+     }
     }
 
    &__box2{
       position:absolute;
       top:2rem;
       left:2rem;
+      @include media-breakpoint-down(sm){
+       top:0;
+       left:0;
+       width:100%;
+     }
       height:15rem;
-      width:60rem;
+      width:80%;
       padding:2rem;
       margin-bottom:5rem;
       background-color:$theme-color;
@@ -120,6 +162,12 @@
       display:inline-block;
       color:#fff;
       font-family: $theme-font;
+      @include media-breakpoint-down(sm){
+        position: absolute;
+        top: 1rem;
+        margin: 0 auto;
+        font-size: 40px;
+      }
     }
  
    &__msg{
@@ -132,15 +180,21 @@
       text-align:center;
       color:#fff;
       font-family: $sub-font;
+      @include media-breakpoint-down(sm){
+        color: $brown;
+        position: absolute;
+        top: 5rem;
+        left: 8rem;
+      }
     }
   }
 
 span{
-        font-size:3.5rem;
+    font-size: 40px;
   }
 
 .information{
-
+  
    &__tytle{
       margin-bottom:0.5rem;
       margin-left:3rem;
@@ -151,11 +205,14 @@ span{
    &__main{
     height:19rem;
     position:relative;
+    @include media-breakpoint-down(sm){
+       flex-direction:column;
+     }
    }
 
     &__box{
      height:16rem;
-     width:31rem;
+     width:40%;
      background-color:$theme-color;
      color:#fff;
      display:inline-block;
@@ -164,8 +221,7 @@ span{
 
    &__circle{
     position:absolute;
-    margin-left:3rem;
-    margin-right:1rem;
+    margin-right:1%;
     &__tytle{
       margin-top:4rem;
       text-align:center;
@@ -190,5 +246,11 @@ span{
 .twitter{
   text-align:center;
   margin-bottom:3rem;
+}
+.twitter-timeline{
+  @include media-breakpoint-down(sm){
+    width: 300;
+    height: 600;
+  }
 }
 </style>
