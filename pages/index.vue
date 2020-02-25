@@ -9,6 +9,7 @@
        </div>
        </h1>
    </div>
+   <div class="back">
    <div class="body">
      <div class="container">
        <div class="concept">
@@ -51,6 +52,8 @@
        </div>
      </div>
     </div>
+    <!--/div-->
+   </div>
   </div>
 
 </template>
@@ -61,12 +64,28 @@
 </script>
 
 <style lang="scss" scoped>
+
+  .back{
+    background-image: url(~@/assets/image/back.svg);
+    background-size:cover;
+    width: 100%;
+    padding:6% 0;
+    @include media-breakpoint-down(sm) {
+      background-image: url(~@/assets/image/back_sm.svg);
+    }
+  }
+
   .container{
     margin:0 auto;
     width:100%;
     text-align:center;
+    background-color:#fff;
+    opacity:0.95;
+    padding:4% 0;
+    border-radius:3%;
     @include media-breakpoint-down(sm){
-     margin:0;
+     margin:0 0;
+     border-radius:20px;
      }
   }
 
@@ -137,7 +156,7 @@
       height:15rem;
       width:84%;
       background-color:$yellow;
-      opacity:0.6;
+      opacity:0.8;
       display:inline-block;
       @include media-breakpoint-down(sm){
        width:100%;
@@ -154,7 +173,7 @@
       padding:2rem;
       margin-bottom:5rem;
       background-color:$yellow;
-      opacity:0.6;
+      opacity:0.8;
        @include media-breakpoint-down(sm){
        top:0;
        left:0;
@@ -190,7 +209,7 @@
       color:#fff;
       font-family: $sub-font;
       @include media-breakpoint-down(sm){
-        color: $brown;
+        color: #fff;
         position: absolute;
         top: 5rem;
         left: 8rem;
@@ -279,7 +298,7 @@ span{
   }
 
 .twitter{
-  text-align:left;
+  text-align:center;
   margin-left:8%;
   margin-bottom:3rem;
   &__tytle{
