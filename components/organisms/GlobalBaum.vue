@@ -1,34 +1,42 @@
 <template>
   <div class="global-nav">
-    <button class="global-nav__toggle" :class="{'--active': active}" @click="toggle">
-      <fa :icon="active ? 'times' : 'bars'" fixed-width/>
+    <button
+      class="global-nav__toggle"
+      :class="{ '--active': active }"
+      @click="toggle"
+    >
+      <fa :icon="active ? 'times' : 'bars'" fixed-width />
       <span class="global-nav__toggle__tooltip">メニュー</span>
     </button>
-    <square class="global-nav__toggle__square"></square>
-    <div class="global-nav__bg" :class="{'--active': active}" @click="close"></div>
-    <nav class="global-nav__body" :class="{'--active': active}">
+    <square class="global-nav__toggle__square" />
+    <div
+      class="global-nav__bg"
+      :class="{ '--active': active }"
+      @click="close"
+    />
+    <nav class="global-nav__body" :class="{ '--active': active }">
       <ul class="global-nav__list">
         <li class="global-nav__list__item">
           <nuxt-link to="/" class="global-nav__list__item__link">
-            <fa icon="home" class="global-nav__list__item__icon" fixed-width/>
+            <fa icon="home" class="global-nav__list__item__icon" fixed-width />
             ホーム
           </nuxt-link>
         </li>
         <li class="global-nav__list__item">
           <nuxt-link to="/circle/" class="global-nav__list__item__link">
-            <fa icon="user" class="global-nav__list__item__icon" fixed-width/>
+            <fa icon="user" class="global-nav__list__item__icon" fixed-width />
             サークル紹介
           </nuxt-link>
         </li>
         <li class="global-nav__list__item">
           <nuxt-link to="/stage/" class="global-nav__list__item__link">
-            <fa icon="star" class="global-nav__list__item__icon" fixed-width/>
+            <fa icon="star" class="global-nav__list__item__icon" fixed-width />
             団体紹介ステージ
           </nuxt-link>
         </li>
         <li class="global-nav__list__item">
           <nuxt-link to="/map/" class="global-nav__list__item__link">
-            <fa icon="map" class="global-nav__list__item__icon" fixed-width/>
+            <fa icon="map" class="global-nav__list__item__icon" fixed-width />
             キャンパスマップ
           </nuxt-link>
         </li>
@@ -41,23 +49,23 @@
 export default {
   data() {
     return {
-      active: false,
-    };
-  },
-  methods: {
-    toggle() {
-      this.active = !this.active;
-    },
-    close() {
-      this.active = false;
-    },
+      active: false
+    }
   },
   watch: {
     $route() {
-      this.close();
-    },
+      this.close()
+    }
   },
-};
+  methods: {
+    toggle() {
+      this.active = !this.active
+    },
+    close() {
+      this.active = false
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -79,7 +87,7 @@ export default {
     outline: none;
     transition: 0.2s ease background, 0.2s ease color;
 
-    &.--active{
+    &.--active {
       background: #ffffff;
       color: $theme-color;
     }
@@ -89,10 +97,11 @@ export default {
     }
 
     &:focus {
-      box-shadow: 0 0 0.9rem rgba($color, 0.3), 0 0 0 0.1rem rgba($theme-color, 0.5);
+      box-shadow: 0 0 0.9rem rgba($color, 0.3),
+        0 0 0 0.1rem rgba($theme-color, 0.5);
     }
 
-    &__square{
+    &__square {
       appearance: none;
       position: fixed;
       bottom: 4.2rem;
@@ -167,7 +176,6 @@ export default {
     }
   }
 
-
   &__body {
     position: fixed;
     top: 0;
@@ -241,4 +249,3 @@ export default {
   }
 }
 </style>
-
