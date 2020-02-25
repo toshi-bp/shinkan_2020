@@ -1,7 +1,7 @@
 <template class="index">
   <div>
     <div class="theme">
-      <img src="~/assets/image/symbol.svg" class="theme__logo" />
+      <img src="~/assets/image/symbol.svg" class="theme__logo">
       <h1 class="theme__catchcopy">
         <div class="theme__catchcopy__1">
           開いた向こうに、
@@ -25,11 +25,11 @@
             </div>
             <div class="concept__body">
               <p class="concept__msg">
-                新入生の皆さんには、<br>
-                想像を超える<br>
-                新しい生活が待っています。<br><br>
+                新入生の皆さんには、<br >
+                想像を超える<br >
+                新しい生活が待っています。<br ><br >
 
-                自分だけの扉を開いて<br>
+                自分だけの扉を開いて<br >
                 歩み出してみましょう。
               </p>
             </div>
@@ -52,7 +52,7 @@
                 サークル紹介
               </p>
               <p class="information__circle__acticle">
-                各サークルが講義棟の教室にて勧誘を行います。<br >00:00~00:00<br >@講義棟
+                各サークルが講義棟の教室にて勧誘を行います。<br />00:00~00:00<br />@講義棟
               </p>
               <!-- 矢印マークのアイコンが欲しい -->
             </nuxt-link>
@@ -61,7 +61,7 @@
                 団体紹介ステージ
               </p>
               <p class="information__group__acticle">
-                新歓参加団体がステージにて実演を行います。<br >00:00~00:00<br >@体育館
+                新歓参加団体がステージにて実演を行います。<br />00:00~00:00<br />@体育館
               </p>
             </nuxt-link>
           </div>
