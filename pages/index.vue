@@ -1,7 +1,7 @@
 <template class="index">
   <div>
     <div class="theme">
-      <img src="~/assets/image/symbol.svg" class="theme__logo" />
+      <img src="~/assets/image/symbol.svg" class="theme__logo" >
       <h1 class="theme__catchcopy">
         <div class="theme__catchcopy__1">
           開いた向こうに、
@@ -25,13 +25,15 @@
             </div>
             <div class="concept__body">
               <p class="concept__msg">
+                今年の新歓テーマは「扉」です。<br />
                 新入生の皆さんには<br />
                 想像を超える<br />
-                新しい生活が待っています。
+                新しい生活が待っているかと思います。
               </p>
               <p class="concept__msg">
-                自分だけの扉を開いて<br />
-                歩み出してみましょう。
+                今年度のテーマである「扉」には、<br />
+                これから始まる自分だけの新生活への扉を開いて<br />
+                歩み出してほしいという願いを込めました。
               </p>
             </div>
           </div>
@@ -40,43 +42,41 @@
     </div>
     <div class="body">
       <TheContainer>
-        <div class="information">
-          <h2 class="information__title">
-            INFORMATION
+        <div class="events">
+          <h2 class="events__title">
+            EVENTS
+            <small class="events__title__small">イベント内容</small>
           </h2>
-          <div class="information__main">
-            <nuxt-link
-              to="/circle/"
-              class="information__box"
-            >
-              <p class="information__box__title">
+          <div class="events__main">
+            <nuxt-link to="/circle/" class="events__box">
+              <p class="events__box__title">
                 サークル紹介
               </p>
-              <p class="information__box__description">
+              <p class="events__box__description">
                 各サークルが講義棟の教室にて勧誘を行います。
               </p>
-              <p class="information__box__time">
-              00:00~00:00
+              <p class="events__box__time">
+                00:00～00:00
               </p>
-              <p class="information__box__place">
-              @講義棟
+              <p class="events__box__place">
+                @講義棟
               </p>
               <!-- 矢印マークのアイコンが欲しい -->
             </nuxt-link>
-            <nuxt-link to="/group/" class="information__box">
-              <p class="information__box__title">
+            <nuxt-link to="/group/" class="events__box">
+              <p class="events__box__title">
                 団体紹介ステージ
               </p>
-              <p class="information__box__description">
+              <p class="events__box__description">
                 新歓参加団体がステージにて実演を行います。
               </p>
-              <p class="information__box__time">
-                00:00~00:00
+              <p class="events__box__time">
+                00:00～00:00
               </p>
-              <p class="information__box__place">
+              <p class="events__box__place">
                 @体育館
               </p>
-              </nuxt-link>
+            </nuxt-link>
           </div>
         </div>
         <div class="twitter">
@@ -102,10 +102,12 @@
 
 <script>
 import TheContainer from "~/components/atoms/TheContainer.vue"
+import LinkButton from "~/components/atoms/LinkButton.vue"
 
 export default {
   components: {
-    TheContainer
+    TheContainer,
+    LinkButton
   }
 }
 </script>
@@ -259,24 +261,30 @@ export default {
     //   top: 5rem;
     //   left: 8rem;
     // }
-    &:last-child { //msgが最後になった場合
+    &:last-child {
+      //msgが最後になった場合
       margin: 0;
     }
   }
 }
 
-.information {
+.events {
   &__title {
     text-align: left;
     margin-bottom: 0.5rem;
     font-family: $theme-font;
     font-size: 1.5rem;
     color: $brown;
+
+    &__small {
+      font-size: 1rem;
+      font-family: $sans-serif;
+    }
   }
 
   &__main {
     display: flex;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     justify-content: space-between;
     @include media-breakpoint-down(sm) {
       flex-direction: column;
@@ -285,47 +293,59 @@ export default {
 
   &__box {
     width: calc(50% - 0.5rem);
-    background-color: $blue;
-    padding:1rem;
-    color: #fff;
+    background-color: #fff;
+    color: $color;
+    padding: 3rem 1rem;
     opacity: 1;
     transition: all 0.2s;
+    border: 3px solid $blue;
+    box-shadow: 0.25rem 0.25rem 0 rgba($blue, 0.5);
     @include media-breakpoint-down(sm) {
       width: 100%;
       margin-bottom: 1%;
     }
-    
+
+    &__title {
+      text-align: center;
+      margin: 0 0 0.5rem;
+      font-size: 1.5rem;
+      font-family: $sub-font;
+      color: $blue;
+      transition: 0.2s all;
+    }
+
     &__description {
       text-align: center;
+      margin: 0;
       @include media-breakpoint-down(sm) {
         font-size: 0.8rem;
       }
     }
-    
-    &__time{
+
+    &__time {
       margin: 0;
     }
 
-    &__place{
+    &__place {
       margin: 0;
-    }
-    
-    &__title {
-      text-align: center;
-      font-size: 1.8rem;
-      font-family: $sub-font;
     }
 
     &:hover {
-      opacity: 0.7;
+      background-color: $blue;
+      color: #fff;
       text-decoration: none;
+      box-shadow: 0 0 0 rgba($blue, 0.2);
+      transform: translate(0.25rem, 0.25rem);
+    }
+
+    &:hover &__title {
+      color: #fff;
     }
   }
 }
 
 .twitter {
   text-align: center;
-  margin-left: 8%;
   margin-bottom: 3rem;
   &__title {
     text-align: left;
