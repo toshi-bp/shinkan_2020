@@ -162,14 +162,15 @@ export default {
   width: 100%;
   display: flex;
   $box-width: 50rem; //二つの箱の幅
-  $shift-width: 10rem; //移動する距離
-  $header-size: 20rem; //前面の四角の大きさ
+  $shift-width: 5rem; //移動する距離
+  $header-size: 11rem; //前面の四角の大きさ
 
   &__title {
-    text-align: left;
-    margin: 0 0 0.5rem;
+    text-align: center;
     font-family: $theme-font;
-    color: $brown;
+    font-size: 1.5rem;
+    margin:0 0 0.75rem 0;
+    color: #fff;
   }
 
   &__box {
@@ -181,8 +182,14 @@ export default {
 
   &__header {
     //position: absolute;
-    size: $header-size;
-    background-color: rgba($theme-color, 0.8);
+    display: flex;
+    flex-direction: column; //要素を縦並びにする
+    align-items: stretch; //要素の幅を親要素と同じにする
+    justify-content: center;
+    width: $header-size;
+    height: calc(#{$header-size} - 1.5rem);
+    padding:0.5rem;
+    background-color: rgba($yellow, 0.9);
     z-index: 2;
     // @include media-breakpoint-down(sm) {
     //   background-color: rgba($yellow, 0.8);
@@ -192,7 +199,7 @@ export default {
   &__body {
     //position: absolute;
     width: calc(#{$box-width} - #{- 10rem + 5rem});
-    background-color: rgba($theme-color, 0.8);
+    background-color: rgba($yellow, 0.8);
     z-index: 1;
     margin: 2.5rem 0 0 #{-$shift-width};
     padding: 2rem 1rem 2rem calc(#{$header-size} - 30rem - #{$shift-width});
@@ -200,7 +207,6 @@ export default {
       top: 0;
       left: 0;
       width: 100%;
-      opacity: 0.5;
     }
   }
 
@@ -243,6 +249,7 @@ export default {
     text-align: left;
     margin-bottom: 0.5rem;
     font-family: $theme-font;
+    font-size: 1.5rem;
     color: $brown;
   }
 
@@ -314,6 +321,7 @@ export default {
     text-align: left;
     margin-bottom: 0.5rem;
     font-family: $theme-font;
+    font-size: 1.5rem;
     color: $brown;
   }
 }
