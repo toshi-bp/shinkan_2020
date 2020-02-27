@@ -5,6 +5,7 @@
       <h1 class="circle__title">サークル紹介</h1>
       <div class="circle__title__line__1"></div>
     </div>
+    <div></div>
   </TheContainer>
 </template>
 
