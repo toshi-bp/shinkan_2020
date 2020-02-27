@@ -170,7 +170,7 @@ export default {
     font-family: $theme-font;
     font-size: 1.5rem;
     margin:0 0 0.75rem 0;
-    color: #fff;
+    color: $brown;
   }
 
   &__box {
@@ -188,8 +188,9 @@ export default {
     justify-content: center;
     width: $header-size;
     height: calc(#{$header-size} - 1.5rem);
+    box-shadow: 10px 10px 0px rgba($theme-color,0.3);
     padding:0.5rem;
-    background-color: rgba($yellow, 0.9);
+    background-color: #fff;
     z-index: 2;
     // @include media-breakpoint-down(sm) {
     //   background-color: rgba($yellow, 0.8);
@@ -199,14 +200,15 @@ export default {
   &__body {
     //position: absolute;
     width: calc(#{$box-width} - #{- 10rem + 5rem});
-    background-color: rgba($yellow, 0.8);
+    background-color: #fff;
+    box-shadow: 10px 10px 0px rgba($yellow,0.6);
     z-index: 1;
     margin: 2.5rem 0 0 #{-$shift-width};
     padding: 2rem 1rem 2rem calc(#{$header-size} - 30rem - #{$shift-width});
     @include media-breakpoint-down(sm) {
-      top: 0;
-      left: 0;
-      width: 100%;
+      // top: 0;
+      // left: 0;
+      // width: 100%;
     }
   }
 
@@ -216,13 +218,12 @@ export default {
     // left:10rem;
     font-size: 3rem;
     display: inline-block;
-    color: #fff;
+    color: $brown;
     font-family: $theme-font;
     @include media-breakpoint-down(sm) {
       // position: absolute;
       // top: 1rem;
-      margin: 0 auto;
-      font-size: 40px;
+      font-size: 2.5rem;
     }
   }
 
@@ -234,7 +235,7 @@ export default {
     display: inline-block;
     margin-bottom: -16px;
     text-align: center;
-    color: #fff;
+    color: #000;
     font-family: $sub-font;
     // @include media-breakpoint-down(sm){
     //   position: absolute;

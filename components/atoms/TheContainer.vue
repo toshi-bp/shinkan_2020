@@ -16,6 +16,7 @@ export default {}
   text-align: center;
   @include media-breakpoint-down(sm) {
     margin: 0 0;
+    max-width: 100%;
   }
 }
 </style>
