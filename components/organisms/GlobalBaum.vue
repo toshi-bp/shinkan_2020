@@ -130,7 +130,7 @@ export default {
       //border-radius: 0.5rem;
       box-shadow: 0 0 0.3rem rgba($color, 0.3);
       border: 1px solid #{$theme-color};
-      animation: 2.5s ease tooltip both;
+      animation: 3s ease tooltip both;
 
       @keyframes tooltip {
         from {
