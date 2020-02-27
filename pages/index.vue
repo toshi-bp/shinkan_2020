@@ -1,7 +1,7 @@
 <template class="index">
   <div>
     <div class="theme">
-      <img src="~/assets/image/symbol.svg" class="theme__logo">
+      <img src="~/assets/image/symbol.svg" class="theme__logo" />
       <h1 class="theme__catchcopy">
         <div class="theme__catchcopy__1">
           開いた向こうに、
@@ -25,11 +25,12 @@
             </div>
             <div class="concept__body">
               <p class="concept__msg">
-                新入生の皆さんには、<br >
-                想像を超える<br >
-                新しい生活が待っています。<br ><br >
-
-                自分だけの扉を開いて<br >
+                新入生の皆さんには<br />
+                想像を超える<br />
+                新しい生活が待っています。
+              </p>
+              <p class="concept__msg">
+                自分だけの扉を開いて<br />
                 歩み出してみましょう。
               </p>
             </div>
@@ -52,7 +53,7 @@
                 サークル紹介
               </p>
               <p class="information__circle__acticle">
-                各サークルが講義棟の教室にて勧誘を行います。<br />00:00~00:00<br />@講義棟
+                各サークルが講義棟の教室にて勧誘を行います。<br >00:00~00:00<br >@講義棟
               </p>
               <!-- 矢印マークのアイコンが欲しい -->
             </nuxt-link>
@@ -61,7 +62,7 @@
                 団体紹介ステージ
               </p>
               <p class="information__group__acticle">
-                新歓参加団体がステージにて実演を行います。<br />00:00~00:00<br />@体育館
+                新歓参加団体がステージにて実演を行います。<br >00:00~00:00<br >@体育館
               </p>
             </nuxt-link>
           </div>
@@ -163,13 +164,13 @@ export default {
   display: flex;
   $box-width: 50rem; //二つの箱の幅
   $shift-width: 5rem; //移動する距離
-  $header-size: 11rem; //前面の四角の大きさ
+  $header-size: 15rem; //前面の四角の大きさ
 
   &__title {
     text-align: center;
     font-family: $theme-font;
     font-size: 1.5rem;
-    margin:0 0 0.75rem 0;
+    margin: 0 0 0.5rem 0;
     color: $brown;
   }
 
@@ -183,13 +184,14 @@ export default {
   &__header {
     //position: absolute;
     display: flex;
+    flex: 0 0 15rem;
     flex-direction: column; //要素を縦並びにする
     align-items: stretch; //要素の幅を親要素と同じにする
     justify-content: center;
     width: $header-size;
     height: calc(#{$header-size} - 1.5rem);
-    box-shadow: 10px 10px 0px rgba($theme-color,0.3);
-    padding:0.5rem;
+    box-shadow: 1rem 1rem 0 rgba($theme-color, 0.3);
+    padding: 1rem;
     background-color: #fff;
     z-index: 2;
     // @include media-breakpoint-down(sm) {
@@ -199,12 +201,14 @@ export default {
 
   &__body {
     //position: absolute;
+    display: flex;
+    flex-direction: column;
     width: calc(#{$box-width} - #{- 10rem + 5rem});
     background-color: #fff;
-    box-shadow: 10px 10px 0px rgba($yellow,0.6);
+    box-shadow: 1rem 1rem 0 rgba($yellow, 0.6);
     z-index: 1;
     margin: 2.5rem 0 0 #{-$shift-width};
-    padding: 2rem 1rem 2rem calc(#{$header-size} - 30rem - #{$shift-width});
+    padding: 2rem 1rem 2rem calc(#{$shift-width} + 1rem);
     @include media-breakpoint-down(sm) {
       // top: 0;
       // left: 0;
@@ -220,6 +224,7 @@ export default {
     display: inline-block;
     color: $brown;
     font-family: $theme-font;
+    margin: 0;
     @include media-breakpoint-down(sm) {
       // position: absolute;
       // top: 1rem;
@@ -233,7 +238,7 @@ export default {
     // left:32rem;
     font-size: 1rem;
     display: inline-block;
-    margin-bottom: -16px;
+    margin: 0 0 1rem;
     text-align: center;
     color: #000;
     font-family: $sub-font;
@@ -242,6 +247,9 @@ export default {
     //   top: 5rem;
     //   left: 8rem;
     // }
+    &:last-child { //msgが最後になった場合
+      margin: 0;
+    }
   }
 }
 

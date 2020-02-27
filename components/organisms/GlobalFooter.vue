@@ -2,12 +2,12 @@
   <div>
     <footer class="footer">
       <div>
-        <img src="~/assets/image/symbol.svg" class="footer__logo" >
+        <img src="~/assets/image/symbol.svg" class="footer__logo">
       </div>
       <div class="footer__copyright">
         <p>
           2020年度 東京理科大学野田地区
-          <br >新入生歓迎ガイダンス実行委員会
+          <br>新入生歓迎ガイダンス実行委員会
         </p>
       </div>
       <p class="footer__welcome">
