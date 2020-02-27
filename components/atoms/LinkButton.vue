@@ -14,21 +14,21 @@
 export default {
   props: {
     to: {
-      type: String,
+      type: String
     },
     href: {
-      type: String,
+      type: String
     },
     componentIs: {
       type: String,
-      default: 'nuxt-link',
+      default: "nuxt-link"
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.link-button{
+.link-button {
   display: inline-block;
   padding: 0.8rem 2.5rem;
   border: 2px solid $theme-color;
@@ -46,11 +46,14 @@ export default {
   }
 
   &:active {
-    $darken: darken($color: $theme-color, $amount: 5);
+    $darken: darken(
+      $color: $theme-color,
+      $amount: 5
+    );
     //上で設定した色を定める。明度、％
     background: $darken;
     border-color: $darken;
-    color:  #ffffff;
+    color: #ffffff;
   }
 
   &:focus {
