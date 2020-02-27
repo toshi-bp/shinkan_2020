@@ -47,24 +47,36 @@
           <div class="information__main">
             <nuxt-link
               to="/circle/"
-              class="information__box information__circle"
+              class="information__box"
             >
               <p class="information__box__title">
                 サークル紹介
               </p>
-              <p class="information__circle__acticle">
-                各サークルが講義棟の教室にて勧誘を行います。<br >00:00~00:00<br >@講義棟
+              <p class="information__box__description">
+                各サークルが講義棟の教室にて勧誘を行います。
+              </p>
+              <p class="information__box__time">
+              00:00~00:00
+              </p>
+              <p class="information__box__place">
+              @講義棟
               </p>
               <!-- 矢印マークのアイコンが欲しい -->
             </nuxt-link>
-            <nuxt-link to="/group/" class="information__box information__group">
+            <nuxt-link to="/group/" class="information__box">
               <p class="information__box__title">
                 団体紹介ステージ
               </p>
-              <p class="information__group__acticle">
-                新歓参加団体がステージにて実演を行います。<br >00:00~00:00<br >@体育館
+              <p class="information__box__description">
+                新歓参加団体がステージにて実演を行います。
               </p>
-            </nuxt-link>
+              <p class="information__box__time">
+                00:00~00:00
+              </p>
+              <p class="information__box__place">
+                @体育館
+              </p>
+              </nuxt-link>
           </div>
         </div>
         <div class="twitter">
@@ -263,28 +275,42 @@ export default {
   }
 
   &__main {
-    // position:relative;
+    display: flex;
+    margin-bottom: 2rem;
+    justify-content: space-between;
     @include media-breakpoint-down(sm) {
       flex-direction: column;
     }
   }
 
   &__box {
-    height: 16rem;
-    width: 42%;
+    width: calc(50% - 0.5rem);
     background-color: $blue;
+    padding:1rem;
     color: #fff;
-    display: inline-block;
     opacity: 1;
-    margin-bottom: 10%;
     transition: all 0.2s;
     @include media-breakpoint-down(sm) {
       width: 100%;
       margin-bottom: 1%;
     }
+    
+    &__description {
+      text-align: center;
+      @include media-breakpoint-down(sm) {
+        font-size: 0.8rem;
+      }
+    }
+    
+    &__time{
+      margin: 0;
+    }
 
+    &__place{
+      margin: 0;
+    }
+    
     &__title {
-      margin-top: 4rem;
       text-align: center;
       font-size: 1.8rem;
       font-family: $sub-font;
@@ -293,31 +319,6 @@ export default {
     &:hover {
       opacity: 0.7;
       text-decoration: none;
-    }
-  }
-
-  &__circle {
-    // position:absolute;
-
-    &__article {
-      font-size: 1.2rem;
-      text-align: center;
-      @include media-breakpoint-down(sm) {
-        font-size: 0.8rem;
-      }
-    }
-  }
-
-  &__group {
-    //  position:absolute;
-    //  left:34.1rem;
-    margin-bottom: 10%;
-    &__article {
-      font-size: 1.2rem;
-      text-align: center;
-      @include media-breakpoint-down(sm) {
-        font-size: 0.8rem;
-      }
     }
   }
 }
