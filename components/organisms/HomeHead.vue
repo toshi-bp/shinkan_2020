@@ -2,12 +2,12 @@
   <div class="head">
     <img src="~/assets/image/symbol.svg" class="head__logo">
     <h1 class="head__catchcopy">
-      <div class="head__catchcopy__1">
+      <span class="head__catchcopy__text">
         開いた向こうに、
-      </div>
-      <div class="head__catchcopy__2">
+      </span>
+      <span class="head__catchcopy__text">
         見えるもの。
-      </div>
+      </span>
     </h1>
   </div>
 </template>
@@ -44,10 +44,7 @@
       margin: 0 auto;
       padding: 0;
     }
-    &__1 {
-      display: inline-block;
-    }
-    &__2 {
+    &__text {
       display: inline-block;
     }
   }

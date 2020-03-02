@@ -30,6 +30,16 @@
     </div>
 </template>
 
+<script>
+import TheContainer from "~/components/atoms/TheContainer.vue"
+
+export default {
+  components: {
+    TheContainer,
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 .theme {
   width: 100%;
@@ -38,7 +48,6 @@
   $shift-width: 5rem; //移動する距離
   $header-size: 15rem; //前面の四角の大きさ
   $header-sm-size: 11rem; //スマホ版の弁面の四角の大きさ
-  margin: 0 0 3rem 0;
 
   &__back {
     background-image: url(~@/assets/image/back.svg);
