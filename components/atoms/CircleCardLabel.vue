@@ -41,7 +41,7 @@ export default {
   display: inline-block;
   color: #fff;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.75rem;
   line-height: 2;
   padding: 0 0.5rem;
 }

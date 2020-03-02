@@ -16,15 +16,16 @@
       }"
     />
     <div class="circle-card__body">
-      <ItemCardLabel
+      <CircleCardLabel
         class="circle-card__label"
         :type="labelType"
         v-if="labelText"
       >
         {{ labelText }}
-      </ItemCardLabel>
+      </CircleCardLabel>
       <h3 class="circle-card__title">{{ title }}</h3>
       <p class="circle-card__lead">{{ lead }}</p>
+      <p class="circle-card__place"><fa icon="map-pin" fixed-width />{{ place }}</p>
     </div>
   </component>
 </template>
@@ -65,7 +66,7 @@ export default {
       type: String,
       required: true,
     },
-    lead: {
+    place: {
       type: String,
       default: '',
     },
@@ -92,7 +93,7 @@ export default {
 <style lang="scss" scoped>
 .circle-card{
   display: block;
-  margin-bottom: 2rem;
+  margin: 0 0 2rem;
   color: $color;
   text-decoration: none;
   transition: 0.3s ease all;
@@ -107,7 +108,7 @@ export default {
     width: 100%;
     position: relative;
     margin-bottom: 1rem;
-    box-shadow: 0 0.25rem 1rem rgba(#000, 0.1);
+    box-shadow: 0 0.25rem 0 rgba(#000, 0.1);
 
     &::before {
       content: "";
@@ -121,13 +122,18 @@ export default {
   }
 
   &__title {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     margin-bottom: 0;
   }
 
   &__lead {
     margin-bottom: 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+
+  &__place {
+    margin-bottom: 0;
+    font-size: 1rem;
   }
 }
 </style>

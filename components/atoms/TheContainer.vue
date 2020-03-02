@@ -1,5 +1,5 @@
 <template>
-  <div class="container" :class="{ 'container--fluid': fluid }">
+  <div class="container">
     <slot />
   </div>
 </template>
@@ -12,8 +12,7 @@ export default {}
 .container {
   margin: 0 auto;
   width: 960px;
-  padding: 4% 3rem;
-  text-align: center;
+  padding: 0 $container-padding;
   @include media-breakpoint-down(sm) {
     margin: 0 0;
     max-width: 100%;
