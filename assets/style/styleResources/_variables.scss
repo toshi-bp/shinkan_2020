@@ -6,6 +6,7 @@ $sub-font: vdl-logona, sans-serif;//サブフォント
 $theme-color: #97c031;//テーマカラー
 
 $color: #3b3636;
+$muted: lighten($color, 30);
 $blue: #8ed0e3;
 $yellow: #e9d431;
 $cream: #f8e994;
@@ -14,6 +15,7 @@ $brown: #612615;
 $global-header-height: 3.8rem;
 
 $container-padding: 1rem;
+$row-gutter: 0.5rem; // = $container-padding / 2
 
 // WaveSection
 $wave-height: 4rem;
