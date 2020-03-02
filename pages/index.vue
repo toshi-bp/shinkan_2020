@@ -1,36 +1,36 @@
 <template class="index">
   <div>
-    <div class="theme">
-      <img src="~/assets/image/symbol.svg" class="theme__logo" >
-      <h1 class="theme__catchcopy">
-        <div class="theme__catchcopy__1">
+    <div class="head">
+      <img src="~/assets/image/symbol.svg" class="head__logo" >
+      <h1 class="head__catchcopy">
+        <div class="head__catchcopy__1">
           開いた向こうに、
         </div>
-        <div class="theme__catchcopy__2">
-          見えるもの
+        <div class="head__catchcopy__2">
+          見えるもの。
         </div>
       </h1>
     </div>
-    <div class="concept">
-      <div class="back">
+    <div class="theme">
+      <div class="theme__back">
         <TheContainer>
-          <div class="concept__box">
-            <div class="concept__header">
-              <h2 class="concept__title">
-                CONCEPT
+          <div class="theme__box">
+            <div class="theme__header">
+              <h2 class="theme__title">
+                THEME
               </h2>
-              <p class="concept__tobira">
+              <p class="theme__tobira">
                 「扉」
               </p>
             </div>
-            <div class="concept__body">
-              <p class="concept__msg">
+            <div class="theme__body">
+              <p class="theme__msg">
                 今年の新歓テーマは「扉」です。<br />
                 新入生の皆さんには<br />
                 想像を超える<br />
                 新しい生活が待っているかと思います。
               </p>
-              <p class="concept__msg">
+              <p class="theme__msg">
                 今年度のテーマである「扉」には、<br />
                 これから始まる自分だけの新生活への扉を開いて<br />
                 歩み出してほしいという願いを込めました。
@@ -39,6 +39,35 @@
           </div>
         </TheContainer>
       </div>
+    </div>
+    <div class="information">
+      <TheContainer>
+        <h2 class="information__title">
+          INFORMATION
+        </h2>
+        <div class="information__box">
+          <div class="information__box__child">
+            <h2 class="information__subtitle">
+               <fa icon="door-open" fixed-width />  開催日時</h2>
+              <p class="information__article">    2020年4月11日土曜日</p>
+            <h2 class="information__subtitle">
+               <fa icon="door-open" fixed-width />  場所</h2>
+              <p class="information__article">    東京理科大学野田キャンパス<br />講義棟及び体育館</p>
+          </div>
+          <div class="information__box__child">
+            <h2 class="information__subtitle">
+               <fa icon="door-open" fixed-width />  テーマ</h2>
+              <p class="information__article">    扉</p>
+            <h2 class="information__subtitle">
+               <fa icon="door-open" fixed-width />  公式SNS</h2>
+               <fa :icon="['fab', 'twitter']" fixed-width /><a
+                  href="https://twitter.com/noda_ridaisai"
+                  target="blank"
+                  class="information__article"
+                >理大祭公式Twitter</a>
+          </div>
+        </div>
+      </TheContainer>
     </div>
     <div class="body">
       <TheContainer>
@@ -113,27 +142,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.back {
-  background-image: url(~@/assets/image/back.svg);
-  background-size: cover;
-  width: 100%;
-  //padding-bottom: 2rem;
-  @include media-breakpoint-down(sm) {
-    background-image: url(~@/assets/image/back_sm.svg);
-  }
-}
 
-// .container{
-//   margin:0 auto;
-//   width:100%;
-//   text-align:center;
-//   padding:4% 3rem;
-//   @include media-breakpoint-down(sm){
-//    margin:0 0;
-//    }
-// }
-
-.theme {
+.head {
   display: flex;
   text-align: center;
   height: calc(100vh - #{$global-header-height});
@@ -173,12 +183,24 @@ export default {
   }
 }
 
-.concept {
+.theme {
   width: 100%;
   display: flex;
   $box-width: 50rem; //二つの箱の幅
   $shift-width: 5rem; //移動する距離
   $header-size: 15rem; //前面の四角の大きさ
+  $header-sm-size: 11rem; //スマホ版の弁面の四角の大きさ
+  margin: 0 0 3rem 0;
+
+  &__back {
+  background-image: url(~@/assets/image/back.svg);
+  background-size: cover;
+  width: 100%;
+  padding: 4rem 0;
+    @include media-breakpoint-down(sm) {
+      background-image: url(~@/assets/image/back_sm.svg);
+    }
+  }
 
   &__title {
     text-align: center;
@@ -191,30 +213,29 @@ export default {
   &__box {
     display: flex;
     position: relative;
-    margin: 0 0 5rem;
     text-align: center;
   }
 
   &__header {
-    //position: absolute;
     display: flex;
     flex: 0 0 15rem;
     flex-direction: column; //要素を縦並びにする
     align-items: stretch; //要素の幅を親要素と同じにする
     justify-content: center;
     width: $header-size;
-    height: calc(#{$header-size} - 1.5rem);
+    height: $header-size;
     box-shadow: 1rem 1rem 0 rgba($theme-color, 0.3);
     padding: 1rem;
     background-color: #fff;
     z-index: 2;
-    // @include media-breakpoint-down(sm) {
-    //   background-color: rgba($yellow, 0.8);
-    // }
+    @include media-breakpoint-down(sm) {
+      // margin: 0 calc(#{$box-width} - #{$header-sm-size} / 2);
+      width: $header-sm-size;
+      height: $header-sm-size;
+    }
   }
 
   &__body {
-    //position: absolute;
     display: flex;
     flex-direction: column;
     width: calc(#{$box-width} - #{- 10rem + 5rem});
@@ -224,46 +245,71 @@ export default {
     margin: 2.5rem 0 0 #{-$shift-width};
     padding: 2rem 1rem 2rem calc(#{$shift-width} + 1rem);
     @include media-breakpoint-down(sm) {
-      // top: 0;
-      // left: 0;
-      // width: 100%;
+      padding: 2rem;
+      width: $box-width;
+      margin: 2.5rem 0 0 0;
     }
   }
 
   &__tobira {
-    // position:absolute;
-    // top:6rem;
-    // left:10rem;
     font-size: 3rem;
     display: inline-block;
     color: $brown;
     font-family: $theme-font;
     margin: 0;
     @include media-breakpoint-down(sm) {
-      // position: absolute;
-      // top: 1rem;
       font-size: 2.5rem;
     }
   }
 
   &__msg {
-    // position:absolute;
-    // top:4rem;
-    // left:32rem;
     font-size: 1rem;
     display: inline-block;
     margin: 0 0 1rem;
     text-align: center;
     color: #000;
     font-family: $sub-font;
-    // @include media-breakpoint-down(sm){
-    //   position: absolute;
-    //   top: 5rem;
-    //   left: 8rem;
-    // }
     &:last-child {
       //msgが最後になった場合
       margin: 0;
+    }
+  }
+}
+
+.information{
+  padding: 4rem 0;
+  background-color: rgba($theme-color,1);
+  margin: 0 0 3rem 0;
+  
+  &__title {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-family: $theme-font;
+    font-size: 1.5rem;
+    color: $brown;
+  }
+
+  &__subtitle{
+    margin: 0;
+    font-size: 1rem;
+    font-family: $sub-font;
+  }
+
+  &__article{
+    font-size: 1.6rem;
+  }
+
+  &__box{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 center;
+    background-color: #fff;
+  
+    &__child{
+      width: 50%;
+      text-align:left;
+      padding: 1rem 3rem;
     }
   }
 }
@@ -302,7 +348,6 @@ export default {
     box-shadow: 0.25rem 0.25rem 0 rgba($blue, 0.5);
     @include media-breakpoint-down(sm) {
       width: 100%;
-      margin-bottom: 1%;
     }
 
     &__title {
