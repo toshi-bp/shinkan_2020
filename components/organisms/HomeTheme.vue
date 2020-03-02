@@ -10,6 +10,7 @@
               <p class="theme__tobira">
                 「扉」
               </p>
+              <small class="theme__tobira__small">開いた向こうに、見えるもの。</small>
             </div>
             <div class="theme__body">
               <p class="theme__msg">
@@ -42,12 +43,9 @@ export default {
 
 <style lang="scss" scoped>
 .theme {
-  width: 100%;
-  display: flex;
   $box-width: 50rem; //二つの箱の幅
   $shift-width: 5rem; //移動する距離
   $header-size: 15rem; //前面の四角の大きさ
-  $header-sm-size: 11rem; //スマホ版の弁面の四角の大きさ
 
   &__back {
     background-image: url(~@/assets/image/back.svg);
@@ -56,6 +54,7 @@ export default {
     padding: 4rem 0;
     @include media-breakpoint-down(sm) {
       background-image: url(~@/assets/image/back_sm.svg);
+      padding:2rem 0 0 0;
     }
   }
 
@@ -71,6 +70,11 @@ export default {
     display: flex;
     position: relative;
     text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__header {
@@ -82,13 +86,13 @@ export default {
     width: $header-size;
     height: $header-size;
     box-shadow: 1rem 1rem 0 rgba($theme-color, 0.3);
+    border: 5px solid $theme-color;
     padding: 1rem;
     background-color: #fff;
     z-index: 2;
     @include media-breakpoint-down(sm) {
       // margin: 0 calc(#{$box-width} - #{$header-sm-size} / 2);
-      width: $header-sm-size;
-      height: $header-sm-size;
+      
     }
   }
 
@@ -98,13 +102,16 @@ export default {
     width: calc(#{$box-width} - #{- 10rem + 5rem});
     background-color: #fff;
     box-shadow: 1rem 1rem 0 rgba($yellow, 0.6);
+    border: 5px solid $yellow;
     z-index: 1;
     margin: 2.5rem 0 0 #{-$shift-width};
     padding: 2rem 1rem 2rem calc(#{$shift-width} + 1rem);
+    text-align: center;
     @include media-breakpoint-down(sm) {
       padding: 2rem;
-      width: $box-width;
-      margin: 2.5rem 0 0 0;
+      width: 100%;
+      margin: 2.5rem 0;
+      text-align: left;
     }
   }
 
@@ -117,13 +124,17 @@ export default {
     @include media-breakpoint-down(sm) {
       font-size: 2.5rem;
     }
+
+    &__small{
+      font-size: 0.8rem;
+      color: $brown;
+    }
   }
 
   &__msg {
     font-size: 1rem;
     display: inline-block;
     margin: 0 0 1rem;
-    text-align: center;
     color: #000;
     font-family: $sub-font;
     &:last-child {

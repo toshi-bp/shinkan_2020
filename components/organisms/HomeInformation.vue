@@ -3,7 +3,7 @@
       <TheContainer>
         <h2 class="information__title">
           INFORMATION
-          <small class="information__title__small">開催概要</small>
+          <small class="information__title__small">新歓の開催概要</small>
         </h2>
         <div class="information__box">
           <div class="information__box__child">
@@ -11,7 +11,8 @@
               <fa icon="door-open" fixed-width /> 開催日時
             </h2>
             <p class="information__article">
-              2020年4月11日<small class="information__article__small">(土曜日)</small>
+              2020年4月11日<small class="information__article__small">(土曜日)</small><br />
+              11:00～15:00
             </p>
             <h2 class="information__subtitle">
               <fa icon="door-open" fixed-width /> 場所
@@ -31,7 +32,7 @@
               <small class="information__article__small">〜開いた向こうに、見えるもの。〜</small>
             </p>
             <h2 class="information__subtitle">
-              <fa icon="door-open" fixed-width /> 公式SNS
+              <fa icon="door-open" fixed-width /> 公式Twitter
             </h2>
             <p class="information__article">
               <a
@@ -60,7 +61,10 @@ export default {
 
 <style lang="scss" scoped>
 .information {
-  padding: 0 0 4rem 0;
+  padding: 0 0 3rem 0;
+  @include media-breakpoint-down(sm) {
+      padding: 0 0 2rem 0;
+    }
 
   &__title {
     text-align: left;

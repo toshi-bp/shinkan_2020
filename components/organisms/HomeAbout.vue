@@ -11,7 +11,7 @@
                 新歓とは「新入生歓迎ガイダンス」の略称です。<br />
                 講義棟では各サークルによる活動の紹介が各教室で行われます。<br />
                 また体育館では、ステージ上でパフォーマンスが繰り広げられます。<br />
-                全サークルが集まって新入生勧誘をするのは1年にこの日だけ！ 
+                全サークルが集まって新入生勧誘をするのは4月11日(土)だけ！ 
               </p>
             </div>
           <img src="~/assets/image/AboutPhoto.jpg" class="about__photo">
@@ -38,7 +38,15 @@ export default {
   $box-width: 50rem; //二つの箱の幅
   $shift-width: 5rem; //移動する距離
   $header-size: 35rem; //前面の四角の大きさ
-
+  $header-sm-size: 100%;
+  @include media-breakpoint-down(md) {
+    width: $header-sm-size;
+    background-image: url(~@/assets/image/AboutPhoto.jpg);
+    background-size: cover;
+    padding: 2rem 0;
+    margin: 2rem 0 0;
+  }
+      
   &__box{
     width: 100%;
     display: flex;
@@ -50,7 +58,12 @@ export default {
     padding: 2rem;
     width: $header-size;
     margin: 0 -6rem 0 0;
-    z-index: 1;
+    z-index: 2;
+    @include media-breakpoint-down(md) {
+        width: $header-sm-size;
+        padding: 1rem;
+        background-color: rgba(#fff, 0.8);
+      }
   }
  
   &__title {
@@ -70,23 +83,19 @@ export default {
     margin: 0;
   }
 
+  
   &__photo{
     display: block;
-    width: 50%;
+    width: 45%;
+    margin: 4rem 0 0 auto;
     height: auto;
-    margin-top: 4rem;
-    z-index: 0;
+    z-index: 1;
+    opacity: 0.8;
+    filter: blur(0.3px);
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
   }
-  // &__box {
-  //   display: flex;
-  //   flex-direction: row;
-  //   width: 100%;
-  //   margin: 0 center;
-  //   background-color: #fff;
-  //   @include media-breakpoint-down(sm) {
-  //     flex-direction: column;
-  //   }
-  // }
-    
+  
   }
 </style>

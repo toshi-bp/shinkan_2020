@@ -83,7 +83,7 @@ export default {
     color: $theme-color;
     width: 3.5rem;
     height: 3.5rem;
-    box-shadow: 0 0 0.9rem rgba($color, 0.2);
+    box-shadow: 0.1rem 0.1rem 0 rgba($color, 0.2);
     outline: none;
     transition: 0.2s ease background, 0.2s ease color;
 
@@ -97,7 +97,7 @@ export default {
     }
 
     &:focus {
-      box-shadow: 0 0 0.9rem rgba($color, 0.3),
+      box-shadow: 0.1rem 0.1rem 0 rgba($color, 0.2),
         0 0 0 0.1rem rgba($theme-color, 0.5);
     }
 
@@ -111,7 +111,7 @@ export default {
       border-width: 2px;
       width: 2rem;
       height: 2rem;
-      box-shadow: 0 0 0.9rem rgba($color, 0.1);
+      box-shadow: 0.1rem 0.1rem 0 rgba($color, 0.1);
       z-index: 9450;
     }
 
