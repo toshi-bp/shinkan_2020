@@ -102,8 +102,12 @@
 
 <script>
 import TheContainer from "~/components/atoms/TheContainer.vue"
+import makeHead from "~/utils/makeHead.js";
 
 export default {
+  head() {
+    return makeHead();
+  },
   components: {
     TheContainer
   }
@@ -294,14 +298,14 @@ export default {
       width: 100%;
       margin-bottom: 1%;
     }
-    
+
     &__description {
       text-align: center;
       @include media-breakpoint-down(sm) {
         font-size: 0.8rem;
       }
     }
-    
+
     &__time{
       margin: 0;
     }
@@ -309,7 +313,7 @@ export default {
     &__place{
       margin: 0;
     }
-    
+
     &__title {
       text-align: center;
       font-size: 1.8rem;

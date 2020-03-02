@@ -1,9 +1,18 @@
 <template>
-  <div>
+  <div class="info">
     <CircleInfoHeader>
       <template #title>
         <slot name="title" />
       </template>
+
+      <template #lead>
+        <slot name="lead" />
+      </template>
+
+      <template #place>
+        <slot name="place" />
+      </template>
+
     </CircleInfoHeader>
 
     <CircleInfoSummary>

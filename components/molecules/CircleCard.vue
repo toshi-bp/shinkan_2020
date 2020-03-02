@@ -66,6 +66,10 @@ export default {
       type: String,
       required: true,
     },
+    lead: {
+      type: String,
+      default: '',
+    },
     place: {
       type: String,
       default: '',

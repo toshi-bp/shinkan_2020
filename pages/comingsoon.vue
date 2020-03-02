@@ -13,8 +13,12 @@
 
 <script>
 import LinkButton from "~/components/atoms/LinkButton.vue"
+import makeHead from "~/utils/makeHead.js";
 
 export default {
+  head() {
+    return makeHead();
+  },
   components: {
     LinkButton
   }

@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import makeHead from "~/utils/makeHead.js";
 import SubHeader from "~/components/organisms/SubHeader.vue";
 import CircleCard from "~/components/molecules/CircleCard.vue";
 import TheContainer from "~/components/atoms/TheContainer.vue";
@@ -35,6 +36,9 @@ import TheColumn from "~/components/atoms/TheColumn.vue";
 import LinkButton from "~/components/atoms/LinkButton.vue";
 
 export default {
+  head() {
+    return makeHead("サークル紹介", "理科大のサークルが大集合");
+  },
   components: {
     SubHeader,
     CircleCard,
