@@ -17,7 +17,7 @@
           </li>
           <li class="info-header__info__item">
             <fa icon="map-pin" fixed-width class="info-header__icon" />
-            <slot name="place" />
+            <slot name="booth" />
           </li>
         </ul>
       </div>
@@ -38,25 +38,25 @@ export default {
 <style lang="scss" scoped>
 .info-header {
   display: flex;
-  justify-content: center;
   align-items: center;
-  border: 0.7rem solid rgba($blue, $alpha: 1);
-  border-bottom: none;
+  justify-content: center;
+
   &__info {
-    list-style: none;
-    padding: 0 0;
-    &__title {
-      font-family: $sub-font;
-      list-style: none;
-      font-size: 1.5rem;
-      color: $brown;
-      margin-bottom: 0;
-    }
+    font-size: 1.5rem;
+    color: $brown;
+    margin-bottom: 0;
 
     &__item {
       font-family: $sub-font;
       list-style: none;
       font-size: 1rem;
+      margin-bottom: 0;
+    }
+
+    &__title {
+      font-family: $theme-font;
+      list-style: none;
+      font-size: 1.5rem;
       margin-bottom: 0;
     }
   }

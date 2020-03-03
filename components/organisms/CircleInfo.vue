@@ -9,12 +9,68 @@
         <slot name="lead" />
       </template>
 
-      <template #place>
-        <slot name="place" />
+      <template #booth>
+        <slot name="booth" />
       </template>
     </CircleInfoHeader>
 
-    <CircleInfoSummary />
+    <CircleInfoSummary :year="年" :month="月">
+      <template #day>
+        <slot name="day" />
+      </template>
+
+      <template #place>
+        <slot name="place" />
+      </template>
+
+      <template #content>
+        <slot name="content" />
+      </template>
+
+      <template #leader>
+        <slot name="leader" />
+      </template>
+
+      <template #people>
+        <slot name="people" />
+      </template>
+
+      <template #male>
+        <slot name="male" />
+      </template>
+
+      <template #female>
+        <slot name="female" />
+      </template>
+
+      <template #cost>
+        <slot name="cost" />
+      </template>
+
+      <template #condition>
+        <slot name="condition" />
+      </template>
+
+      <template #twitter>
+        <slot name="twitter" />
+      </template>
+
+      <template #homepage>
+        <slot name="homepage" />
+      </template>
+
+      <template #contact>
+        <slot name="contact" />
+      </template>
+
+      <template #instagram>
+        <slot name="instagram" />
+      </template>
+
+      <template #remarks>
+        <slot name="remarks" />
+      </template>
+    </CircleInfoSummary>
   </div>
 </template>
 
@@ -36,4 +92,5 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

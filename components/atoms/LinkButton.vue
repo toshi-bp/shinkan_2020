@@ -56,7 +56,6 @@ export default {
   &__inner {
     padding: 0.8rem 2.5rem;
     color: $theme-color;
-    font-weight: bold;
     text-align: center;
     line-height: 1;
     position: relative;
