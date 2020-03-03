@@ -23,7 +23,7 @@
           </nuxt-link>
         </li>
         <li class="global-nav__list__item">
-          <nuxt-link to="/circle/" class="global-nav__list__item__link">
+          <nuxt-link to="/circles/" class="global-nav__list__item__link">
             <fa icon="user" class="global-nav__list__item__icon" fixed-width />
             サークル紹介
           </nuxt-link>

@@ -8,24 +8,25 @@
     <header>
       <TheContainer>
         <div class="info-header">
-          <img
-            src="~/assets/image/symbol.png"
-            alt="画像よ"
+          <figure
+            :style="{
+              'background-image': `url(${require('~/assets/image/symbol.png')})`
+            }"
             class="info-header__img"
-          >
-          <ul class="info-heder__info">
-            <li class="info-header__info__title">
+          />
+          <div class="info-header__info">
+            <h2 class="info-header__info__title">
               <slot name="title" />
-            </li>
-            <li class="info-header__info__item">
+            </h2>
+            <p class="info-header__info__item">
               <!--fa icon="star" fixed-width class="info-header__icon"/-->
               <slot name="lead" />
-            </li>
-            <li class="info-header__info__item">
+            </p>
+            <p class="info-header__info__item">
               <fa icon="map-pin" fixed-width class="info-header__icon" />
               <slot name="booth" />
-            </li>
-          </ul>
+            </p>
+          </div>
         </div>
       </TheContainer>
     </header>
@@ -34,12 +35,12 @@
 
 <script>
 import TheContainer from "~/components/atoms/TheContainer.vue"
-import SubHeader from "~/components/organisms/SubHeader.vue";
+import SubHeader from "~/components/organisms/SubHeader.vue"
 
 export default {
   components: {
     TheContainer,
-    SubHeader,
+    SubHeader
   }
 }
 </script>
@@ -48,35 +49,43 @@ export default {
 .info-header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  margin: 0 0 3rem;
 
   @include media-breakpoint-down(sm) {
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   &__info {
-    font-size: 1.5rem;
-    color: $brown;
-    margin-bottom: 0;
+    margin: 0;
+    flex: 1;
+    padding: 0 0 0 1.5rem;
+
+    @include media-breakpoint-down(sm) {
+      padding: 1rem 0 0;
+      text-align: center;
+    }
 
     &__item {
       font-family: $sub-font;
-      list-style: none;
       font-size: 1rem;
-      margin-bottom: 0;
+      margin: 0;
     }
 
     &__title {
       font-family: $theme-font;
-      list-style: none;
       font-size: 1.5rem;
-      margin-bottom: 0;
+      margin: 0;
     }
   }
 
   &__img {
     width: 15rem;
+    height: 15rem;
+    background: center center / contain no-repeat;
+    border: 1px solid $muted;
+    margin: 0;
   }
+
   &__icon {
     opacity: 0.8;
   }

@@ -1,51 +1,51 @@
 <template>
   <CircleInfo :image-url="require(`~/assets/image/symbol.png`)">
     <template #title>
-      金村の会
+      サークル名
     </template>
 
     <template #lead>
-      金村琢磨の時代が今、始まる。
+      サークル概要
     </template>
 
     <template #booth>
-      RHK
+      ブース
     </template>
 
     <template #day>
-      金
+      活動日
     </template>
 
     <template #place>
-      金村の森
+      活動場所
     </template>
 
     <template #content>
-      金村後援会
+      活動内容
     </template>
 
     <template #leader>
-      金村琢磨
+      代表者氏名
     </template>
 
     <template #people>
-      1
+      人数
     </template>
 
     <template #male>
-      1
+      男
     </template>
 
     <template #female>
-      0
+      女
     </template>
 
     <template #cost>
-      3,000,000
+      部費
     </template>
 
     <template #condition>
-      なし
+      入部条件
     </template>
 
     <template #twitter>
@@ -53,19 +53,19 @@
     </template>
 
     <template #homepage>
-      ほーむぺーじ
+      ホームページ
     </template>
 
     <template #contact>
-      めーる
+      メール
     </template>
 
     <template #instagram>
-      いんすたぐらむ
+      Instagram
     </template>
 
     <template #remarks>
-      非公認
+      備考
     </template>
   </CircleInfo>
 </template>

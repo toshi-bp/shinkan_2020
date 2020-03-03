@@ -2,7 +2,7 @@
   <header class="sub-header">
     <TheContainer>
       <h1 class="sub-header__title">
-      <!--:class="{'sub-header__title--no-margin': !$slots.lead}"-->
+        <!--:class="{'sub-header__title--no-margin': !$slots.lead}"-->
         <slot name="title" />
       </h1>
     </TheContainer>
@@ -32,7 +32,7 @@ export default {
     z-index: 2;
     display: inline-block;
 
-    &::before{
+    &::before {
       content: "";
       display: inline-block;
       position: absolute;
@@ -44,7 +44,7 @@ export default {
       height: 1rem;
       opacity: 0.8;
     }
-    &::after{
+    &::after {
       content: "";
       display: inline-block;
       position: absolute;

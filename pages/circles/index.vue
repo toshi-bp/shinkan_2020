@@ -23,9 +23,9 @@
             to="/circles/"
             image-url="~/assets/image/symbol.png"
             label-type="blue"
-            label-text="KANEMURASAN"
-            title="金村の会"
-            place="RHK本部"
+            label-text="sample系"
+            title="sample名前"
+            place="sample場所"
           />
         </TheColumn>
       </TheRow>

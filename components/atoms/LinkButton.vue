@@ -38,6 +38,7 @@ export default {
   position: relative;
   overflow: hidden;
   font-family: $sub-font;
+  box-shadow: 0.25rem 0.25rem 0 rgba($theme-color, 0.5);
 
   &::before {
     content: "";
@@ -64,6 +65,8 @@ export default {
 
   &:hover {
     text-decoration: none;
+    box-shadow: 0 0 0 rgba($theme-color, 0.2);
+    transform: translate(0.25rem, 0.25rem);
 
     &::before {
       transform: translateX(0);

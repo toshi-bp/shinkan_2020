@@ -2,7 +2,7 @@
   <section class="section">
     <h2 class="section__title">
       <slot name="title" />
-      <small class="section__title__small" v-if="$slots.titleSmall">
+      <small v-if="$slots.titleSmall" class="section__title__small">
         <slot name="titleSmall" />
       </small>
     </h2>

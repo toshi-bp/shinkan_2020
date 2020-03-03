@@ -146,7 +146,6 @@ export default {
     margin: 0 0 0.5rem;
   }
 
-
   &__text {
     margin: 0 0 1rem;
 

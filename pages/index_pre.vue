@@ -14,11 +14,21 @@
           </h1>
           <p class="head__lead">
             <span class="head__lead__text">2020年度東京理科大学</span><!--
-            --><span class="head__lead__text">野田地区新入生歓迎ガイダンス</span>
+            --><span class="head__lead__text">野田地区新入生歓迎ガイダンス</span><!--
+            --><span class="head__lead__text">(課外活動ガイダンス)</span>
           </p>
           <p class="head__lead">
             2020年4月11日(土) 11:00〜15:00
           </p>
+          <p class="comingsoon">
+            近日公開
+          </p>
+          <p class="head__lead">
+            <a href="https://twitter.com/tusnodashinan" target="_blank" rel="noopener">
+                <fa :icon="['fab', 'twitter']" fixed-width />
+                @tusnodashinkan
+            </a>
+          </p></p>
         </div>
       </div>
     </TheContainer>
@@ -81,6 +91,7 @@ export default {
     display: inline-block;
     line-height: 1.4;
     margin: 0 0 1rem;
+
     @include media-breakpoint-down(sm) {
       font-size: 1.5rem;
       padding: 0;
@@ -92,11 +103,17 @@ export default {
 
   &__lead {
     font-family: $sub-font;
-    margin: 0 0 0.5rem;
+    margin-bottom: 0.5rem;
 
     &__text {
       display: inline-block;
     }
   }
+}
+
+.comingsoon {
+    color: $muted;
+    font-family: $sub-font;
+    font-size: 1rem;
 }
 </style>
