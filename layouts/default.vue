@@ -2,8 +2,8 @@
   <div>
     <GlobalHeader />
     <nuxt />
-    <GlobalBaum v-if="$route.name !== 'index_pre'" />
-    <GlobalFooter v-if="$route.name !== 'index_pre'" />
+    <GlobalBaum v-if="$route.name !== 'index'" />
+    <GlobalFooter v-if="$route.name !== 'index'" />
   </div>
 </template>
 
