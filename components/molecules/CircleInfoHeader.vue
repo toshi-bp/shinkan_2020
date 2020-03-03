@@ -43,6 +43,7 @@ export default {
   justify-content: center;
   align-items: center;
   border: 0.7rem solid rgba($blue, $alpha: 1.0);
+  border-bottom: none;
   &__info {
     list-style: none;
     padding: 0 0;

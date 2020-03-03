@@ -6,7 +6,9 @@
     class="link-button"
     tabindex="0"
   >
-    <slot />
+    <div class="link-button__inner">
+      <slot />
+    </div>
   </component>
 </template>
 
@@ -30,19 +32,47 @@ export default {
 <style lang="scss" scoped>
 .link-button {
   display: inline-block;
-  padding: 0.8rem 2.5rem;
   border: 2px solid $theme-color;
-  color: $theme-color;
-  font-weight: bold;
-  text-align: center;
   transition: 0.15s ease all;
-  line-height: 1;
-  background: #ffffff;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  font-family: $sub-font;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    z-index: 1;
+    background: $theme-color;
+    transform: translateX(-100%) translateX(-1px); //calc は IE で使えない
+    transition: 0.15s ease all;
+  }
+
+  &__inner {
+    padding: 0.8rem 2.5rem;
+    color: $theme-color;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    position: relative;
+    z-index: 2;
+  }
 
   &:hover {
-    background: $theme-color;
-    color: #ffffff;
     text-decoration: none;
+
+    &::before {
+      transform: translateX(0);
+    }
+  }
+
+  &:hover &__inner {
+    color: #fff;
   }
 
   &:active {
