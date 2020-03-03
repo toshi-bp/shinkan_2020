@@ -2,14 +2,13 @@
   <div>
     <header class="header">
       <nuxt-link to="/" class="header__title">
-        理科大野田地区 新歓２０２０
+        理科大野田地区 新歓2020
       </nuxt-link>
       <!-- <nuxt-link to="/about/">新館って何？</nuxt-link> -->
       <div class="header__date">
         <span class="header__date__number">４</span>月<span
           class="header__date__number"
-          >11</span
-        >日（土）
+          >11</span>日（土）
       </div>
     </header>
     <GlobalBaum />
@@ -28,7 +27,7 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  box-shadow: 0 1px 6px 1px rgba(#000, 0.16);
+  box-shadow: 0 5px 0 rgba(#000, 0.1);
   height: $global-header-height;
   position: fixed;
   top: 0;
