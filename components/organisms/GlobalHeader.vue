@@ -1,26 +1,37 @@
 <template>
   <div>
     <header class="header">
-      <nuxt-link to="/" class="header__title">
-        理科大野田地区 新歓2020
-      </nuxt-link>
-      <!-- <nuxt-link to="/about/">新館って何？</nuxt-link> -->
-      <div class="header__date">
-        <span class="header__date__number">４</span>月<span
-          class="header__date__number"
-          >11</span>日（土）
-      </div>
+      <TheContainer class="header__container">
+        <div class="header__inner">
+          <nuxt-link to="/" class="header__title">
+            <div class="header__title__sub">
+              2020年度東京理科大学野田地区
+            </div>
+            <div class="header__title__main">
+              新入生歓迎ガイダンス
+            </div>
+          </nuxt-link>
+          <!-- <nuxt-link to="/about/">新館って何？</nuxt-link> -->
+          <div class="header__date">
+            <span class="header__date__number header__date__hidden-xs">2020</span>
+            <span class="header__date__hidden-xs">年</span>
+            <span class="header__date__number">4</span>
+            月
+            <span class="header__date__number">11</span>
+            日(土)
+          </div>
+        </div>
+      </TheContainer>
     </header>
-    <GlobalBaum />
   </div>
 </template>
 
 <script>
-import GlobalBaum from "~/components/organisms/GlobalBaum.vue"
+import TheContainer from "~/components/atoms/TheContainer.vue"
 
 export default {
   components: {
-    GlobalBaum
+    TheContainer
   }
 }
 </script>
@@ -35,6 +46,17 @@ export default {
   right: 0;
   z-index: $z-index-global-header;
   background: $theme-color;
+
+  &__container {
+    height: 100%;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
   @include media-breakpoint-down(sm) {
     height: 3.2rem;
   }
@@ -44,41 +66,49 @@ export default {
   &__title {
     color: #fff;
     font-family: $theme-font;
-    font-size: 24px;
-    display: inline-block;
-    margin: 0.8rem 0 1.15rem 2rem;
+    font-size: 1.5rem;
     text-decoration: none;
-    @include media-breakpoint-down(sm) {
-      font-size: 20px;
-      margin: 0.6rem 0 0.6rem 1.5rem;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     @include media-breakpoint-down(md) {
-      font-size: 22px;
-      margin: 0.7rem 0 0.6rem 1.5rem;
+      font-size: 1.3rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+    }
+
+    &__sub {
+      font-size: 0.6rem;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+
+    &__main {
+      font-size: 1rem;
+      line-height: 1;
     }
   }
   &__date {
+    border: 1px solid #fff;
     color: #fff;
-    font-family: $theme-font;
-    font-size: 16px;
+    padding: 0.25rem 0.5rem;
+    line-height: 1;
+    font-size: 0.75rem;
     display: inline-block;
-    //float:right;
-    margin: 0 0 1.15rem 2rem;
-    @include media-breakpoint-down(sm) {
-      font-size: 14px;
-      margin: 0.6rem 0 0.6rem 1.5rem;
-    }
-    @include media-breakpoint-down(md) {
-      // font-size:16px;
-      margin: 0.6rem 0 0.6rem 1.5rem;
-    }
+    margin: 0 0 0 1rem;
+    display: flex;
+    align-items: flex-end;
+
     &__number {
-      font-size: 22px;
-      @include media-breakpoint-down(sm) {
-        font-size: 18px;
-      }
-      @include media-breakpoint-down(md) {
-        font-size: 20px;
+      font-size: 1rem;
+    }
+
+    &__hidden-xs {
+      @include media-breakpoint-down(xs) {
+        display: none;
       }
     }
   }

@@ -13,7 +13,8 @@
             </span>
           </h1>
           <p class="head__lead">
-            2020年度東京理科大学野田地区新入生歓迎ガイダンス
+            <span class="head__lead__text">2020年度東京理科大学</span><!--
+            --><span class="head__lead__text">野田地区新入生歓迎ガイダンス</span>
           </p>
           <p class="head__lead">
             2020年4月11日(土) 11:00〜15:00
@@ -25,7 +26,7 @@
 </template>
 
 <script>
-import TheContainer from "~/components/atoms/TheContainer.vue";
+import TheContainer from "~/components/atoms/TheContainer.vue"
 
 export default {
   components: {
@@ -45,7 +46,6 @@ export default {
     justify-content: center;
     @include media-breakpoint-down(sm) {
       flex-direction: column;
-      text-align: center;
     }
   }
 
@@ -55,6 +55,7 @@ export default {
     display: block;
     width: 100%;
     height: auto;
+    margin: 0 0 1rem;
     @include media-breakpoint-down(sm) {
       flex: none;
       max-width: 10rem;
@@ -78,9 +79,10 @@ export default {
     font-family: $theme-font;
     color: $brown;
     display: inline-block;
+    line-height: 1.4;
+    margin: 0 0 1rem;
     @include media-breakpoint-down(sm) {
       font-size: 1.5rem;
-      margin: 0 auto;
       padding: 0;
     }
     &__text {
@@ -90,7 +92,11 @@ export default {
 
   &__lead {
     font-family: $sub-font;
-    margin-bottom: 0.25rem;
+    margin: 0 0 0.5rem;
+
+    &__text {
+      display: inline-block;
+    }
   }
 }
 </style>
