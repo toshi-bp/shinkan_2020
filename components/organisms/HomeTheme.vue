@@ -1,34 +1,36 @@
 <template>
-   <div class="theme">
-      <div class="theme__back">
-        <TheContainer>
-          <div class="theme__box">
-            <div class="theme__header">
-              <h2 class="theme__title">
-                THEME
-              </h2>
-              <p class="theme__tobira">
-                「扉」
-              </p>
-              <small class="theme__tobira__small">開いた向こうに、見えるもの。</small>
-            </div>
-            <div class="theme__body">
-              <p class="theme__msg">
-                今年の新歓テーマは「扉」です。<br >
-                新入生の皆さんには<br >
-                想像を超える<br >
-                新しい生活が待っているかと思います。
-              </p>
-              <p class="theme__msg">
-                今年度のテーマである「扉」には、<br >
-                これから始まる自分だけの新生活への扉を開いて<br >
-                歩み出してほしいという願いを込めました。
-              </p>
-            </div>
+  <div class="theme">
+    <div class="theme__back">
+      <TheContainer>
+        <div class="theme__box">
+          <div class="theme__header">
+            <h2 class="theme__title">
+              THEME
+            </h2>
+            <p class="theme__tobira">
+              「扉」
+            </p>
+            <small class="theme__tobira__small"
+              >開いた向こうに、見えるもの。</small
+            >
           </div>
-        </TheContainer>
-      </div>
+          <div class="theme__body">
+            <p class="theme__msg">
+              今年の新歓テーマは「扉」です。<br />
+              新入生の皆さんには<br />
+              想像を超える<br />
+              新しい生活が待っているかと思います。
+            </p>
+            <p class="theme__msg">
+              今年度のテーマである「扉」には、<br />
+              これから始まる自分だけの新生活への扉を開いて<br />
+              歩み出してほしいという願いを込めました。
+            </p>
+          </div>
+        </div>
+      </TheContainer>
     </div>
+  </div>
 </template>
 
 <script>
@@ -36,7 +38,7 @@ import TheContainer from "~/components/atoms/TheContainer.vue"
 
 export default {
   components: {
-    TheContainer,
+    TheContainer
   }
 }
 </script>
@@ -54,7 +56,7 @@ export default {
     padding: 4rem 0;
     @include media-breakpoint-down(sm) {
       background-image: url(~@/assets/image/back_sm.svg);
-      padding:2rem 0 0 0;
+      padding: 2rem 0 0 0;
     }
   }
 
@@ -92,7 +94,6 @@ export default {
     z-index: 2;
     @include media-breakpoint-down(sm) {
       // margin: 0 calc(#{$box-width} - #{$header-sm-size} / 2);
-      
     }
   }
 
@@ -125,7 +126,7 @@ export default {
       font-size: 2.5rem;
     }
 
-    &__small{
+    &__small {
       font-size: 0.8rem;
       color: $brown;
     }

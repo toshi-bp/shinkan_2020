@@ -1,7 +1,5 @@
 <template>
-  <CircleInfo
-    :imageUrl="require(`~/assets/image/symbol.png`)"
-  >
+  <CircleInfo :image-url="require(`~/assets/image/symbol.png`)">
     <template #title>
       金村の会
     </template>
@@ -17,23 +15,21 @@
 </template>
 
 <script>
-import CircleInfo from "~/components/organisms/CircleInfo.vue";
-import makeHead from "~/utils/makeHead.js";
+import CircleInfo from "~/components/organisms/CircleInfo.vue"
+import makeHead from "~/utils/makeHead.js"
 
 export default {
-    head() {
-      return makeHead(
-        '金村の会',
-        '金村琢磨の時代が今始まる',
-        require('~/assets/image/symbol.png')
-      );
-    },
   components: {
-    CircleInfo,
+    CircleInfo
+  },
+  head() {
+    return makeHead(
+      "金村の会",
+      "金村琢磨の時代が今始まる",
+      require("~/assets/image/symbol.png")
+    )
   }
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

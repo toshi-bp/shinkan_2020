@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import makeHead from "~/utils/makeHead.js";
+import makeHead from "~/utils/makeHead.js"
 
 export default {
   head() {
-    return makeHead();
-  },
+    return makeHead()
+  }
 }
 </script>
 

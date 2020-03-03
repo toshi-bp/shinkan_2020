@@ -4,7 +4,7 @@
     <HomeTheme />
     <HomeAbout />
     <TheContainer>
-     <HomeEvents />
+      <HomeEvents />
     </TheContainer>
     <HomeInformation />
     <!-- <TheContainer>
@@ -25,9 +25,6 @@ import HomeEvents from "~/components/organisms/HomeEvents.vue"
 import HomeTwitter from "~/components/organisms/HomeTwitter.vue"
 
 export default {
-  head() {
-    return makeHead();
-  },
   components: {
     TheContainer,
     LinkButton,
@@ -36,11 +33,12 @@ export default {
     HomeAbout,
     HomeInformation,
     HomeEvents,
-    HomeTwitter,
+    HomeTwitter
+  },
+  head() {
+    return makeHead()
   }
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

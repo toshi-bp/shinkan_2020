@@ -41,8 +41,8 @@
 .events {
   padding: 3rem 0;
   @include media-breakpoint-down(sm) {
-      padding: 2rem 0;
-    }
+    padding: 2rem 0;
+  }
 
   &__title {
     text-align: left;
@@ -76,8 +76,8 @@
     box-shadow: 0.25rem 0.25rem 0 rgba($blue, 0.5);
     @include media-breakpoint-down(sm) {
       width: 100%;
-      &:last-child{
-      margin: 1rem 0 0 0;
+      &:last-child {
+        margin: 1rem 0 0 0;
       }
     }
 

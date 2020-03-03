@@ -1,7 +1,9 @@
 <template>
   <TheContainer>
     <div>
-      <h2 class="summary__title">金村さん最高w</h2>
+      <h2 class="summary__title">
+        金村さん最高w
+      </h2>
       <p class="summary__day">
         <slot name="day" />
       </p>
@@ -10,18 +12,18 @@
 </template>
 
 <script>
-import TheContainer from "~/components/atoms/TheContainer.vue";
+import TheContainer from "~/components/atoms/TheContainer.vue"
 
 export default {
   components: {
-    TheContainer,
+    TheContainer
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .summary {
-  &__title{
+  &__title {
     font-family: $sub-font;
   }
 }

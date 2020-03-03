@@ -2,7 +2,7 @@
   <div class="head">
     <TheContainer>
       <div class="head__flex">
-        <img src="~/assets/image/symbol.svg" class="head__logo">
+        <img src="~/assets/image/symbol.svg" class="head__logo" />
         <div class="head__main">
           <h1 class="head__catchcopy">
             <span class="head__catchcopy__text">
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import TheContainer from "~/components/atoms/TheContainer.vue";
+import TheContainer from "~/components/atoms/TheContainer.vue"
 
 export default {
   components: {

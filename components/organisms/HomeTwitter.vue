@@ -1,20 +1,22 @@
 <template>
-   <div class="twitter">
-          <h2 class="twitter__title">
-            <fa :icon="['fab', 'twitter']" fixed-width />Twitter
-          </h2>
-          <a
-            class="twitter-timeline"
-            data-width="500"
-            data-height="1000"
-            href="https://twitter.com/tusnodashinkan?ref_src=twsrc%5Etfw"
-          >Tweets by tusnodashinkan</a>
-          <script
-            async
-            src="https://platform.twitter.com/widgets.js"
-            charset="utf-8"
-          />
-        </div>
+  <div class="twitter">
+    <h2 class="twitter__title">
+      <fa :icon="['fab', 'twitter']" fixed-width />Twitter
+    </h2>
+    <a
+      class="twitter-timeline"
+      data-width="500"
+      data-height="1000"
+      href="https://twitter.com/tusnodashinkan?ref_src=twsrc%5Etfw"
+      >Tweets by tusnodashinkan</a
+    >
+    >
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    />
+  </div>
 </template>
 
 <style lang="scss" scoped>

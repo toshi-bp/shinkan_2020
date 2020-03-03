@@ -12,32 +12,28 @@
       <template #place>
         <slot name="place" />
       </template>
-
     </CircleInfoHeader>
 
-    <CircleInfoSummary>
-    </CircleInfoSummary>
+    <CircleInfoSummary />
   </div>
 </template>
 
 <script>
-import CircleInfoHeader from "~/components/molecules/CircleInfoHeader.vue";
-import CircleInfoSummary from "~/components/molecules/CircleInfoSummary.vue";
+import CircleInfoHeader from "~/components/molecules/CircleInfoHeader.vue"
+import CircleInfoSummary from "~/components/molecules/CircleInfoSummary.vue"
 
 export default {
   components: {
     CircleInfoHeader,
-    CircleInfoSummary,
+    CircleInfoSummary
   },
   props: {
     imageUrl: {
       type: String,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

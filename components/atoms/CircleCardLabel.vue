@@ -2,7 +2,7 @@
   <span
     class="circle-card-label"
     :style="{
-      backgroundColor: labelColor,
+      backgroundColor: labelColor
     }"
   >
     <slot />
@@ -14,24 +14,24 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'theme',
+      default: "theme"
     }
   },
   computed: {
     labelColor() {
       const typesDict = {
-        theme: '#97c031',
-        color: '#3b3636',
-        yellow: '#e9d431',
-        cream: '#f8e994',
-        blue: '#8ed0e3',
-      };
+        theme: "#97c031",
+        color: "#3b3636",
+        yellow: "#e9d431",
+        cream: "#f8e994",
+        blue: "#8ed0e3"
+      }
 
       if (this.type in typesDict) {
-        return typesDict[this.type];
+        return typesDict[this.type]
       }
-      return typesDict['theme'];
-    },
+      return typesDict["theme"]
+    }
   }
 }
 </script>
