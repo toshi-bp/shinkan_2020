@@ -1,36 +1,45 @@
 <template>
-  <header>
-    <TheContainer>
-      <div class="info-header">
-        <img
-          src="~/assets/image/symbol.png"
-          alt="画像よ"
-          class="info-header__img"
-        >
-        <ul class="info-heder__info">
-          <li class="info-header__info__title">
-            <slot name="title" />
-          </li>
-          <li class="info-header__info__item">
-            <!--fa icon="star" fixed-width class="info-header__icon"/-->
-            <slot name="lead" />
-          </li>
-          <li class="info-header__info__item">
-            <fa icon="map-pin" fixed-width class="info-header__icon" />
-            <slot name="booth" />
-          </li>
-        </ul>
-      </div>
-    </TheContainer>
-  </header>
+  <div>
+    <SubHeader>
+      <template #title>
+        サークル紹介
+      </template>
+    </SubHeader>
+    <header>
+      <TheContainer>
+        <div class="info-header">
+          <img
+            src="~/assets/image/symbol.png"
+            alt="画像よ"
+            class="info-header__img"
+          >
+          <ul class="info-heder__info">
+            <li class="info-header__info__title">
+              <slot name="title" />
+            </li>
+            <li class="info-header__info__item">
+              <!--fa icon="star" fixed-width class="info-header__icon"/-->
+              <slot name="lead" />
+            </li>
+            <li class="info-header__info__item">
+              <fa icon="map-pin" fixed-width class="info-header__icon" />
+              <slot name="booth" />
+            </li>
+          </ul>
+        </div>
+      </TheContainer>
+    </header>
+  </div>
 </template>
 
 <script>
 import TheContainer from "~/components/atoms/TheContainer.vue"
+import SubHeader from "~/components/organisms/SubHeader.vue";
 
 export default {
   components: {
-    TheContainer
+    TheContainer,
+    SubHeader,
   }
 }
 </script>
@@ -40,6 +49,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include media-breakpoint-down(sm) {
+    flex-wrap: wrap;
+  }
 
   &__info {
     font-size: 1.5rem;
