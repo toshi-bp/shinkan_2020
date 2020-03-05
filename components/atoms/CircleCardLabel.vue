@@ -20,11 +20,11 @@ export default {
   computed: {
     labelColor() {
       const typesDict = {
-        theme: "#97c031",
-        color: "#3b3636",
-        yellow: "#e9d431",
-        cream: "#f8e994",
-        blue: "#8ed0e3"
+        cultual: "#97c031", //文化系
+        //color: "#3b3636",
+        musical: "#e9d431", //音楽系
+        //cream: "#f8e994",
+        physical: "#8ed0e3" //運動系
       }
 
       if (this.type in typesDict) {

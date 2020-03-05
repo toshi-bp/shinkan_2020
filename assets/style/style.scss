@@ -1,7 +1,5 @@
-@import 'normalize.css/normalize.css';
 @import './styleResources/variables';
 @import '~bootstrap/scss/bootstrap-reboot';
-@import '~bootstrap/scss/bootstrap-grid';
 
 body {
   font-feature-settings: "palt";
@@ -9,10 +7,6 @@ body {
   line-height: 1.7;
   color: $color;
   padding-top: $global-header-height;
-}
-
-.text-center {
-  text-align: center;
 }
 
 strong,

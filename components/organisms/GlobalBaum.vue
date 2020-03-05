@@ -8,7 +8,7 @@
       <fa :icon="active ? 'times' : 'bars'" fixed-width />
       <span class="global-nav__toggle__tooltip">メニュー</span>
     </button>
-    <square class="global-nav__toggle__square" />
+    <div class="global-nav__toggle__square" />
     <div
       class="global-nav__bg"
       :class="{ '--active': active }"
