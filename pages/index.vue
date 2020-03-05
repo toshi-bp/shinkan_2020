@@ -24,11 +24,6 @@
             近日公開
           </p>
           <p class="head__lead">
-<<<<<<< HEAD
-            <a href="https://twitter.com/tusnodashinan" target="_blank" rel="noopener">
-              <fa :icon="['fab', 'twitter']" fixed-width />
-              @tusnodashinkan
-=======
             <a
               href="https://twitter.com/tusnodashinkan"
               target="_blank"
@@ -36,7 +31,6 @@
               <fa :icon="['fab', 'twitter']" fixed-width
             />
             @tusnodashinkan
->>>>>>> 2b3eb5d2059046f523d0921997d5abcf12d0d605
             </a>
           </p>
         </div>
