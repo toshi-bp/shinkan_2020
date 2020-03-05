@@ -80,8 +80,8 @@ export default {
   },
   head() {
     return makeHead(
-      "金村の会",
-      "金村琢磨の時代が今始まる",
+      "サークル名",
+      "サークル概要",
       require("~/assets/image/symbol.png")
     )
   }

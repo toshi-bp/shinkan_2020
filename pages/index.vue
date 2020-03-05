@@ -24,11 +24,21 @@
             近日公開
           </p>
           <p class="head__lead">
+<<<<<<< HEAD
             <a href="https://twitter.com/tusnodashinan" target="_blank" rel="noopener">
               <fa :icon="['fab', 'twitter']" fixed-width />
               @tusnodashinkan
+=======
+            <a
+              href="https://twitter.com/tusnodashinkan"
+              target="_blank"
+              rel="noopener"
+              <fa :icon="['fab', 'twitter']" fixed-width
+            />
+            @tusnodashinkan
+>>>>>>> 2b3eb5d2059046f523d0921997d5abcf12d0d605
             </a>
-          </p></p>
+          </p>
         </div>
       </div>
     </TheContainer>
@@ -36,6 +46,7 @@
 </template>
 
 <script>
+import makeHead from "~/utils/makeHead.js"
 import TheContainer from "~/components/atoms/TheContainer.vue"
 import LinkButton from "~/components/atoms/LinkButton.vue"
 import HomeHead from "~/components/organisms/HomeHead.vue"
@@ -54,7 +65,10 @@ export default {
     HomeAbout,
     HomeInformation,
     HomeEvents,
-    HomeTwitter,
+    HomeTwitter
+  },
+  head() {
+    return makeHead()
   }
 }
 </script>
@@ -126,8 +140,8 @@ export default {
 }
 
 .comingsoon {
-    color: $muted;
-    font-family: $sub-font;
-    font-size: 1rem;
+  color: $muted;
+  font-family: $sub-font;
+  font-size: 1rem;
 }
 </style>
