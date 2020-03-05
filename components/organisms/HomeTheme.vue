@@ -48,12 +48,12 @@ export default {
   $box-width: 50rem; //二つの箱の幅
   $shift-width: 5rem; //移動する距離
   $header-size: 15rem; //前面の四角の大きさ
-
   &__back {
     background-image: url(~@/assets/image/back.svg);
     background-size: cover;
     width: 100%;
     padding: 4rem 0;
+    margin-top: 1rem;
     @include media-breakpoint-down(sm) {
       background-image: url(~@/assets/image/back_sm.svg);
       padding: 2rem 0 0 0;
