@@ -3,10 +3,10 @@
     <TheContainer>
       <div class="footer__row">
         <div class="footer__head">
-          <img src="~/assets/image/symbol.svg" class="footer__logo" />
+          <img src="~/assets/image/symbol.svg" class="footer__logo">
           <p class="footer__copyright">
             2020年度 東京理科大学野田地区
-            <br>新入生歓迎ガイダンス実行委員会
+            <br >新入生歓迎ガイダンス実行委員会
           </p>
         </div>
         <div class="footer__ridaisai">

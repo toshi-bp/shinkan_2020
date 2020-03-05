@@ -24,7 +24,7 @@
               class="information__article__small information__article__small--is-block"
               >東京理科大学野田キャンパス</small
             >
-            講義棟<br >
+            講義棟<br />
             森戸記念体育館
           </p>
         </div>
