@@ -6,14 +6,28 @@
         <slot name="titleSmall" />
       </small>
     </h2>
-    <div class="section__box">
+    <div
+      class="section__box"
+      :class="{
+        'section__box--is_green': type === 'green',
+        'section__box--is_blue': type === 'blue',
+        'section__box--is_yellow': type === 'yellow'
+      }"
+    >
       <slot />
     </div>
   </section>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    type: {
+      type: String,
+      default: "green"
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -38,8 +52,21 @@ export default {}
     margin: 0 center;
     background-color: #fff;
     padding: 2rem;
-    border: 3px solid $theme-color;
-    box-shadow: 0.25rem 0.25rem 0 rgba($theme-color, 0.5);
+
+    &--is_green {
+      border: 3px solid $theme-color;
+      box-shadow: 0.25rem 0.25rem 0 rgba($theme-color, 0.5);
+    }
+
+    &--is_blue {
+      border: 3px solid $blue;
+      box-shadow: 0.25rem 0.25rem 0 rgba($blue, 0.5);
+    }
+
+    &--is_yellow {
+      border: 3px solid $yellow;
+      box-shadow: 0.25rem 0.25rem 0 rgba($yellow, 0.5);
+    }
   }
 }
 </style>
