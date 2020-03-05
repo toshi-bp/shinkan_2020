@@ -25,8 +25,8 @@
           </p>
           <p class="head__lead">
             <a href="https://twitter.com/tusnodashinan" target="_blank" rel="noopener">
-                <fa :icon="['fab', 'twitter']" fixed-width />
-                @tusnodashinkan
+              <fa :icon="['fab', 'twitter']" fixed-width />
+              @tusnodashinkan
             </a>
           </p></p>
         </div>
