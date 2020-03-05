@@ -40,7 +40,7 @@ export default {
     font-family: $theme-font;
     font-size: 1.5rem;
     color: $brown;
-    font-weight: normal;
+    font-weight: bold;
     &__small {
       font-size: 1rem;
       font-family: $sans-serif;

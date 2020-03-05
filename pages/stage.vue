@@ -27,13 +27,16 @@
             10:45～00:00
           </p>
         </TheSection>
-        <div class="stage__timetable">
-          <fa :icon="['far', 'clock']" fixed-width />TIME TABLE<small
-            class="tage__timetable"
-          >
-            タイムテーブル3/5ver</small>
-        </div>
+        <!-- <div class="stage__timetable"> -->
+          
+        <!-- </div> -->
         <TheSection class="stage__box" type="blue">
+          <template #title>
+          <fa :icon="['far', 'clock']" fixed-width />TIME TABLE
+          </template>
+          <template #titleSmall>
+            タイムテーブル3/5ver
+          </template>
           <dl class="stage__box__child">
             <dt class="stage__box__time">
               10:45～11:05
@@ -47,6 +50,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 VOICE TRAINING部
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
             <dt class="stage__box__time">
@@ -55,6 +59,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 東京理科大学 ギター部
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
             <dt class="stage__box__time">
@@ -63,6 +68,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 東京理科大学Ⅰ部体育局 野田合気道部
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
             <dt class="stage__box__time">
@@ -71,6 +77,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 Ⅰ部文化会 和太鼓サークル樹部
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
             <dt class="stage__box__time">
@@ -79,6 +86,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 東京理科大学Ⅰ部体育局 少林寺拳法部
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
             <dt class="stage__box__time">
@@ -87,6 +95,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 東京理科大学Ⅰ部体育局 吹奏楽部
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
             <dt class="stage__box__time">
@@ -95,6 +104,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 東京理科大学Ⅰ部体育局 アメリカンフットボール部
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
             <dt class="stage__box__time">
@@ -103,6 +113,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 東京理科大学 Yosakoiソーラン部
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
             <dt class="stage__box__time">
@@ -111,6 +122,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 東京理科大学 ストリートダンスサークル GASSES
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
             <dt class="stage__box__time">
@@ -119,6 +131,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 東京理科大学 ジャグリング DOMINUS SOMNI
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
             <dt class="stage__box__time">
@@ -127,6 +140,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 東京理科大学Ⅰ部体育局 男子ラクロス部
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
             <dt class="stage__box__time">
@@ -135,6 +149,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 東京理科大学Ⅰ部体育局 女子ラクロス部
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
             <dt class="stage__box__time">
@@ -143,6 +158,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 アイドルコピーダンスサークル
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
             <dt class="stage__box__time">
@@ -151,6 +167,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 K-POPダンス KOOLGEM
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
             <dt class="stage__box__time">
@@ -159,6 +176,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 東京理科大学 チアリーディング部 SIRIUS
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
             <dt class="stage__box__time">
@@ -167,6 +185,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 TUSフラサークル
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
             <dt class="stage__box__time">
@@ -175,6 +194,7 @@
             <dd class="stage__box__text">
               <nuxt-link to="/circles/sample/" class="stage__box__link">
                 2020年度東京理科大学 野田地区理大祭実行委員会
+                <fa icon="angle-right" fixed-width />
               </nuxt-link>
             </dd>
           </dl>
@@ -262,12 +282,12 @@ export default {
 
     &__text {
       font-size: 1rem;
-      padding: 0 0 1.2rem 10rem;
+      padding: 0 0 1.2rem 8rem;
       margin: 0 0 1.2rem;
       &:last-child {
         margin: 0;
       }
-      border-bottom: 2px solid #333;
+      border-bottom: 1.5px solid #333;
     }
   }
 }
