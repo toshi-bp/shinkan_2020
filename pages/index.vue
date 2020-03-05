@@ -24,9 +24,13 @@
             近日公開
           </p>
           <p class="head__lead">
-            <a href="https://twitter.com/tusnodashinkan" target="_blank" rel="noopener">
-                <fa :icon="['fab', 'twitter']" fixed-width />
-                @tusnodashinkan
+            <a
+              href="https://twitter.com/tusnodashinkan"
+              target="_blank"
+              rel="noopener"
+              <fa :icon="['fab', 'twitter']" fixed-width
+            />
+            @tusnodashinkan
             </a>
           </p>
         </div>
@@ -55,7 +59,7 @@ export default {
     HomeAbout,
     HomeInformation,
     HomeEvents,
-    HomeTwitter,
+    HomeTwitter
   },
   head() {
     return makeHead()
@@ -130,8 +134,8 @@ export default {
 }
 
 .comingsoon {
-    color: $muted;
-    font-family: $sub-font;
-    font-size: 1rem;
+  color: $muted;
+  font-family: $sub-font;
+  font-size: 1rem;
 }
 </style>
