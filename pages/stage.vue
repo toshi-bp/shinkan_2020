@@ -28,11 +28,11 @@
           </p>
         </TheSection>
         <!-- <div class="stage__timetable"> -->
-          
+
         <!-- </div> -->
         <TheSection class="stage__box" type="blue">
           <template #title>
-          <fa :icon="['far', 'clock']" fixed-width />TIME TABLE
+            <fa :icon="['far', 'clock']" fixed-width />TIME TABLE
           </template>
           <template #titleSmall>
             タイムテーブル3/5ver
