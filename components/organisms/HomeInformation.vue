@@ -9,49 +9,49 @@
           新歓の開催概要
         </template>
         <TheRow>
-          <TheColumn pcsize=6 spsize=12 class="information__box__child">
-              <h2 class="information__subtitle">
-                <fa icon="door-open" fixed-width /> 開催日時
-              </h2>
-              <p class="information__article">
-                2020年4月11日<small class="information__article__small"
-                  >(土曜日)</small
-                ><br />
-                11:00～15:00
-              </p>
-              <h2 class="information__subtitle">
-                <fa icon="door-open" fixed-width /> 場所
-              </h2>
-              <p class="information__article">
-                <small
-                  class="information__article__small information__article__small--is-block"
-                  >東京理科大学野田キャンパス</small
-                >
-                講義棟<br />
-                森戸記念体育館<small class="information__article__small"
-                  >ほか</small
-                >
-              </p>
+          <TheColumn pcsize="6" spsize="12" class="information__box__child">
+            <h2 class="information__subtitle">
+              <fa icon="door-open" fixed-width /> 開催日時
+            </h2>
+            <p class="information__article">
+              2020年4月11日<small class="information__article__small"
+                >(土曜日)</small
+              ><br />
+              11:00～15:00
+            </p>
+            <h2 class="information__subtitle">
+              <fa icon="door-open" fixed-width /> 場所
+            </h2>
+            <p class="information__article">
+              <small
+                class="information__article__small information__article__small--is-block"
+                >東京理科大学野田キャンパス</small
+              >
+              講義棟<br >
+              森戸記念体育館<small class="information__article__small"
+                >ほか</small
+              >
+            </p>
           </TheColumn>
-          <TheColumn pcsize=6 spsize=12 class="information__box__child">
-              <h2 class="information__subtitle">
-                <fa icon="door-open" fixed-width /> テーマ
-              </h2>
-              <p class="information__article">
-                扉
-                <small class="information__article__small"
-                  >〜開いた向こうに、見えるもの。〜</small
-                >
-              </p>
-              <h2 class="information__subtitle">
-                <fa icon="door-open" fixed-width /> 公式Twitter
-              </h2>
-              <p class="information__article">
-                <a href="https://twitter.com/tusnodashinkan" target="blank">
-                  <fa :icon="['fab', 'twitter']" fixed-width />
-                  @tusnodashinkan
-                </a>
-              </p>
+          <TheColumn pcsize="6" spsize="12" class="information__box__child">
+            <h2 class="information__subtitle">
+              <fa icon="door-open" fixed-width /> テーマ
+            </h2>
+            <p class="information__article">
+              扉
+              <small class="information__article__small"
+                >〜開いた向こうに、見えるもの。〜</small
+              >
+            </p>
+            <h2 class="information__subtitle">
+              <fa icon="door-open" fixed-width /> 公式Twitter
+            </h2>
+            <p class="information__article">
+              <a href="https://twitter.com/tusnodashinkan" target="blank">
+                <fa :icon="['fab', 'twitter']" fixed-width />
+                @tusnodashinkan
+              </a>
+            </p>
           </TheColumn>
         </TheRow>
       </TheSection>
