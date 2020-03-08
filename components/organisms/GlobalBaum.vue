@@ -194,7 +194,7 @@ export default {
       transform: translateX(0);
     }
 
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       width: 100%;
       max-width: 100%;
       $max-height: 223px;
@@ -202,7 +202,7 @@ export default {
       bottom: 0;
       left: 0;
       right: 0;
-      
+
       z-index: $z-index-global-nav-body;
       background: #fff;
       padding: 0;
@@ -212,7 +212,7 @@ export default {
       transform: translateY(100%);
       &.--active {
         transform: translateY(0);
-    }
+      }
     }
   }
 
@@ -237,9 +237,9 @@ export default {
         color: $color;
 
         @include media-breakpoint-down(sm) {
-          border-bottom: 0.5px solid rgba($color,0.25);
-        } 
-        
+          border-bottom: 0.5px solid rgba($color, 0.25);
+        }
+
         &.nuxt-link-exact-active {
           font-weight: bold;
         }
@@ -251,7 +251,7 @@ export default {
         font-size: 1.25rem;
         opacity: 0.5;
       }
-      
+
       &__angle {
         color: $color;
         font-size: 1.25rem;
