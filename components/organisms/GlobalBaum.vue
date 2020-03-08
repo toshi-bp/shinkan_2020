@@ -20,28 +20,24 @@
           <nuxt-link to="/" class="global-nav__list__item__link">
             <fa icon="home" class="global-nav__list__item__icon" fixed-width />
             ホーム
-            <fa icon="angle-right" class="global-nav__list__item__angle" fixed-width />
           </nuxt-link>
         </li>
         <li class="global-nav__list__item">
           <nuxt-link to="/circles/" class="global-nav__list__item__link">
             <fa icon="user" class="global-nav__list__item__icon" fixed-width />
             サークル紹介
-            <fa icon="angle-right" class="global-nav__list__item__angle" fixed-width />
           </nuxt-link>
         </li>
         <li class="global-nav__list__item">
           <nuxt-link to="/stage/" class="global-nav__list__item__link">
             <fa icon="star" class="global-nav__list__item__icon" fixed-width />
             団体紹介ステージ
-            <fa icon="angle-right" class="global-nav__list__item__angle" fixed-width />
           </nuxt-link>
         </li>
         <li class="global-nav__list__item">
           <nuxt-link to="/map/" class="global-nav__list__item__link">
             <fa icon="map" class="global-nav__list__item__icon" fixed-width />
             キャンパスマップ
-            <fa icon="angle-right" class="global-nav__list__item__angle" fixed-width />
           </nuxt-link>
         </li>
       </ul>
@@ -252,12 +248,6 @@ export default {
       &__icon {
         color: $color;
         margin-right: 0.75rem;
-        font-size: 1.25rem;
-        opacity: 0.5;
-      }
-      
-      &__angle {
-        color: $color;
         font-size: 1.25rem;
         opacity: 0.5;
       }
