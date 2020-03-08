@@ -3,7 +3,7 @@ export const state = () => ({
     physical: false,
     musical: false,
     cultual: false
-    }
+  }
 })
 
 export const mutations = {

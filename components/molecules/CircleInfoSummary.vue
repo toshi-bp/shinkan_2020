@@ -44,7 +44,8 @@
           </dt>
           <dd class="summary__text">
             <slot name="people_all" />
-            (男子 : <slot name="people_male" />、女子 : <slot name="people_female" />)
+            (男子 : <slot name="people_male" />、女子 :
+            <slot name="people_female" />)
           </dd>
           <dt class="summary__smallheading">
             代表者氏名
@@ -62,7 +63,14 @@
           </template>
         </dl>
       </TheSection>
-      <TheSection v-if="twitter_ids_with_link || $slots.url || $slots.email || $slots.instagram_ids">
+      <TheSection
+        v-if="
+          twitter_ids_with_link ||
+            $slots.url ||
+            $slots.email ||
+            $slots.instagram_ids
+        "
+      >
         <template #title>
           <fa icon="mobile-alt" fixed-width />
           公式アカウント
@@ -72,14 +80,18 @@
             <dt class="summary__smallheading">
               Twitter
             </dt>
-            <dd class="summary__text" v-html="twitter_ids_with_link"></dd>
+            <dd class="summary__text" v-html="twitter_ids_with_link" />
           </template>
           <template v-if="$slots.url">
             <dt class="summary__smallheading">
               ホームページ
             </dt>
             <dd class="summary__text">
-              <a :href="$slots.url[0].text.trim()" target="_blank" rel="noopener">
+              <a
+                :href="$slots.url[0].text.trim()"
+                target="_blank"
+                rel="noopener"
+              >
                 {{ $slots.url[0].text.trim() }}
               </a>
             </dd>
@@ -89,7 +101,11 @@
               新入生連絡先
             </dt>
             <dd class="summary__text">
-              <a :href="`mailto:${$slots.email[0].text.trim()}`" target="_blank" rel="noopener">
+              <a
+                :href="`mailto:${$slots.email[0].text.trim()}`"
+                target="_blank"
+                rel="noopener"
+              >
                 {{ $slots.email[0].text.trim() }}
               </a>
             </dd>
@@ -131,7 +147,10 @@ export default {
       }
 
       let raw_text = this.$slots.twitter_ids[0].text.trim()
-      return raw_text.replace(/@(\w+)/gm, '<a href="https://twitter.com/$1" target="_blank" rel="noopener">@$1</a>')
+      return raw_text.replace(
+        /@(\w+)/gm,
+        '<a href="https://twitter.com/$1" target="_blank" rel="noopener">@$1</a>'
+      )
     }
   }
 }

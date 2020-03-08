@@ -22,14 +22,19 @@
               <!--fa icon="star" fixed-width class="info-header__icon"/-->
               <slot name="subtitle" />
             </p>
-            <p class="info-header__info__item" v-if="$slots.booth">
+            <p v-if="$slots.booth" class="info-header__info__item">
               <fa icon="map-pin" fixed-width class="info-header__icon" />
-              <nuxt-link to="/circles/">ブース勧誘</nuxt-link>参加 :
+              <nuxt-link to="/circles/">
+                ブース勧誘
+              </nuxt-link>参加 :
               <slot name="booth" />
             </p>
-            <p class="info-header__info__item" v-if="stageInfo">
+            <p v-if="stageInfo" class="info-header__info__item">
               <fa icon="star" fixed-width class="info-header__icon" />
-              <nuxt-link to="/stage/">団体紹介ステージ</nuxt-link>出演 : 2020/04/11(土) {{ stageInfo.start_at }}〜{{ stageInfo.end_at }}
+              <nuxt-link to="/stage/">
+                団体紹介ステージ
+              </nuxt-link>出演 : >出演
+              : 2020/04/11(土) {{ stageInfo.start_at }}〜{{ stageInfo.end_at }}
             </p>
           </div>
         </div>
@@ -51,7 +56,7 @@ export default {
   props: {
     imageUrl: {
       type: String,
-      default: ''
+      default: ""
     },
     circleId: {
       type: Number

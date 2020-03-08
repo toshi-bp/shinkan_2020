@@ -43,12 +43,12 @@
             </dd>
 
             <template v-for="stage in stages">
-              <dt class="stage__box__time" :key="`${stage.circle_id}_dt`">
+              <dt :key="`${stage.circle_id}_dt`" class="stage__box__time">
                 {{ stage.start_at }}
                 ～
                 {{ stage.end_at }}
               </dt>
-              <dd class="stage__box__text" :key="`${stage.circle_id}_dd`">
+              <dd :key="`${stage.circle_id}_dd`" class="stage__box__text">
                 <component
                   :is="stage.circleInfoUrl ? 'nuxt-link' : 'span'"
                   :to="stage.circleInfoUrl || undefined"
@@ -62,7 +62,7 @@
       </TheContainer>
     </header>
   </div>
- </template>
+</template>
 
 <script>
 import TheContainer from "~/components/atoms/TheContainer.vue"
@@ -81,7 +81,9 @@ export default {
   computed: {
     stages() {
       return stages.map(stage => {
-        const circle = circles.find(circle => circle.circle_id == stage.circle_id)
+        const circle = circles.find(
+          circle => circle.circle_id == stage.circle_id
+        )
         if (!circle) {
           return stage
         }

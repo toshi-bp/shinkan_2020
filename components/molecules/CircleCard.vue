@@ -29,7 +29,7 @@
       <p class="circle-card__subtitle">
         {{ subtitle }}
       </p>
-      <p class="circle-card__booth" v-if="booth">
+      <p v-if="booth" class="circle-card__booth">
         <fa icon="map-pin" fixed-width />{{ booth }}
       </p>
     </div>

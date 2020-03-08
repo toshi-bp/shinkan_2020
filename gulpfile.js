@@ -31,7 +31,7 @@ gulp.task(
     // 1団体ごとに1ページ作成
     for (let i = 0; i < circles.length; i++) {
       if (circles[i].circle_id === undefined) {
-        continue;
+        continue
       }
 
       gulp

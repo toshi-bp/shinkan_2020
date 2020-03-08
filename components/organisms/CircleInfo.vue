@@ -1,6 +1,6 @@
 <template>
   <div class="info">
-    <CircleInfoHeader :imageUrl="imageUrl" :circleId="circleId">
+    <CircleInfoHeader :image-url="imageUrl" :circle-id="circleId">
       <template #name>
         <slot name="name" />
       </template>
@@ -66,7 +66,6 @@
       <template #instagram_ids>
         <slot name="instagram_ids" />
       </template>
-
     </CircleInfoSummary>
   </div>
 </template>
@@ -86,7 +85,7 @@ export default {
       required: true
     },
     circleId: {
-      type: Number,
+      type: Number
     }
   }
 }
