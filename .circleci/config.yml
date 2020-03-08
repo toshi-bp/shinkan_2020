@@ -23,7 +23,7 @@ jobs:
           key:
             v1-yarn-packages-{{ checksum "yarn.lock" }}
 
-      - run: cd circles & yarn run circles
+      - run: yarn run circles
 
       # - run: yarn run lint
       - run: yarn run generate

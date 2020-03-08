@@ -1,8 +1,8 @@
 if (typeof window === "undefined") {
   const fs = require("fs")
 
-  const CSV_FILE_PATH = "circleList.csv"
-  const JSON_FILE_PATH = "circleList.json"
+  const CSV_FILE_PATH = "./circles/circleList.csv"
+  const JSON_FILE_PATH = "./circles/circleList.json"
 
   const TITLES = {}
   TITLES["団体ID"] = "circle_id"
