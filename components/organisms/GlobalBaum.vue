@@ -241,7 +241,7 @@ export default {
         color: $color;
 
         @include media-breakpoint-down(sm) {
-          border-bottom: 0.5px solid rgba($color,0.9);
+          border-bottom: 0.5px solid rgba($color,0.25);
         } 
         
         &.nuxt-link-exact-active {
