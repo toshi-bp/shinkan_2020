@@ -4,6 +4,9 @@ const gulp = require("gulp")
 const ejs = require("gulp-ejs")
 const rename = require("gulp-rename")
 const rimraf = require("rimraf")
+const imagemin = require("gulp-imagemin")
+const pngquant = require("imagemin-pngquant")
+const mozjpeg = require("imagemin-mozjpeg")
 
 gulp.task("clean", function(cb) {
   rimraf("./pages/circles", cb)
@@ -26,7 +29,17 @@ gulp.task(
       .pipe(gulp.dest(dest))
 
     // 団体画像
-    gulp.src("./circles/images/*").pipe(gulp.dest("./assets/image/circles/"))
+    gulp.task('imagemin' ,() => {
+      gulp.src("./circles/images/*")
+      .pipe(imagemin([
+        pngquant('65-80'),
+        mozjpeg({
+          quality: 80,
+          progressive: true
+        }),
+      ]))
+    .pipe(gulp.dest("./assets/image/circles/"))
+    })
 
     // 1団体ごとに1ページ作成
     for (let i = 0; i < circles.length; i++) {
