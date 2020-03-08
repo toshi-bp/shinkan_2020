@@ -8,21 +8,11 @@
     <TheContainer>
       <div class="circle__types">
         <LinkButton
-          v-for="(circles, type) in {
-            physical: yellow,
-            musical: blue,
-            cultual: green
-          }"
+          v-for="(color, type) in typeColorDict"
           :key="type"
           component-is="a"
           :href="`/2020/circles/#heading-${type}`"
-          :type="
-            {
-              physical: 'yellow',
-              musical: 'blue',
-              cultual: 'green'
-            }[type]
-          "
+          :type="color"
           class="circle__types__button"
           no-horizontal-padding
         >
@@ -82,12 +72,7 @@
           <LinkButton
             v-if="!isMoreVisible[type]"
             component-is="button"
-            :type="
-            {
-              physical: 'yellow',
-              musical: 'blue',
-              cultual: 'green'
-            }[type]"
+            :type="typeColorDict[type]"
             class='circle__button'
             @click="onClickMore(type)"
           >
@@ -160,6 +145,13 @@ export default {
         circles.filter(item => item.type === "musical"),
         this.isMoreVisible.musical
       )
+    },
+    typeColorDict() {
+      return {
+        physical: `yellow`,
+        musical: `blue`,
+        cultual: `green`
+      }
     }
   },
 
