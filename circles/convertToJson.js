@@ -14,11 +14,11 @@ if (typeof window === 'undefined') {
   TITLES['所属人数'] = 'people_all';
   TITLES['男子所属人数'] = 'people_male';
   TITLES['女子所属人数'] = 'people_female';
-  TITLES['代表者'] = 'leader';
+  TITLES['代表者氏名'] = 'leader';
   TITLES['部費'] = 'club_dues';
   TITLES['入部条件'] = 'qualifications';
   TITLES['サークル概要'] = 'subtitle';
-  TITLES['活動内容'] = 'summar';
+  TITLES['活動内容'] = 'summary';
   TITLES['@イメージ画像'] = 'image_filename';
   TITLES['TwitterアカウントID'] = 'twitter_ids';
   TITLES['ホームページのリンク(任意)'] = 'url';
@@ -36,7 +36,7 @@ if (typeof window === 'undefined') {
 
   // 0 行目はタイトル行なので、i = 0 ではなく i = 1 からループを始める
   for (let i = 1; i < array_data.length; ++i) {
-    const line = array_data[i].split(",");
+    const line = array_data[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/) || [];
     for (let j = 0; j < line.length; ++j) {
       if (typeof return_data[i - 1] !== 'object') {
         return_data[i - 1] = {};
@@ -46,7 +46,11 @@ if (typeof window === 'undefined') {
         continue;
       }
 
-      let item = line[j];
+      let item = line[j].split('"').join('');
+
+      if (titles[j] === '団体ID') {
+        item = parseInt(item, 10)
+      }
 
       if (titles[j] === '仕分け') {
         item = {

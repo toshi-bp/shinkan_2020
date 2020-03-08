@@ -10,21 +10,26 @@
         <div class="info-header">
           <figure
             :style="{
-              'background-image': `url(${require('~/assets/image/symbol.png')})`
+              backgroundImage: imageUrl ? `url(${imageUrl})` : ''
             }"
             class="info-header__img"
           />
           <div class="info-header__info">
             <h2 class="info-header__info__title">
-              <slot name="title" />
+              <slot name="name" />
             </h2>
-            <p class="info-header__info__item">
+            <p class="info-header__info__subtitle">
               <!--fa icon="star" fixed-width class="info-header__icon"/-->
-              <slot name="lead" />
+              <slot name="subtitle" />
             </p>
-            <p class="info-header__info__item">
+            <p class="info-header__info__item" v-if="$slots.booth">
               <fa icon="map-pin" fixed-width class="info-header__icon" />
+              <nuxt-link to="/circles/">ブース勧誘</nuxt-link>参加 :
               <slot name="booth" />
+            </p>
+            <p class="info-header__info__item" v-if="stageInfo">
+              <fa icon="star" fixed-width class="info-header__icon" />
+              <nuxt-link to="/stage/">団体紹介ステージ</nuxt-link>出演 : 2020/04/11(土) {{ stageInfo.start_at }}〜{{ stageInfo.end_at }}
             </p>
           </div>
         </div>
@@ -36,11 +41,26 @@
 <script>
 import TheContainer from "~/components/atoms/TheContainer.vue"
 import SubHeader from "~/components/organisms/SubHeader.vue"
+import stages from "~/circles/stageList.json"
 
 export default {
   components: {
     TheContainer,
     SubHeader
+  },
+  props: {
+    imageUrl: {
+      type: String,
+      default: ''
+    },
+    circleId: {
+      type: Number
+    }
+  },
+  computed: {
+    stageInfo() {
+      return stages.find(stage => stage.circle_id === this.circleId)
+    }
   }
 }
 </script>
@@ -65,10 +85,23 @@ export default {
       text-align: center;
     }
 
-    &__item {
+    &__subtitle {
       font-family: $sub-font;
       font-size: 1rem;
-      margin: 0;
+      margin: 0 0 0.5rem;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    &__item {
+      font-size: 1rem;
+      margin: 0 0 0.5rem;
+
+      &:last-child {
+        margin: 0;
+      }
     }
 
     &__title {

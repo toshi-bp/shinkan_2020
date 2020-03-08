@@ -26,11 +26,11 @@
       <h3 class="circle-card__title">
         {{ title }}
       </h3>
-      <p class="circle-card__lead">
-        {{ lead }}
+      <p class="circle-card__subtitle">
+        {{ subtitle }}
       </p>
-      <p class="circle-card__place">
-        <fa icon="map-pin" fixed-width />{{ place }}
+      <p class="circle-card__booth" v-if="booth">
+        <fa icon="map-pin" fixed-width />{{ booth }}
       </p>
     </div>
   </component>
@@ -72,11 +72,11 @@ export default {
       type: String,
       required: true
     },
-    lead: {
+    subtitle: {
       type: String,
       default: ""
     },
-    place: {
+    booth: {
       type: String,
       default: ""
     },
@@ -136,12 +136,12 @@ export default {
     margin-bottom: 0;
   }
 
-  &__lead {
+  &__subtitle {
     margin-bottom: 0;
     font-size: 1rem;
   }
 
-  &__place {
+  &__booth {
     margin-bottom: 0;
     font-size: 1rem;
   }
