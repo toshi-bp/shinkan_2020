@@ -193,6 +193,27 @@ export default {
     &.--active {
       transform: translateX(0);
     }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      max-width: 100%;
+      $max-height: 223px;
+      top: calc(100% - #{$max-height});
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      z-index: $z-index-global-nav-body;
+      background: #fff;
+      padding: 0;
+
+      // animation
+      transition: 0.3s ease all;
+      transform: translateY(100%);
+      &.--active {
+        transform: translateY(0);
+      }
+    }
   }
 
   &__list {
@@ -215,6 +236,10 @@ export default {
         font-size: 1rem;
         color: $color;
 
+        @include media-breakpoint-down(sm) {
+          border-bottom: 0.5px solid rgba($color, 0.25);
+        }
+
         &.nuxt-link-exact-active {
           font-weight: bold;
         }
@@ -223,6 +248,12 @@ export default {
       &__icon {
         color: $color;
         margin-right: 0.75rem;
+        font-size: 1.25rem;
+        opacity: 0.5;
+      }
+
+      &__angle {
+        color: $color;
         font-size: 1.25rem;
         opacity: 0.5;
       }

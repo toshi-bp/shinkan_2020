@@ -12,12 +12,12 @@ export default {
   props: {
     pcsize: {
       type: Number,
-      default: "4"
+      default: 4
     },
 
     spsize: {
       type: Number,
-      default: "6"
+      default: 6
     }
   }
 }

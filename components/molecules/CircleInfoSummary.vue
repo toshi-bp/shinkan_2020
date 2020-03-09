@@ -11,13 +11,13 @@
             活動内容
           </dt>
           <dd class="summary__text">
-            <slot name="content" />
+            <slot name="summary" />
           </dd>
           <dt class="summary__smallheading">
             活動日
           </dt>
           <dd class="summary__text">
-            <slot name="day" />
+            <slot name="days" />
           </dd>
           <dt class="summary__smallheading">
             活動場所
@@ -28,13 +28,9 @@
           <dt class="summary__smallheading">
             部費
           </dt>
-          <dd v-if="year" class="summary__text">
-            年あたり<slot name="cost" />円
+          <dd class="summary__text">
+            <slot name="club_dues" />
           </dd>
-          <dd v-else-if="month" class="summary__text">
-            月あたり<slot name="cost" />円
-          </dd>
-          <dd v-else class="summary__text">半年あたり<slot name="cost" />円</dd>
         </dl>
       </TheSection>
       <TheSection>
@@ -47,7 +43,9 @@
             所属人数
           </dt>
           <dd class="summary__text">
-            <slot name="people" />
+            <slot name="people_all" />
+            (男子 : <slot name="people_male" />、女子 :
+            <slot name="people_female" />)
           </dd>
           <dt class="summary__smallheading">
             代表者氏名
@@ -55,50 +53,71 @@
           <dd class="summary__text">
             <slot name="leader" />
           </dd>
-          <dt class="summary__smallheading">
-            入部条件
-          </dt>
-          <dd class="summary__text">
-            <slot name="condition" />
-          </dd>
-          <dt class="summary__smallheading">
-            備考
-          </dt>
-          <dd class="summary__text">
-            <slot name="remarks" />
-          </dd>
+          <template v-if="$slots.qualification">
+            <dt class="summary__smallheading">
+              入部条件
+            </dt>
+            <dd class="summary__text">
+              <slot name="qualifications" />
+            </dd>
+          </template>
         </dl>
       </TheSection>
-      <TheSection>
+      <TheSection
+        v-if="
+          twitter_ids_with_link ||
+            $slots.url ||
+            $slots.email ||
+            $slots.instagram_ids
+        "
+      >
         <template #title>
           <fa icon="mobile-alt" fixed-width />
           公式アカウント
         </template>
         <dl class="summary__box__child">
-          <dt class="summary__smallheading">
-            Twitter
-          </dt>
-          <dd class="summary__text">
-            <slot name="twitter" />
-          </dd>
-          <dt class="summary__smallheading">
-            ホームページ
-          </dt>
-          <dd class="summary__text">
-            <slot name="homepage" />
-          </dd>
-          <dt class="summary__smallheading">
-            新入生連絡先
-          </dt>
-          <dd class="summary__text">
-            <slot name="contact" />
-          </dd>
-          <dt class="summary__smallheading">
-            Instagram
-          </dt>
-          <dd class="summary__text">
-            <slot name="instagram" />
-          </dd>
+          <template v-if="twitter_ids_with_link">
+            <dt class="summary__smallheading">
+              Twitter
+            </dt>
+            <dd class="summary__text" v-html="twitter_ids_with_link" />
+          </template>
+          <template v-if="$slots.url">
+            <dt class="summary__smallheading">
+              ホームページ
+            </dt>
+            <dd class="summary__text">
+              <a
+                :href="$slots.url[0].text.trim()"
+                target="_blank"
+                rel="noopener"
+              >
+                {{ $slots.url[0].text.trim() }}
+              </a>
+            </dd>
+          </template>
+          <template v-if="$slots.email">
+            <dt class="summary__smallheading">
+              新入生連絡先
+            </dt>
+            <dd class="summary__text">
+              <a
+                :href="`mailto:${$slots.email[0].text.trim()}`"
+                target="_blank"
+                rel="noopener"
+              >
+                {{ $slots.email[0].text.trim() }}
+              </a>
+            </dd>
+          </template>
+          <template v-if="$slots.instagram_ids">
+            <dt class="summary__smallheading">
+              Instagram
+            </dt>
+            <dd class="summary__text">
+              <slot name="instagram_ids" />
+            </dd>
+          </template>
         </dl>
       </TheSection>
     </div>
@@ -120,6 +139,19 @@ export default {
     TheContainer,
     LinkButton,
     TheSection
+  },
+  computed: {
+    twitter_ids_with_link() {
+      if (!this.$slots.twitter_ids) {
+        return null
+      }
+
+      let raw_text = this.$slots.twitter_ids[0].text.trim()
+      return raw_text.replace(
+        /@(\w+)/gm,
+        '<a href="https://twitter.com/$1" target="_blank" rel="noopener">@$1</a>'
+      )
+    }
   }
 }
 </script>
