@@ -1,3 +1,8 @@
+# 自動生成のページ
+circles/circleList.json
+assets/image/circles/
+pages/circles/
+
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
 # Logs
@@ -88,3 +93,4 @@ sw.*
 
 # Vim swap files
 *.swp
+
