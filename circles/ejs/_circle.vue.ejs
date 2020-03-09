@@ -1,7 +1,7 @@
 <%
   const filename = circle.image_filename
     ? `~/assets/image/circles/${circle.image_filename}`
-    : '~/assets/image/symbol.png';
+    : `~/assets/image/symbol.png`;
 %>
 <template>
   <CircleInfo :image-url="require('<%= filename %>')" :circle-id="<%= circle.circle_id %>">

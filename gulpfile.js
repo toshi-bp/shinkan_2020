@@ -32,8 +32,7 @@ gulp.task(
     gulp.task("imagemin", () => {
       gulp
         .src("./circles/images/*")
-        .pipe(
-          imagemin([
+        .pipe(imagemin([
             pngquant("65-80"),
             mozjpeg({
               quality: 80,
@@ -41,7 +40,7 @@ gulp.task(
             })
           ])
         )
-        .pipe(gulp.dest("./assets/image/circles/"))
+        .pipe(gulp.dest("./assets/image/circles/*"))
     })
 
     // 1団体ごとに1ページ作成
