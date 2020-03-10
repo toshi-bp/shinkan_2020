@@ -12,6 +12,21 @@ gulp.task("clean", function(cb) {
   rimraf("./pages/circles", cb)
 })
 
+//団体画像の圧縮
+gulp.task("imagemin", () => {
+  gulp
+    .src("./circles/images/*")
+    .pipe(imagemin([
+        pngquant("65-80"),
+        mozjpeg({
+          quality: 80,
+          progressive: true
+        })
+      ])
+    )
+    .pipe(gulp.dest("./assets/image/circles/*"))
+})
+
 gulp.task(
   "ejs:circles",
   gulp.series(gulp.parallel("clean"), function(done) {
@@ -29,19 +44,7 @@ gulp.task(
       .pipe(gulp.dest(dest))
 
     // 団体画像
-    gulp.task("imagemin", () => {
-      gulp
-        .src("./circles/images/*")
-        .pipe(imagemin([
-            pngquant("65-80"),
-            mozjpeg({
-              quality: 80,
-              progressive: true
-            })
-          ])
-        )
-        .pipe(gulp.dest("./assets/image/circles/*"))
-    })
+    gulp.src("./circles/images/*").pipe(gulp.dest("./assets/image/circles/"))
 
     // 1団体ごとに1ページ作成
     for (let i = 0; i < circles.length; i++) {
