@@ -4,7 +4,7 @@ export default function(title, description, image) {
     imageAbsoluteUrl = "https://welcome-tus.grats.jp/2020/" + imageAbsoluteUrl
   }
   const defaultImageUrl =
-    "https://welcome-tus.grats.jp/2020/" + require("assets/image/symbol.png")
+    "https://welcome-tus.grats.jp/2020/" + require("~/assets/image/symbol.png")
   const imageUrl = imageAbsoluteUrl || defaultImageUrl
 
   return {

@@ -65,6 +65,7 @@
 </template>
 
 <script>
+import makeHead from "~/utils/makeHead.js"
 import TheContainer from "~/components/atoms/TheContainer.vue"
 import SubHeader from "~/components/organisms/SubHeader.vue"
 import TheSection from "~/components/atoms/TheSection.vue"
@@ -93,6 +94,9 @@ export default {
         }
       })
     }
+  },
+  head() {
+    return makeHead("団体紹介ステージ", "ステージでパフォーマンスを披露")
   }
 }
 </script>
