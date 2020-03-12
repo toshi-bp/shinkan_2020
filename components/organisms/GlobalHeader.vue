@@ -28,7 +28,9 @@
         <div class="emergency__article">
             今年度の新歓は予定されていた4月11日から延期となりました。具体的な日程等詳細は3月25日を目途にホームページまたは公式Twitterにてお知らせいたします。
         </div>
-      </TheContainer>   
+      </TheContainer>
+    </div>
+    <div class="blank">
     </div>
   </div>
 </template>
@@ -127,5 +129,24 @@ export default {
   background-color: #c13648;;
   color: #fff;
   box-shadow: 0 5px 0 rgba(#000, 0.1);
+  margin-top: -0.3rem;
+  &__article {
+    font-size: 1rem;
+    @include media-breakpoint-down(sm) {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.blank {
+  height: calc(#{$global-header-height} + 2rem);
+
+  @include media-breakpoint-down(sm) {
+    height: calc(#{$global-header-height} + 5rem);
+  }
+
+  // @include media-breakpoint-down(xs) {
+  //   height: calc(#{$global-header-height} + 6rem);
+  // }
 }
 </style>
