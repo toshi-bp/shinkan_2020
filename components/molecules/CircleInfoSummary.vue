@@ -1,7 +1,7 @@
 <template>
   <TheContainer>
     <div class="summary__box">
-      <TheSection>
+      <TheSection :type="typeColorDict[circleType]">
         <template #title>
           <fa icon="user-clock" fixed-width />
           活動情報
@@ -33,7 +33,7 @@
           </dd>
         </dl>
       </TheSection>
-      <TheSection>
+      <TheSection :type="typeColorDict[circleType]">
         <template #title>
           <fa icon="user-friends" fixed-width />
           サークル概要
@@ -70,6 +70,7 @@
             $slots.email ||
             $slots.instagram_ids
         "
+        :type="typeColorDict[type]"
       >
         <template #title>
           <fa icon="mobile-alt" fixed-width />
@@ -122,7 +123,10 @@
       </TheSection>
     </div>
     <div class="linkbutton">
-      <LinkButton to="/circles/">
+      <LinkButton
+        to="/circles/"
+        :type="typeColorDict[circleType]"
+      >
         サークル一覧
       </LinkButton>
     </div>
@@ -140,6 +144,12 @@ export default {
     LinkButton,
     TheSection
   },
+  props: {
+    circleType: {
+      type: String,
+      default: ""
+    }
+  },
   computed: {
     twitter_ids_with_link() {
       if (!this.$slots.twitter_ids) {
@@ -151,6 +161,13 @@ export default {
         /@(\w+)/gm,
         '<a href="https://twitter.com/$1" target="_blank" rel="noopener">@$1</a>'
       )
+    },
+    typeColorDict() {
+      return {
+        physical: 'yellow',
+        musical: 'blue',
+        cultual: 'green'
+      }
     }
   }
 }
