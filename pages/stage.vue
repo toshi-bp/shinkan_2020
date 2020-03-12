@@ -27,15 +27,12 @@
             10:45～00:00
           </p>
         </TheSection>
-        <!-- <div class="stage__timetable"> -->
-
-        <!-- </div> -->
         <TheSection class="stage__box" type="blue">
           <template #title>
             <fa :icon="['far', 'clock']" fixed-width />TIME TABLE
           </template>
           <template #titleSmall>
-            タイムテーブル3/5ver
+            タイムテーブル (3/5 ver)
           </template>
           <dl class="stage__box__child">
             <dt class="stage__box__time">
@@ -44,159 +41,22 @@
             <dd class="stage__box__text">
               開会式
             </dd>
-            <dt class="stage__box__time">
-              11:05～11:10
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                VOICE TRAINING部
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
-            <dt class="stage__box__time">
-              11:10～11:15
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                東京理科大学 ギター部
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
-            <dt class="stage__box__time">
-              11:15～11:20
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                東京理科大学Ⅰ部体育局 野田合気道部
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
-            <dt class="stage__box__time">
-              11:20～11:25
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                Ⅰ部文化会 和太鼓サークル樹部
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
-            <dt class="stage__box__time">
-              11:25～11:30
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                東京理科大学Ⅰ部体育局 少林寺拳法部
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
-            <dt class="stage__box__time">
-              11:30～11:35
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                東京理科大学Ⅰ部体育局 吹奏楽部
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
-            <dt class="stage__box__time">
-              11:35～11:40
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                東京理科大学Ⅰ部体育局 アメリカンフットボール部
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
-            <dt class="stage__box__time">
-              11:40～11:45
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                東京理科大学 Yosakoiソーラン部
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
-            <dt class="stage__box__time">
-              11:45～11:50
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                東京理科大学 ストリートダンスサークル GASSES
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
-            <dt class="stage__box__time">
-              11:50～11:55
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                東京理科大学 ジャグリング DOMINUS SOMNI
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
-            <dt class="stage__box__time">
-              11:55～12:00
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                東京理科大学Ⅰ部体育局 男子ラクロス部
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
-            <dt class="stage__box__time">
-              12:00～12:05
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                東京理科大学Ⅰ部体育局 女子ラクロス部
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
-            <dt class="stage__box__time">
-              12:05～12:10
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                アイドルコピーダンスサークル
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
-            <dt class="stage__box__time">
-              12:10～12:15
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                K-POPダンス KOOLGEM
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
-            <dt class="stage__box__time">
-              12:15～12:20
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                東京理科大学 チアリーディング部 SIRIUS
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
-            <dt class="stage__box__time">
-              12:20～12:25
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                TUSフラサークル
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
-            <dt class="stage__box__time">
-              12:25～
-            </dt>
-            <dd class="stage__box__text">
-              <nuxt-link to="/circles/sample/" class="stage__box__link">
-                2020年度東京理科大学 野田地区理大祭実行委員会
-                <fa icon="angle-right" fixed-width />
-              </nuxt-link>
-            </dd>
+
+            <template v-for="stage in stages">
+              <dt :key="`${stage.circle_id}_dt`" class="stage__box__time">
+                {{ stage.start_at }}
+                ～
+                {{ stage.end_at }}
+              </dt>
+              <dd :key="`${stage.circle_id}_dd`" class="stage__box__text">
+                <component
+                  :is="stage.circleInfoUrl ? 'nuxt-link' : 'span'"
+                  :to="stage.circleInfoUrl || undefined"
+                >
+                  {{ stage.name }}
+                </component>
+              </dd>
+            </template>
           </dl>
         </TheSection>
       </TheContainer>
@@ -205,15 +65,38 @@
 </template>
 
 <script>
+import makeHead from "~/utils/makeHead.js"
 import TheContainer from "~/components/atoms/TheContainer.vue"
 import SubHeader from "~/components/organisms/SubHeader.vue"
 import TheSection from "~/components/atoms/TheSection.vue"
+
+import circles from "~/circles/circleList.json"
+import stages from "~/circles/stageList.json"
 
 export default {
   components: {
     TheContainer,
     SubHeader,
     TheSection
+  },
+  computed: {
+    stages() {
+      return stages.map(stage => {
+        const circle = circles.find(
+          circle => circle.circle_id == stage.circle_id
+        )
+        if (!circle) {
+          return stage
+        }
+        return {
+          ...stage,
+          circleInfoUrl: `/circles/${stage.circle_id}/`
+        }
+      })
+    }
+  },
+  head() {
+    return makeHead("団体紹介ステージ", "ステージでパフォーマンスを披露")
   }
 }
 </script>
@@ -276,11 +159,8 @@ export default {
       float: left;
     }
 
-    &__link {
-      color: #333;
-    }
-
     &__text {
+      color: #333;
       font-size: 1rem;
       padding: 0 0 1.2rem 8rem;
       margin: 0 0 1.2rem;

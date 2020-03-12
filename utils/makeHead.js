@@ -1,10 +1,10 @@
 export default function(title, description, image) {
   let imageAbsoluteUrl = image
   if (typeof image === "string" && imageAbsoluteUrl.slice(0, 1) === "/") {
-    imageAbsoluteUrl = "https://welcome-tus.grats.jp/s20/" + imageAbsoluteUrl
+    imageAbsoluteUrl = "https://welcome-tus.grats.jp/2020/" + imageAbsoluteUrl
   }
   const defaultImageUrl =
-    "https://welcome-tus.grats.jp/2020/" + require("assets/image/symbol.png")
+    "https://welcome-tus.grats.jp/2020/" + require("~/assets/image/symbol.png")
   const imageUrl = imageAbsoluteUrl || defaultImageUrl
 
   return {

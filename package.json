@@ -10,7 +10,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
+    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+    "circles": "cd circles && node convertToJson.js && npx gulp ejs:circles"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
@@ -25,7 +26,10 @@
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-ejs": "^5.0.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0",
     "markdown-it-attrs": "^3.0.1",
     "node-sass": "^4.13.0",
     "normalize.css": "^8.0.1",
@@ -41,6 +45,7 @@
     "eslint-loader": "^3.0.3",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-vue": "^6.2.1",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.2"
   }
 }

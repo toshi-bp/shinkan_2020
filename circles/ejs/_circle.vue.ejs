@@ -1,0 +1,93 @@
+<%
+  const filename = circle.image_filename
+    ? `~/assets/image/circles/${circle.image_filename}`
+    : `~/assets/image/symbol.png`;
+%>
+<template>
+  <CircleInfo :image-url="require('<%= filename %>')" :circle-id="<%= circle.circle_id %>" :type="<%= circle.type %>">
+    <template #name>
+      <%= circle.name %>
+    </template>
+
+    <template #subtitle>
+      <%= circle.subtitle %>
+    </template>
+
+    <template #booth>
+      <%= circle.booth %>
+    </template>
+
+    <template #days>
+      <%= circle.days %>
+    </template>
+
+    <template #place>
+      <%= circle.place %>
+    </template>
+
+    <template #summary>
+      <%= circle.summary %>
+    </template>
+
+    <template #leader>
+      <%= circle.leader %>
+    </template>
+
+    <template #people_all>
+      <%= circle.people_all %>
+    </template>
+
+    <template #people_male>
+      <%= circle.people_male %>
+    </template>
+
+    <template #people_female>
+      <%= circle.people_female %>
+    </template>
+
+    <template #club_dues>
+      <%= circle.club_dues %>
+    </template>
+
+    <template #qualifications>
+      <%= circle.qualifications %>
+    </template>
+
+    <template #twitter_ids>
+      <%= circle.twitter_ids %>
+    </template>
+
+    <template #url>
+      <%= circle.url %>
+    </template>
+
+    <template #email>
+      <%= circle.email %>
+    </template>
+
+    <template #instagram_ids>
+      <%= circle.instagram_ids %>
+    </template>
+
+  </CircleInfo>
+</template>
+
+<script>
+import CircleInfo from "~/components/organisms/CircleInfo.vue"
+import makeHead from "~/utils/makeHead.js"
+
+export default {
+  components: {
+    CircleInfo
+  },
+  head() {
+    return makeHead(
+      "<%= circle.name %>",
+      "<%= circle.subtitle %>",
+      require("<%= filename %>")
+    )
+  }
+}
+</script>
+
+<style lang="scss" scoped></style>
