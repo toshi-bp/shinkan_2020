@@ -70,7 +70,7 @@
             $slots.email ||
             $slots.instagram_ids
         "
-        :type="typeColorDict[type]"
+        :type="typeColorDict[circleType]"
       >
         <template #title>
           <fa icon="mobile-alt" fixed-width />
@@ -147,7 +147,6 @@ export default {
   props: {
     circleType: {
       type: String,
-      default: ""
     }
   },
   computed: {

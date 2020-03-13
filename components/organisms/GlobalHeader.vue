@@ -17,19 +17,19 @@
             <span class="header__date__hidden-xs">年</span>
             <span class="header__date__number">4</span>
             月
-            <span class="header__date__number">11</span>
-            日(土)
+            <!-- <span class="header__date__number">11</span> -->
+            開催
           </div>
         </div>
       </TheContainer>
-    </header>
-    <div class="emergency">
+      <div class="emergency">
       <TheContainer>
         <div class="emergency__article">
             今年度の新歓は予定されていた4月11日から延期となりました。具体的な日程等詳細は3月25日を目途にホームページまたは公式Twitterにてお知らせいたします。
         </div>
       </TheContainer>
     </div>
+    </header>
     <div class="blank">
     </div>
   </div>

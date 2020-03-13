@@ -18,7 +18,7 @@
             --><span class="head__lead__text">(課外活動ガイダンス)</span>
           </p>
           <p class="head__lead">
-            2020年4月11日(土) 11:00〜15:00
+            2020年4月開催<!-- 11日(土) 11:00〜15:00 -->
           </p>
           <p class="comingsoon">
             近日公開
