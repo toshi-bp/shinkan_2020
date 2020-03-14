@@ -1,6 +1,6 @@
 <template>
   <div class="info">
-    <CircleInfoHeader :image-url="imageUrl" :circle-id="circleId" :type="circleType">
+    <CircleInfoHeader :image-url="imageUrl" :circle-id="circleId">
       <template #name>
         <slot name="name" />
       </template>
@@ -14,7 +14,7 @@
       </template>
     </CircleInfoHeader>
 
-    <CircleInfoSummary :type="circleType">
+    <CircleInfoSummary :circleType="type">
       <template #days>
         <slot name="days" />
       </template>
@@ -87,7 +87,7 @@ export default {
     circleId: {
       type: Number
     },
-    circleType: {
+    type: {
       type: String,
     }
   },
