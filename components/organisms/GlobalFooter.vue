@@ -15,9 +15,9 @@
           </p>
           <div class="footer__list">
             <ul>
-              <li class="footer__list__item">
+              <!-- <li class="footer__list__item">
                 <fa icon="desktop" fixed-width /><a href="" target="blank">理大祭新歓ウェブサイト</a>
-              </li>
+              </li> -->
               <li class="footer__list__item">
                 <fa :icon="['fab', 'twitter']" fixed-width /><a
                   href="https://twitter.com/noda_ridaisai"

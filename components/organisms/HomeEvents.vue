@@ -13,7 +13,7 @@
           各サークルが講義棟の教室にて勧誘を行います。
         </p>
         <p class="events__box__time">
-          00:00～00:00
+          11:00 ～ 15:00
         </p>
         <p class="events__box__place">
           @講義棟
@@ -27,10 +27,10 @@
           新歓参加団体がステージにて実演を行います。
         </p>
         <p class="events__box__time">
-          00:00～00:00
+          10:45 ～ 12:30
         </p>
         <p class="events__box__place">
-          @体育館
+          @森戸記念体育館
         </p>
       </nuxt-link>
     </div>
