@@ -2,7 +2,7 @@
   <div class="head">
     <TheContainer>
       <div class="head__flex">
-        <img src="~/assets/image/symbol.svg" class="head__logo" />
+        <img src="~/assets/image/symbol.svg" class="head__logo">
         <div class="head__main">
           <h1 class="head__catchcopy">
             <span class="head__catchcopy__text">
@@ -14,10 +14,24 @@
           </h1>
           <p class="head__lead">
             <span class="head__lead__text">2020年度東京理科大学</span><!--
-            --><span class="head__lead__text">野田地区新入生歓迎ガイダンス</span>
+            --><span class="head__lead__text">野田地区新入生歓迎ガイダンス</span><!--
+            --><span class="head__lead__text">(課外活動ガイダンス)</span>
           </p>
           <p class="head__lead">
-            2020年4月 11:00 〜 15:00
+2020年4月開催<!-- 11日(土) 11:00〜15:00 -->
+</p>
+          <p class="comingsoon">
+            近日公開
+          </p>
+          <p class="head__lead">
+            <a
+              href="https://twitter.com/tusnodashinkan"
+              target="_blank"
+              rel="noopener"
+            >
+              <fa :icon="['fab', 'twitter']" fixed-width />
+              @tusnodashinkan
+            </a>
           </p>
         </div>
       </div>
@@ -26,11 +40,29 @@
 </template>
 
 <script>
+import makeHead from "~/utils/makeHead.js"
 import TheContainer from "~/components/atoms/TheContainer.vue"
+import LinkButton from "~/components/atoms/LinkButton.vue"
+import HomeHead from "~/components/organisms/HomeHead.vue"
+import HomeTheme from "~/components/organisms/HomeTheme.vue"
+import HomeAbout from "~/components/organisms/HomeAbout.vue"
+import HomeInformation from "~/components/organisms/HomeInformation.vue"
+import HomeEvents from "~/components/organisms/HomeEvents.vue"
+import HomeTwitter from "~/components/organisms/HomeTwitter.vue"
 
 export default {
   components: {
-    TheContainer
+    TheContainer,
+    LinkButton,
+    HomeHead,
+    HomeTheme,
+    HomeAbout,
+    HomeInformation,
+    HomeEvents,
+    HomeTwitter
+  },
+  head() {
+    return makeHead()
   }
 }
 </script>
@@ -81,6 +113,7 @@ export default {
     display: inline-block;
     line-height: 1.4;
     margin: 0 0 1rem;
+
     @include media-breakpoint-down(sm) {
       font-size: 1.5rem;
       padding: 0;
@@ -92,11 +125,17 @@ export default {
 
   &__lead {
     font-family: $sub-font;
-    margin: 0 0 0.5rem;
+    margin-bottom: 0.5rem;
 
     &__text {
       display: inline-block;
     }
   }
+}
+
+.comingsoon {
+  color: $muted;
+  font-family: $sub-font;
+  font-size: 1rem;
 }
 </style>

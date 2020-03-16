@@ -18,7 +18,7 @@
               <!-- 11日<small class="information__article__small"
                 >(土曜日)</small
               > -->
-              <br />
+              <br >
               11:00 ～ 15:00
             </p>
             <h2 class="information__subtitle">
@@ -29,7 +29,7 @@
                 class="information__article__small information__article__small--is-block"
                 >東京理科大学野田キャンパス</small
               >
-              講義棟<br >
+              講義棟<br>
               森戸記念体育館<small class="information__article__small"
                 >ほか</small
               >

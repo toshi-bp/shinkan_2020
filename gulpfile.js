@@ -16,7 +16,8 @@ gulp.task("clean", function(cb) {
 gulp.task("imagemin", () => {
   gulp
     .src("./circles/images/*")
-    .pipe(imagemin([
+    .pipe(
+      imagemin([
         pngquant("65-80"),
         mozjpeg({
           quality: 80,

@@ -23,15 +23,14 @@
         </div>
       </TheContainer>
       <div class="emergency">
-      <TheContainer>
-        <div class="emergency__article">
+        <TheContainer>
+          <div class="emergency__article">
             今年度の新歓は予定されていた4月11日から延期となりました。具体的な日程等詳細は3月25日を目途にホームページまたは公式Twitterにてお知らせいたします。
-        </div>
-      </TheContainer>
-    </div>
+          </div>
+        </TheContainer>
+      </div>
     </header>
-    <div class="blank">
-    </div>
+    <div class="blank" />
   </div>
 </template>
 
@@ -126,7 +125,7 @@ export default {
   position: fixed;
   width: 100%;
   padding: 1rem 0;
-  background-color: #c13648;;
+  background-color: #c13648;
   color: #fff;
   box-shadow: 0 5px 0 rgba(#000, 0.1);
   margin-top: -0.3rem;

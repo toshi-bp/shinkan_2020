@@ -8,13 +8,13 @@
             <small class="about__title__small">新歓とは</small>
           </h2>
           <p class="about__article">
-            新歓とは「新入生歓迎ガイダンス」の略称で、「課外活動ガイダンス」とも呼ばれます。<br>
-            講義棟では各サークルによる活動の紹介が各教室で行われます。<br>
-            また体育館では、ステージ上でパフォーマンスが繰り広げられます。<br>
+            新歓とは「新入生歓迎ガイダンス」の略称で、「課外活動ガイダンス」とも呼ばれます。<br />
+            講義棟では各サークルによる活動の紹介が各教室で行われます。<br />
+            また体育館では、ステージ上でパフォーマンスが繰り広げられます。<br />
             全サークルが集まって新入生勧誘をするのはこの日だけ！
           </p>
         </div>
-        <img src="~/assets/image/AboutPhoto.jpg" class="about__photo" />
+        <img src="~/assets/image/AboutPhoto.jpg" class="about__photo" >
       </div>
     </TheContainer>
   </div>
