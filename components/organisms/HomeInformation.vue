@@ -19,7 +19,7 @@
                 >(土曜日)</small
               > -->
               <br />
-              11:00 ～ 15:00
+              11:00 ～ 16:00
             </p>
             <h2 class="information__subtitle">
               <fa icon="door-open" fixed-width /> 場所

@@ -17,7 +17,7 @@
             --><span class="head__lead__text">野田地区新入生歓迎ガイダンス</span>
           </p>
           <p class="head__lead">
-            2020年4月 11:00 〜 15:00
+            2020年4月 11:00 〜 16:00
           </p>
         </div>
       </div>
