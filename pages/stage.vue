@@ -12,7 +12,8 @@
             <fa icon="door-open" fixed-width /> 団体紹介ステージとは
           </h2>
           <p class="stage__header__description">
-            団体紹介ステージは、新入生へ向けて団体を紹介するイベントです。今年も素敵な部活やサークルが勢揃い！魅力的なパフォーマンスを見に体育館へ行こう！
+            団体紹介ステージは、新入生へ向けて団体を紹介するイベントです。今年も素敵な部活やサークルが勢揃い！魅力的なパフォーマンスを見に体育館へ行こう！<br />
+            ※掲載されている情報は予告なく変更になる場合があります。
           </p>
           <h2 class="stage__header__subtitle">
             <fa icon="door-open" fixed-width /> 場所
@@ -24,7 +25,7 @@
             <fa icon="door-open" fixed-width /> 時間帯
           </h2>
           <p class="stage__header__article">
-            10:45～00:00
+            10:45 ～ 12:30
           </p>
         </TheSection>
         <TheSection class="stage__box" type="blue">
@@ -32,11 +33,11 @@
             <fa :icon="['far', 'clock']" fixed-width />TIME TABLE
           </template>
           <template #titleSmall>
-            タイムテーブル (3/5 ver)
+            タイムテーブル
           </template>
           <dl class="stage__box__child">
             <dt class="stage__box__time">
-              10:45～11:05
+              10:45 ～ 11:05
             </dt>
             <dd class="stage__box__text">
               開会式
@@ -164,6 +165,7 @@ export default {
       font-size: 1rem;
       padding: 0 0 1.2rem 8rem;
       margin: 0 0 1.2rem;
+      text-decoration: none;
       &:last-child {
         margin: 0;
       }

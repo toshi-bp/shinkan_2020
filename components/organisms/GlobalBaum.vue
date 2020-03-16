@@ -35,7 +35,7 @@
           </nuxt-link>
         </li>
         <li class="global-nav__list__item">
-          <nuxt-link to="/map/" class="global-nav__list__item__link">
+          <nuxt-link to="/comingsoon/" class="global-nav__list__item__link">
             <fa icon="map" class="global-nav__list__item__icon" fixed-width />
             キャンパスマップ
           </nuxt-link>
