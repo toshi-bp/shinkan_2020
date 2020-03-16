@@ -123,10 +123,7 @@
       </TheSection>
     </div>
     <div class="linkbutton">
-      <LinkButton
-        to="/circles/"
-        :type="typeColorDict[circleType]"
-      >
+      <LinkButton to="/circles/" :type="typeColorDict[circleType]">
         サークル一覧
       </LinkButton>
     </div>
@@ -146,7 +143,7 @@ export default {
   },
   props: {
     circleType: {
-      type: String,
+      type: String
     }
   },
   computed: {
@@ -163,9 +160,9 @@ export default {
     },
     typeColorDict() {
       return {
-        physical: 'yellow',
-        musical: 'blue',
-        cultual: 'green'
+        physical: "yellow",
+        musical: "blue",
+        cultual: "green"
       }
     }
   }
