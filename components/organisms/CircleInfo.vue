@@ -14,7 +14,7 @@
       </template>
     </CircleInfoHeader>
 
-    <CircleInfoSummary :circle-type="type">
+    <CircleInfoSummary :circleType="type">
       <template #days>
         <slot name="days" />
       </template>
@@ -88,9 +88,9 @@ export default {
       type: Number
     },
     type: {
-      type: String
+      type: String,
     }
-  }
+  },
 }
 </script>
 
