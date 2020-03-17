@@ -30,8 +30,8 @@
         </div>
       </TheContainer>
     </div>
-    <div class="blank">
-    </div>
+    <!-- <div class="blank">
+    </div> -->
   </div>
 </template>
 
