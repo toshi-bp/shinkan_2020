@@ -38,7 +38,7 @@ export default function(title, description, image) {
           description ||
           "2020年度東京理科大学野田地区新入生歓迎ガイダンス公式ウェブサイト。本年度は4月11日(土)開催。"
       },
-      { hid: "twitter:image", name: "twitter:image", content: imageUrl }
+      { hid: "twitter:image", name: "twitter:image", content: "~/assets/image/symbol.png" }
     ]
   }
 }
