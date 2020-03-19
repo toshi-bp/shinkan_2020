@@ -13,7 +13,7 @@
           各サークルが講義棟の教室にて勧誘を行います。
         </p>
         <p class="events__box__time">
-          11:00 ～ 15:00
+          11:00 ～ 16:00
         </p>
         <p class="events__box__place">
           @講義棟
