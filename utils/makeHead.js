@@ -1,7 +1,7 @@
 export default function(title, description, image) {
   let imageAbsoluteUrl = image;
   if (typeof image === "string" && imageAbsoluteUrl.slice(0, 1) === "/") {
-    imageAbsoluteUrl = "https://welcome-tus.grats.jp/2020/" + imageAbsoluteUrl
+    imageAbsoluteUrl = "https://welcome-tus.grats.jp" + imageAbsoluteUrl
   }
   const defaultImageUrl =
     "https://welcome-tus.grats.jp" + require("~/assets/image/symbol.png");
