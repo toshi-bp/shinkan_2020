@@ -29,7 +29,7 @@ export default function(title, description, image) {
       {
         hid: "twitter:title",
         name: "twitter:title",
-        content: "東京理科大学 野田地区新歓2020"
+        content: title || "東京理科大学 野田地区新歓2020"
       },
       {
         hid: "twitter:description",

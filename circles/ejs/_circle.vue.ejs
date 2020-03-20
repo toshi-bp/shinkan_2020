@@ -4,7 +4,7 @@
     : `~/assets/image/symbol.png`;
 %>
 <template>
-  <CircleInfo :image-url="require('<%= filename %>')" :circle-id="<%= circle.circle_id %>" type="<%= circle.type %>">
+  <CircleInfo :imageUrl="require('<%= filename %>')" :circle-id="<%= circle.circle_id %>" type="<%= circle.type %>">
     <template #name>
       <%= circle.name %>
     </template>
