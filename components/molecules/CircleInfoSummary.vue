@@ -44,7 +44,7 @@
           </dt>
           <dd class="summary__text">
             <slot name="people_all" />
-            (男子 : <slot name="people_male" />,女子 :
+            (男子 : <slot name="people_male" />, 女子 :
             <slot name="people_female" />)
           </dd>
           <dt class="summary__smallheading">
