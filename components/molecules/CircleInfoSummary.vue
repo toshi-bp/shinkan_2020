@@ -44,7 +44,7 @@
           </dt>
           <dd class="summary__text">
             <slot name="people_all" />
-            (男子 : <slot name="people_male" />、女子 :
+            (男子 : <slot name="people_male" />,女子 :
             <slot name="people_female" />)
           </dd>
           <dt class="summary__smallheading">
@@ -116,7 +116,14 @@
               Instagram
             </dt>
             <dd class="summary__text">
-              <slot name="instagram_ids" />
+              <a
+                :href="$slots.instagram_ids[0].text.trim()"
+                target="_blank"
+                rel="noopener"
+              >
+                {{ $slots.instagram_ids[0].text.trim() }}
+              </a>
+              <!-- <slot name="instagram_ids" /> -->
             </dd>
           </template>
         </dl>
