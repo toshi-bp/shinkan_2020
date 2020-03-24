@@ -1,3 +1,12 @@
+ const fs = require('fs')
+ const circles = JSON.parse(fs.readFileSync('circles/circleList.json'))
+
+//  module.exports = {
+//    env: {
+//      circles: circles
+//    }
+//  }
+
 export default {
   mode: "universal",
   /*
@@ -20,11 +29,17 @@ export default {
   },
   router: {
     base: "/2020/",
-    trailingSlash: true
+    trailingSlash: true,
   },
   generate: {
-    routes: ["404"]
-  },
+    routes () {
+      return circles.filter(circle => circle.circle_id).map((circle) => {
+        return {
+          route: '/circles/' + circle.circle_id + '/',
+        }
+      })
+      }
+    },
   /*
    ** Customize the progress-bar color
    */
