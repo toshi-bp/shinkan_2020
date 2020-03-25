@@ -1,5 +1,7 @@
 <template>
-  <CircleInfo :imageUrl="require(circle.image_filename ? `@/assets/image/circles/${circle.image_filename}` : `@/assets/image/symbol.png`)" :circle-id="circle.circle_id" type="circle.type">
+  <CircleInfo :imageUrl="circle.image_filename
+                  ? require(`~/assets/image/circles/${circle.image_filename}`)
+                  : require('~/assets/image/symbol.png')" :circle-id="circle.circle_id" type="circle.type">
     <template #name>
       circle.name
     </template>
@@ -89,7 +91,9 @@ export default {
     return makeHead(
       this.circle.name,
       this.circle.subtitle,
-      require(this.circle.image_filename ? `@/assets/image/circles/${this.circle.image_filename}` : `@/assets/image/symbol.png`)
+      circle.image_filename
+        ? require(`~/assets/image/circles/${circle.image_filename}`)
+        : require('~/assets/image/symbol.png')
     )
   }
 }
