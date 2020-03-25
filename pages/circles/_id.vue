@@ -81,7 +81,7 @@ export default {
   },
   computed: {
     circle: function() {
-      return circles.find(circle => this.$route.params.id == circle.circle_id);
+      return circles.find(circle => parseInt(this.$route.params.id, 10) === parseInt(circle.circle_id, 10));
     }
   },
   validate ({ params }) {
@@ -91,8 +91,8 @@ export default {
     return makeHead(
       this.circle.name,
       this.circle.subtitle,
-      circle.image_filename
-        ? require(`~/assets/image/circles/${circle.image_filename}`)
+      this.circle.image_filename
+        ? require(`~/assets/image/circles/${this.circle.image_filename}`)
         : require('~/assets/image/symbol.png')
     )
   }
