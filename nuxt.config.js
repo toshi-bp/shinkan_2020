@@ -15,7 +15,7 @@ export default {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/2020/favicon.ico' },
       // { rel: 'apple-touch-icon-precomposed', href: 'https://welcome-tus.grats.jp/2020/symbol.png'}ブックマークされる用の画像
     ]
   },
