@@ -1,6 +1,6 @@
 <template>
   <div class="info">
-    <CircleInfoHeader :image-url="imageUrl" :circle-id="circleId">
+    <CircleInfoHeader :imageUrl="imageUrl" :circle-id="circleId">
       <template #name>
         <slot name="name" />
       </template>
