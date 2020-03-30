@@ -14,13 +14,14 @@
               <fa icon="door-open" fixed-width /> 開催日時
             </h2>
             <p class="information__article">
-              2020年4月<small class="information__article__small"
+              日付未定
+              <!-- 2020年4月<small class="information__article__small"
                 >(日付未定)</small>
-              <!-- 11日<small class="information__article__small"
+              11日<small class="information__article__small"
                 >(土曜日)</small
-              > -->
+              >
               <br />
-              11:00 ～ 16:00
+              11:00 ～ 16:00 -->
             </p>
             <h2 class="information__subtitle">
               <fa icon="door-open" fixed-width /> 場所
