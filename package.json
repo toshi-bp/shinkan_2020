@@ -23,6 +23,7 @@
     "@nuxtjs/markdownit": "^1.2.7",
     "@nuxtjs/style-resources": "^1.0.0",
     "bootstrap": "^4.4.1",
+    "easypz": "^1.1.8",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-ejs": "^5.0.0",

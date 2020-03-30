@@ -3,7 +3,7 @@
     <h1 class="map-header__heading">キャンパスマップ</h1>
     <p class="map-header__para" v-if="!isTouchDevice">スクロールでズーム、ドラッグで移動できます。</p>
     <p class="map-header__para" v-else>ズームと移動が可能です。</p>
-    <p class="map-header__para">建物・ブースを{{ clickActionName }}すると、そのエリアの企画一覧が表示されます。</p>
+    <p class="map-header__para">建物・ブースを{{ clickActionName }}すると、その施設の説明が表示されます。</p>
   </header>
 </template>
 

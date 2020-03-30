@@ -73,27 +73,27 @@ export default {
     // 現在表示中のエリア
     area() {
       return this.$route.query.area;
+      },
     },
-  },
-  mounted() {
-    if (process.client) {
-      this.updateMapSize();
-      window.addEventListener('resize', this.updateMapSize);
-      this.showingMapHeader = true;
-    }
-  },
-  updated() {
-    if (process.client) {
-      this.updateMapSize();
-    }
-  },
-  destroyed() {
-    console.log('destroyed');
-    if (process.client) {
-      window.removeEventListener('resize', this.updateMapSize);
-    }
-  },
-}
+    mounted() {
+      if (process.client) {
+        this.updateMapSize();
+        window.addEventListener('resize', this.updateMapSize);
+        this.showingMapHeader = true;
+      }
+    },
+    updated() {
+      if (process.client) {
+        this.updateMapSize();
+      }
+    },
+    destroyed() {
+      console.log('destroyed');
+      if (process.client) {
+        window.removeEventListener('resize', this.updateMapSize);
+      }
+    },
+  }
 </script>
 
 <style lang="scss" scoped>

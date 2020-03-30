@@ -379,10 +379,10 @@ export default {
           this.openBoothsList(text);
         }
       }, timeoutTime * 2);
-    },
-    openBoothsList(text) {
-      this.$emit('clickLabel', {text});
-    },
+    },//ここまでが、建物や文字がクリックされたときに実行される関数
+     openBoothsList(text) {
+       this.$emit('clickLabel', {text});
+     },//クリックしたときの場所を示す
     setScale(newScale) {
       const oldScale = this.scale;
       this.scale = newScale;
@@ -612,7 +612,7 @@ export default {
   stroke-linejoin: round;
   stroke-miterlimit: 10;
   paint-order: stroke;
-  dominant-baseline: central;
+  //dominant-baseline: central;
   transition: 0.3s ease font-size;
 
   &--is-link {
