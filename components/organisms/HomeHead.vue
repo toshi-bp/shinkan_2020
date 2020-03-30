@@ -16,9 +16,9 @@
             <span class="head__lead__text">2020年度東京理科大学</span><!--
             --><span class="head__lead__text">野田地区新入生歓迎ガイダンス</span>
           </p>
-          <p class="head__lead">
+          <!-- <p class="head__lead">
             2020年4月 11:00 〜 16:00
-          </p>
+          </p> -->
         </div>
       </div>
     </TheContainer>
