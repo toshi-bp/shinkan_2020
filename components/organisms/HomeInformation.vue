@@ -9,7 +9,7 @@
           新歓の開催概要
         </template>
         <TheRow>
-          <TheColumn pcsize="6" spsize="12" class="information__box__child">
+          <TheColumn :pcsize="6" :spsize="12" class="information__box__child">
             <h2 class="information__subtitle">
               <fa icon="door-open" fixed-width /> 開催日時
             </h2>
@@ -37,7 +37,7 @@
               >
             </p>
           </TheColumn>
-          <TheColumn pcsize="6" spsize="12" class="information__box__child">
+          <TheColumn :pcsize="6" :spsize="12" class="information__box__child">
             <h2 class="information__subtitle">
               <fa icon="door-open" fixed-width /> テーマ
             </h2>
