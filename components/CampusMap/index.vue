@@ -441,6 +441,9 @@ export default {
 
       this.setScale(this.scale + newDistanceBetweenFingers / oldDistanceBetweenFingers - 1);
     },
+    rotateMap(newDistanceBetweenFingers) {
+      new EasyPZ();
+    },
     // スクロールしすぎて地図から遠ざかってしまわないようにする
     preventOverScroll() {
       // space === 0 だと、画面の端と地図がぴっちりしてしまうので…
