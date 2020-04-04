@@ -333,6 +333,7 @@ export default {
         y: 0,
       },
       distanceBetweenFingers: 0,
+      rotateAnglesOfFingers: 0,
       mapWrapSize: {
         width: 0,
         height: 0,
@@ -441,7 +442,7 @@ export default {
 
       this.setScale(this.scale + newDistanceBetweenFingers / oldDistanceBetweenFingers - 1);
     },
-    rotateMap(newDistanceBetweenFingers) {
+    rotateMap(rotateAnglesOfFingers) {
       new EasyPZ();
     },
     // スクロールしすぎて地図から遠ざかってしまわないようにする
