@@ -71,7 +71,7 @@
       <path style="fill:#DBEAB8;" d="M561.8,326.9c-4.2-0.1-7.9-2.2-10.3-5.4l0,0l-16.5,1.6l-5.9,30.6l8.9,1.3l3,14.7l22.6-1.4l10.1-48.1
         C571.3,324.4,566.8,327.1,561.8,326.9z"/>
       <circle style="fill:#DBEAB8;" cx="561.9" cy="313.4" r="6.5"/>
-      <polygon style="fill:#DBEAB8; stroke:#DBEAB8" points="471.9,155 559.4,174 521.4,352.8 512.4,351.4 508,371.2 475.3,371.7 467.4,212.2 	" @click.exact="onClickLabel('薬学部芝生')" @touchstart="onClickLabel('薬学部芝生')" class="clickable-bldg"/>
+      <polygon style="fill:#DBEAB8; stroke:#DBEAB8" points="471.9,155 559.4,174 521.4,352.8 512.4,351.4 508,371.2 475.3,371.7 467.4,212.2 "/><!--薬学部芝生-->
       <polygon style="fill:#DBEAB8;" points="560.6,206.9 550.9,247.9 587.3,256.3 596.2,215 	"/>
       <polyline style="fill:#DBEAB8;" points="601.8,296.3 597.1,358 565.2,358.1 563.6,368.4 698.4,360.1 713.4,292 705.4,290.6
         699,321.1 623.8,304.9 624.6,301.3 601.8,296.3 	"/>
@@ -219,7 +219,7 @@
       <rect x="438.7" y="537.4" style="fill:#DF8D88;" width="35.4" height="16.4" @click.exact="onClickLabel('ag')" @touchstart="onClickLabel('ag')" class="clickable-bldg"/>
       <rect x="407.9" y="524.5" style="fill:#DF8D88;" width="16.2" height="32.7" @click.exact="onClickLabel('ah')" @touchstart="onClickLabel('ah')" class="clickable-bldg"/>
       <rect x="422.7" y="559.4" style="fill:#DF8D88;" width="9.5" height="9.5" @click.exact="onClickLabel('ai')" @touchstart="onClickLabel('ai')" class="clickable-bldg"/>
-      <rect x="456.2" y="562.8" style="fill:#DF8D88;" width="17.9" height="45.5" @click.exact="onClickLabel('aj')" @touchstart="onClickLabel('aj')" class="clickable-bldg"/>
+      <rect x="456.2" y="562.8" style="fill:#DF8D88;" width="17.9" height="45.5" @click.exact="onClickLabel('セブンイレブン')" @touchstart="onClickLabel('セブンイレブン')" class="clickable-bldg"/>
       <rect x="428.5" y="582.1" style="fill:#DF8D88;" width="20" height="28.4" @click.exact="onClickLabel('ak')" @touchstart="onClickLabel('ak')" class="clickable-bldg"/>
       <rect x="417.4" y="582.1" style="fill:#DF8D88;" width="9" height="23.8" @click.exact="onClickLabel('al')" @touchstart="onClickLabel('al')" class="clickable-bldg"/>
       <rect x="373.7" y="458.2" style="fill:#DF8D88;" width="16" height="12.9" @click.exact="onClickLabel('am')" @touchstart="onClickLabel('am')" class="clickable-bldg"/>
@@ -229,8 +229,8 @@
       <rect x="528.1" y="36.4" transform="matrix(0.9771 0.2127 -0.2127 0.9771 24.6011 -114.9388)" style="fill:#5887C6;" width="36.7" height="40.8" @click.exact="onClickLabel('部室棟')" @touchstart="onClickLabel('部室棟')" class="clickable-bldg"/>
       <rect x="500.7" y="48.3" transform="matrix(0.9771 0.2127 -0.2127 0.9771 24.3594 -107.3147)" style="fill:#5887C6;" width="20.4" height="22.4" /><!--トレーニング室-->
       <rect x="566.4" y="192.1" transform="matrix(0.9771 0.2127 -0.2127 0.9771 57.8146 -129.3657)" style="fill:#5887C6;" width="127.3" height="23.8" @click.exact="onClickLabel('t')" @touchstart="onClickLabel('t')" class="clickable-bldg"/>
-      <rect x="637.6" y="146.2" transform="matrix(0.9771 0.2127 -0.2127 0.9771 49.4057 -137.9073)" style="fill:#5887C6;" width="56.1" height="29" @click.exact="onClickLabel('u')" @touchstart="onClickLabel('u')" class="clickable-bldg"/>
-      <rect x="709.2" y="181" transform="matrix(0.9771 0.2127 -0.2127 0.9771 56.4448 -148.8378)" style="fill:#5887C6;" width="21.5" height="13.8" @click.exact="onClickLabel('v')" @touchstart="onClickLabel('v')" class="clickable-bldg"/>
+      <rect x="637.6" y="146.2" transform="matrix(0.9771 0.2127 -0.2127 0.9771 49.4057 -137.9073)" style="fill:#5887C6;" width="56.1" height="29"/><!--16号館-->
+      <rect x="709.2" y="181" transform="matrix(0.9771 0.2127 -0.2127 0.9771 56.4448 -148.8378)" style="fill:#5887C6;" width="21.5" height="13.8"/><!--16号館横の四角-->
       <rect x="704.9" y="208.9" transform="matrix(0.9771 0.2127 -0.2127 0.9771 62.1852 -146.3304)" style="fill:#5887C6;" width="12.5" height="13.9" @click.exact="onClickLabel('w')" @touchstart="onClickLabel('w')" class="clickable-bldg"/>
       <rect x="678" y="237.1" transform="matrix(0.9771 0.2127 -0.2127 0.9771 69.9252 -141.7796)" style="fill:#5887C6;" width="31.6" height="34" @click.exact="onClickLabel('x')" @touchstart="onClickLabel('x')" class="clickable-bldg"/>
       <rect x="666.8" y="323.1" transform="matrix(0.9771 0.2127 -0.2127 0.9771 87.1736 -136.8726)" style="fill:#5887C6;" width="25.7" height="27.1" @click.exact="onClickLabel('y')" @touchstart="onClickLabel('y')" class="clickable-bldg"/>
@@ -276,7 +276,7 @@
         style="overflow:visible;"
       />
     </g> -->
-    <!-- <g id="ラベル">
+    <g id="ラベル">
       <text
         v-for="label in labels"
         :key="label.text"
@@ -295,7 +295,7 @@
       >
         {{ label.text }}
       </text>
-    </g> -->
+    </g>
   </g>
   <!-- 開発用 -->
   <!-- <rect :x="mousePosition.x - 15" :y="mousePosition.y - 15" width="30" height="30" fill="red" /> -->
@@ -304,7 +304,7 @@
 
 <script>
 //import Symbols from './Symbols.vue';
-//import labels from './json/labels.json';
+import labels from './json/labels.json';
 //import icons from './json/icons.json';
 
 export default {

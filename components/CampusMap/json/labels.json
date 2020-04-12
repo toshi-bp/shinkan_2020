@@ -1,0 +1,183 @@
+[
+  {
+    "x": 359.55,
+    "y": 586.7,
+    "text": "講義棟",
+    "isLink": true
+  },
+  {
+    "x": 458,
+    "y": 590,
+    "text": "セブンイレブン",
+    "isLink": true
+  },
+  {
+    "x": 312.8,
+    "y": 585.1,
+    "text": "生協",
+    "isLink": true
+  },
+  {
+    "x": 37.7747,
+    "y": 649.9505,
+    "text": "レストラン赤レンガ",
+    "isLink": true
+  },
+  {
+    "x": 34.7683,
+    "y": 688.6909,
+    "text": "至運河駅"
+  },
+  {
+    "x": 334.8,
+    "y": 463.7,
+    "text": "5号館",
+    "isHiddenInSmall": true
+  },
+  {
+    "x": 175,
+    "y": 551.35,
+    "text": "2号館",
+    "isHiddenInSmall": true
+  },
+  {
+    "x": 50.4,
+    "y": 542.2,
+    "text": "10号館",
+    "isHiddenInSmall": true
+  },
+  {
+    "x": 40.45,
+    "y": 588.2,
+    "text": "なるほど科学体験館",
+    "isHiddenInSmall": true
+  },
+  {
+    "x": 43.8,
+    "y": 514.7,
+    "text": "11号館",
+    "isHiddenInSmall": true
+  },
+  {
+    "x": 256.1,
+    "y": 587.25,
+    "text": "4号館",
+    "isHiddenInSmall": true
+  },
+  {
+    "x": 183.65,
+    "y": 655.35,
+    "text": "1号館",
+    "isHiddenInSmall": true
+  },
+  {
+    "x": 193.6,
+    "y": 458.85,
+    "text": "3号館",
+    "isHiddenInSmall": true
+  },
+  {
+    "x": 447.25,
+    "y": 467.45,
+    "text": "8号館",
+    "isHiddenInSmall": true
+  },
+  {
+    "x": 550,
+    "y": 431.262,
+    "text": "コミュニケーション棟",
+    "isLink": true
+  },
+  {
+    "x": 843.8502,
+    "y": 454.0072,
+    "text": "理窓会自然公園"
+  },
+  {
+    "x": 522.7511,
+    "y": 122.411,
+    "text": "体育館",
+    "isLink": true
+  },
+  {
+    "x": 545.9531,
+    "y": 58.1885,
+    "text": "部室棟",
+    "isLink": true
+  },
+  {
+    "x": 250,
+    "y": 654.85,
+    "text": "カナル会館",
+    "isHiddenInSmall": true
+  },
+  {
+    "x": 401.05,
+    "y": 502.75,
+    "text": "6号館",
+    "isLink": true
+  },
+  {
+    "x": 590.7332,
+    "y": 278.588,
+    "text": "14号館",
+    "isHiddenInSmall": true
+  },
+  {
+    "x": 582.2444,
+    "y": 340.9324,
+    "text": "1311教室",
+    "isLink": true
+  },
+  {
+    "x": 600.614,
+    "y": 197.3276,
+    "text": "15号館",
+    "isHiddenInSmall": true
+  },
+  {
+    "x": 668.2047,
+    "y": 160.9784,
+    "text": "16号館",
+    "isHiddenInSmall": true
+  },
+  {
+    "x": 844.35,
+    "y": 270.2896,
+    "text": "生命医科学研究所"
+  },
+  {
+    "x": 837.8991,
+    "y": 340.0332,
+    "text": "セミナーハウス"
+  },
+  {
+    "x": 276.4,
+    "y": 458.75,
+    "text": "7号館",
+    "isLink": true
+  },
+  {
+    "x": 291.4,
+    "y": 405.05,
+    "text": "12号館",
+    "isHiddenInSmall": true
+  },
+  {
+    "x": 266.7626,
+    "y": 521.4913,
+    "text": "中庭",
+    "isLink": true
+  },
+  {
+    "x": 355,
+    "y": 539.9,
+    "text": "図書館",
+    "isLink": true
+  },
+  {
+    "x": 505.8807,
+    "y": 260.384,
+    "text": "薬学部芝生"
+  }
+]
