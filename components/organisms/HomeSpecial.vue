@@ -58,9 +58,9 @@
 
     @include media-breakpoint-down(sm) {
       width: 100%;
-      &:last-child {
-        margin: 1rem 0 0 0;
-      }
+      // &:last-child {
+      //   margin: 1rem 0 0 0;
+      // }
     }
 
     &__title {
