@@ -12,11 +12,11 @@
       @changeScale="hideMapHeader"
       @move="hideMapHeader"
     />
-    <!-- <BoothsList
+    <Establishment
       :show="!!$route.query.area"
       :area="$route.query.area"
-      @closeList="closeList"
-    /> -->
+      @closeIntro="closeIntro"
+    />
   </div>
 </template>
 
@@ -24,7 +24,7 @@
 import makeHead from '~/utils/makeHead';
 import CampusMap from '~/components/CampusMap/index.vue';
 import MapHeader from '~/components/organisms/MapHeader.vue';
-//import BoothsList from '~/components/CampusMap/BoothsList.vue';
+import Establishment from '~/components/CampusMap/establishment.vue';
 
 // 将来的に GlobalHeader の高さが変わったとしても、
 // 地図が一画面に収まらなくなるだけで、特に問題がないので、
@@ -42,7 +42,7 @@ export default {
   components: {
     MapHeader,
     CampusMap,
-    //BoothsList,
+    Establishment,
   },
   data() {
     return {

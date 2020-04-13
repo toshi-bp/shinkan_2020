@@ -198,14 +198,14 @@
       <rect x="161.8" y="643" style="fill:#EF8DA9;" width="43.7" height="24.7" @click.exact="onClickLabel('1号館')" @touchstart="onClickLabel('1号館')" class="clickable-bldg"/>
       <rect x="217.4" y="637.1" style="fill:#EF8DA9;" width="65.2" height="35.5" @click.exact="onClickLabel('カナル')" @touchstart="onClickLabel('カナル')" class="clickable-bldg"/>
       <rect x="305.6" y="568.4" style="fill:#DF8D88;" width="14.4" height="33.4" @click.exact="onClickLabel('生協')" @touchstart="onClickLabel('生協')" class="clickable-bldg"/>
-      <rect x="162.7" y="501.7" style="fill:#DF8D88;" width="24.6" height="99.3" @click.exact="onClickLabel('2号館')" @touchstart="onClickLabel('2号館')" class="clickable-bldg"/>
-      <rect x="156.2" y="440.9" style="fill:#DF8D88;" width="74.8" height="35.9" @click.exact="onClickLabel('3号館')" @touchstart="onClickLabel('3号館')" class="clickable-bldg"/>
-      <rect x="5.3" y="530.8" style="fill:#D5C944;" width="90.2" height="22.8" @click.exact="onClickLabel('10号館')" @touchstart="onClickLabel('10号館')" class="clickable-bldg"/>
-      <rect x="31.1" y="570.1" style="fill:#D5C944;" width="18.7" height="36.4" @click.exact="onClickLabel('g')" @touchstart="onClickLabel('g')" class="clickable-bldg"/>
+      <rect x="162.7" y="501.7" style="fill:#DF8D88;" width="24.6" height="99.3"/><!--2号館-->
+      <rect x="156.2" y="440.9" style="fill:#DF8D88;" width="74.8" height="35.9"/><!--3号館-->
+      <rect x="5.3" y="530.8" style="fill:#D5C944;" width="90.2" height="22.8"/><!--10号館-->
+      <rect x="31.1" y="570.1" style="fill:#D5C944;" width="18.7" height="36.4"/><!--なるほど科学体験館-->
       <rect x="5.3" y="507.2" style="fill:#D5C944;" width="77" height="15" /><!--10号館の通路的なもの-->
       <rect x="66.2" y="518.2" style="fill:#D5C944;" width="11.5" height="15" /><!--10号館の後ろ-->
       <rect x="246.8" y="440.8" style="fill:#DF8D88;" width="59.2" height="35.9" @click.exact="onClickLabel('7号館')" @touchstart="onClickLabel('7号館')" class="clickable-bldg"/>
-      <rect x="315.2" y="450.6" style="fill:#DF8D88;" width="39.2" height="26.2" @click.exact="onClickLabel('5号館')" @touchstart="onClickLabel('5号館')" class="clickable-bldg"/>
+      <rect x="315.2" y="450.6" style="fill:#DF8D88;" width="39.2" height="26.2"/><!--5号館-->
       <rect x="317.3" y="382" style="fill:#DF8D88;" width="18.7" height="44.1" @click.exact="onClickLabel('l')" @touchstart="onClickLabel('l')" class="clickable-bldg"/>
       <rect x="318.5" y="429.5" style="fill:#DF8D88;" width="14.9" height="9.9" @click.exact="onClickLabel('m')" @touchstart="onClickLabel('m')" class="clickable-bldg"/>
       <rect x="343.5" y="401.3" style="fill:#DF8D88;" width="10.4" height="12.7" @click.exact="onClickLabel('n')" @touchstart="onClickLabel('n')" class="clickable-bldg"/>
@@ -213,18 +213,18 @@
       <rect x="337.2" y="421.3" style="fill:#DF8D88;" width="13.3" height="21.3" @click.exact="onClickLabel('p')" @touchstart="onClickLabel('p')" class="clickable-bldg"/>
       <polygon style="fill:#DF8D88;" points="368.7,470.6 368.7,443.7 368.7,421.2 353.2,421.2 353.3,442.6 361.5,442.6 361.5,470.6 	" @click.exact="onClickLabel('a')" @touchstart="onClickLabel('a')" class="clickable-bldg"/>
       <rect x="310.2" y="524.1" style="fill:#DF8D88; stroke:#DF8D88" width="89.6" height="31.6" @click.exact="onClickLabel('図書館')" @touchstart="onClickLabel('図書館')" class="clickable-bldg"/>
-      <rect x="424.6" y="458.1" style="fill:#DF8D88;" width="45.3" height="18.7" @click.exact="onClickLabel('ad')" @touchstart="onClickLabel('ad')" class="clickable-bldg"/>
+      <rect x="424.6" y="458.1" style="fill:#DF8D88;" width="45.3" height="18.7"/><!--8号館-->
       <rect x="399.1" y="458.1" style="fill:#DF8D88;" width="22.1" height="16.6" @click.exact="onClickLabel('ae')" @touchstart="onClickLabel('ae')" class="clickable-bldg"/>
       <rect x="434.7" y="559.6" style="fill:#DF8D88;" width="10.2" height="16.4" @click.exact="onClickLabel('af')" @touchstart="onClickLabel('af')" class="clickable-bldg"/>
-      <rect x="438.7" y="537.4" style="fill:#DF8D88;" width="35.4" height="16.4" @click.exact="onClickLabel('ag')" @touchstart="onClickLabel('ag')" class="clickable-bldg"/>
+      <rect x="438.7" y="537.4" style="fill:#DF8D88;" width="35.4" height="16.4"/><!--9号館-->
       <rect x="407.9" y="524.5" style="fill:#DF8D88;" width="16.2" height="32.7" @click.exact="onClickLabel('ah')" @touchstart="onClickLabel('ah')" class="clickable-bldg"/>
       <rect x="422.7" y="559.4" style="fill:#DF8D88;" width="9.5" height="9.5" @click.exact="onClickLabel('ai')" @touchstart="onClickLabel('ai')" class="clickable-bldg"/>
       <rect x="456.2" y="562.8" style="fill:#DF8D88;" width="17.9" height="45.5" @click.exact="onClickLabel('セブンイレブン')" @touchstart="onClickLabel('セブンイレブン')" class="clickable-bldg"/>
       <rect x="428.5" y="582.1" style="fill:#DF8D88;" width="20" height="28.4" @click.exact="onClickLabel('ak')" @touchstart="onClickLabel('ak')" class="clickable-bldg"/>
       <rect x="417.4" y="582.1" style="fill:#DF8D88;" width="9" height="23.8" @click.exact="onClickLabel('al')" @touchstart="onClickLabel('al')" class="clickable-bldg"/>
       <rect x="373.7" y="458.2" style="fill:#DF8D88;" width="16" height="12.9" @click.exact="onClickLabel('am')" @touchstart="onClickLabel('am')" class="clickable-bldg"/>
-      <rect x="346.3" y="490.4" style="fill:#DF8D88; stroke:#DF8D88" width="109.5" height="24.7" @click.exact="onClickLabel('6号館')" @touchstart="onClickLabel('6号館')" class="clickable-bldg"/>
-      <rect x="276" y="383.6" transform="matrix(1 -4.963295e-03 4.963295e-03 1 -2.0068 1.4513)" style="fill:#DF8D88;" width="30.8" height="42.9" @click.exact="onClickLabel('12号館')" @touchstart="onClickLabel('12号館')" class="clickable-bldg"/>
+      <rect x="346.3" y="490.4" style="fill:#DF8D88; stroke:#DF8D88" width="109.5" height="24.7"/><!--6号館-->
+      <rect x="276" y="383.6" transform="matrix(1 -4.963295e-03 4.963295e-03 1 -2.0068 1.4513)" style="fill:#DF8D88;" width="30.8" height="42.9"/><!--12号館-->
       <rect x="492.4" y="81.4" transform="matrix(0.9771 0.2127 -0.2127 0.9771 36.9033 -108.8377)" style="fill:#5887C6; stroke:#5887C6" width="63.7" height="71.3" @click.exact="onClickLabel('体育館')" @touchstart="onClickLabel('体育館')" class="clickable-bldg"/>
       <rect x="528.1" y="36.4" transform="matrix(0.9771 0.2127 -0.2127 0.9771 24.6011 -114.9388)" style="fill:#5887C6;" width="36.7" height="40.8" @click.exact="onClickLabel('部室棟')" @touchstart="onClickLabel('部室棟')" class="clickable-bldg"/>
       <rect x="500.7" y="48.3" transform="matrix(0.9771 0.2127 -0.2127 0.9771 24.3594 -107.3147)" style="fill:#5887C6;" width="20.4" height="22.4" /><!--トレーニング室-->
@@ -241,19 +241,19 @@
       <polygon style="fill:#739971;" points="765.3,180.4 771.7,150.2 762.2,148.2 752.8,192.2 753.9,192.5 753.9,192.5 787,199.7
         790.1,185.8 	" @click.exact="onClickLabel('an')" @touchstart="onClickLabel('an')" class="clickable-bldg"/>
       <polygon style="fill:#739971;" points="871.4,247.2 871.4,247.2 838.2,240 808.7,233.6 800.4,271.7 829.9,278.1 832.4,266.4
-        861.1,272.6 853.8,305.9 883.3,312.3 896.3,252.6 	" @click.exact="onClickLabel('ao')" @touchstart="onClickLabel('ao')" class="clickable-bldg"/>
+        861.1,272.6 853.8,305.9 883.3,312.3 896.3,252.6 	"/><!--生命科学研究所-->
       <polygon style="fill:#739971;" points="901.6,335.4 804.8,314.3 802.4,325.2 832.5,331.8 828.2,351.7 851.6,356.7 855.9,336.9
-        899.2,346.3 	" @click.exact="onClickLabel('ap')" @touchstart="onClickLabel('ap')" class="clickable-bldg"/>
+        899.2,346.3 	"/><!--セミナーハウス-->
       <rect x="552.2" y="273.8" transform="matrix(0.9771 0.2127 -0.2127 0.9771 74.6919 -125.7121)" style="fill:#5887C6;" width="138.7" height="20.9" @click.exact="onClickLabel('aq')" @touchstart="onClickLabel('aq')" class="clickable-bldg"/>
-      <rect x="165.9" y="388" transform="matrix(1 -4.963295e-03 4.963295e-03 1 -2.02 0.9867)" style="fill:#DF8D88;" width="63.8" height="39" @click.exact="onClickLabel('ar')" @touchstart="onClickLabel('ar')" class="clickable-bldg"/>
+      <rect x="165.9" y="388" transform="matrix(1 -4.963295e-03 4.963295e-03 1 -2.02 0.9867)" style="fill:#DF8D88;" width="63.8" height="39"/><!--実験棟-->
       <rect x="237.5" y="383.5" transform="matrix(1 -4.963295e-03 4.963295e-03 1 -2.0067 1.2474)" style="fill:#DF8D88;" width="25.5" height="42.9" @click.exact="onClickLabel('as')" @touchstart="onClickLabel('as')" class="clickable-bldg"/>
       <rect x="540.1" y="393.4" transform="matrix(0.9957 -9.213269e-02 9.213269e-02 0.9957 -36.8956 52.6439)" style="fill:#9B72B0; stroke:#9B72B0" width="23.2" height="65.1" @click.exact="onClickLabel('コミュニケーション棟')" @touchstart="onClickLabel('コミュニケーション棟')" class="clickable-bldg"/>
       <polygon style="fill:#5887C6;" points="598.4,205.1 565.2,358.1 597.1,358 608.5,206.9" @click.exact="onClickLabel('at')" @touchstart="onClickLabel('at')" class="clickable-bldg"/>
-      <polygon style="fill:#5887C6; stroke:#5887C6" points="573,326.6 566.3,357.2 596.2,357 598.5,327" @click.exact="onClickLabel('1311教室')" @touchstart="onClickLabel('1311教室')" class="clickable-bldg"/>
+      <polygon style="fill:#5887C6; stroke:#5887C6" points="573,326.6 566.3,357.2 596.2,357 598.5,327"/><!--1311教室-->
       <circle style="fill:#5887C6;" cx="614.1" cy="247.4" r="6.1" @click.exact="onClickLabel('au')" @touchstart="onClickLabel('au')" class="clickable-bldg"/>
       <polygon style="fill:#D5C944;" points="65.4,638.1 37.4,637.4 27.4,637.3 27.4,660.9 37.5,660.9 37.5,663.8 	" @click.exact="onClickLabel('赤レンガ')" @touchstart="onClickLabel('赤レンガ')" class="clickable-bldg"/>
-      <rect x="218.7" y="572.1" style="fill:#DF8D88;" width="74.8" height="30.3" @click.exact="onClickLabel('4号館')" @touchstart="onClickLabel('4号館')" class="clickable-bldg"/>
-      <polygon style="fill:#DF8D88;" points="311.2,610.9 311.2,602.5 305.6,602.5 305.6,603.9 298.9,610.8 	" @click.exact="onClickLabel('aw')" @touchstart="onClickLabel('aw')" class="clickable-bldg"/>
+      <rect x="218.7" y="572.1" style="fill:#DF8D88;" width="74.8" height="30.3"/><!--4号館-->
+      <polygon style="fill:#DF8D88;" points="311.2,610.9 311.2,602.5 305.6,602.5 305.6,603.9 298.9,610.8 	"/><!--生協の横の壁-->
     </g>
     <!-- <g id="ブース">
       <path d="M140.7,562.9l-24.8,24.8l-4-4l24.8-24.8L140.7,562.9z M150.8,609.8h-29.4v5.7h29.4V609.8z" style="fill:#CC364A; stroke:#CC364A" @click.exact="onClickLabel('Gブース')" @touchstart="onClickLabel('Gブース')" class="clickable-bldg"/>
