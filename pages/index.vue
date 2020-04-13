@@ -5,6 +5,7 @@
     <HomeAbout />
     <TheContainer>
       <HomeEvents />
+      <HomeSpecial />
     </TheContainer>
     <HomeInformation />
     <!-- <TheContainer>
@@ -22,6 +23,7 @@ import HomeTheme from "~/components/organisms/HomeTheme.vue"
 import HomeAbout from "~/components/organisms/HomeAbout.vue"
 import HomeInformation from "~/components/organisms/HomeInformation.vue"
 import HomeEvents from "~/components/organisms/HomeEvents.vue"
+import HomeSpecial from "~/components/organisms/HomeSpecial.vue"
 import HomeTwitter from "~/components/organisms/HomeTwitter.vue"
 
 export default {
@@ -33,6 +35,7 @@ export default {
     HomeAbout,
     HomeInformation,
     HomeEvents,
+    HomeSpecial,
     HomeTwitter
   },
   head() {
