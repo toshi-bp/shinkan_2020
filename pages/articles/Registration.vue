@@ -2,11 +2,11 @@
   <div>
     <FeatureArticle>
       <template v-slot:title>
-        金村の会に入ってみたwww
+        履修登録のすゝめ
       </template>
       <!-- </template> -->
       <template v-slot:body>
-        <MarkdownPreview :markdownHtml="special"/>
+        <MarkdownPreview :markdownHtml="Registration"/>
       </template>
     </FeatureArticle>
   </div>
@@ -16,13 +16,13 @@
 import makeHead from '~/utils/makeHead';
 import FeatureArticle from '~/components/organisms/FeatureArticle.vue';
 import MarkdownPreview from '~/components/atoms/MarkdownPreview.vue';
-import special from '~/assets/markdown/special.md';
+import Registration from '~/assets/markdown/Registration.md';
 
 export default {
   head() {
     return makeHead(
-      '奏メシ',
-      '理大祭にはいろんな食べ物がいっぱい！',
+      '履修登録のすゝめ',
+      '新歓実行委員が履修登録の手続き等を説明します！',
     );
   },
   components: {
@@ -30,8 +30,8 @@ export default {
     MarkdownPreview,
   },
   computed: {
-    special() {
-      return special;
+    Registration() {
+      return Registration;
     }
   }
 };
