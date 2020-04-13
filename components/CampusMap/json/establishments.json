@@ -2,6 +2,6 @@
   {
     "name": "講義棟",
     "description": "63の教室があり、多くの授業がここで行われます。1階から4階と、4階から7階をつなぐエスカレーターがかっこいいです！サークル活動でも使う場合があり、多くの学生が行きかう場所です。天気のいい日には富士山が見えます。✨",
-    "imageurl": "~/assets/image/symbol.png"
+    "imageUrl": "~/assets/image/symbol.png"
   }
 ]

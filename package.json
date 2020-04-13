@@ -24,6 +24,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "bootstrap": "^4.4.1",
     "easypz": "^1.1.8",
+    "fs": "^0.0.1-security",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-ejs": "^5.0.0",
@@ -48,5 +49,8 @@
     "eslint-plugin-vue": "^6.2.1",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.2"
+  },
+  "browser": {
+    "fs": false
   }
 }

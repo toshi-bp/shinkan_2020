@@ -67,8 +67,7 @@
   {
     "x": 183.65,
     "y": 655.35,
-    "text": "1号館",
-    "isHiddenInSmall": true
+    "text": "1号館"
   },
   {
     "x": 193.6,
@@ -108,8 +107,8 @@
   {
     "x": 250,
     "y": 654.85,
-    "text": "カナル会館",
-    "isHiddenInSmall": true
+    "text": "Restaurantカナル",
+    "isLink": true
   },
   {
     "x": 401.05,
