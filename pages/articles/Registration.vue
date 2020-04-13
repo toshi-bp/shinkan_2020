@@ -23,6 +23,7 @@ export default {
     return makeHead(
       '履修登録のすゝめ',
       '新歓実行委員が履修登録の手続き等を説明します！',
+      require("~/assets/image/articles/Registration.png")
     );
   },
   components: {
