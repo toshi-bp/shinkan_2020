@@ -37,6 +37,7 @@ export default {
     return makeHead(
       'キャンパスマップ',
       '東京理科大学野田キャンパスのマップです。',
+      require("~/assets/image/symbol.png")
     );
   },
   components: {
