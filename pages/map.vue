@@ -36,7 +36,8 @@ export default {
   head() {
     return makeHead(
       'キャンパスマップ',
-      '東京理科大学野田キャンパスのマップです。'
+      '東京理科大学野田キャンパスのマップです。',
+      require('~/assets/maps/map.svg')
     );
   },
   components: {
@@ -65,7 +66,7 @@ export default {
     hideMapHeader() {
       this.showingMapHeader = false;
     },
-    closeList() {
+    closeIntro() {
       this.$router.push({ query: {} });
     }
   },
