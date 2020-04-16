@@ -1,4 +1,4 @@
-<template>
+<!--template>
   <div>
     <div>
       緯度：{{latitude}}、経度：{{longitude}}
@@ -31,4 +31,4 @@ export default {
     }
   }
 }
-</script>
+</script-->
