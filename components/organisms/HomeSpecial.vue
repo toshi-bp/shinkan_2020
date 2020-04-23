@@ -13,6 +13,14 @@
           履修登録の方法などを紹介します！
         </p>
       </nuxt-link>
+      <nuxt-link to="/articles/ridaisai/" class="special__box">
+        <p class="special__box__title">
+          理大祭ってどんなイベント？
+        </p>
+        <p class="special__box__description">
+          理科大の学園祭「理大祭」について紹介します！
+        </p>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -58,9 +66,9 @@
 
     @include media-breakpoint-down(sm) {
       width: 100%;
-      // &:last-child {
-      //   margin: 1rem 0 0 0;
-      // }
+      &:last-child {
+        margin: 1rem 0 0 0;
+      }
     }
 
     &__title {
