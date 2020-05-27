@@ -13,8 +13,8 @@
             <h2 class="information__subtitle">
               <fa icon="door-open" fixed-width /> 開催日時
             </h2>
-            <p class="information__article">
-              日付未定
+            <p class="information__article__date">
+              中止
               <!-- 2020年4月<small class="information__article__small"
                 >(日付未定)</small>
               11日<small class="information__article__small"
@@ -118,6 +118,12 @@ export default {
       &--is-block {
         display: block;
       }
+    }
+
+    &__date {
+      color: red;
+      font-size: 1.5rem;
+      font-weight: bold;
     }
 
     &:last-child {

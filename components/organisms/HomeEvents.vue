@@ -10,16 +10,16 @@
           サークル紹介
         </p>
         <p class="events__box__description">
-          各サークルが講義棟の教室にて勧誘を行います。
+          各サークルの情報を掲載しております。
         </p>
-        <p class="events__box__time">
+        <!-- <p class="events__box__time">
           11:00 ～ 16:00
         </p>
         <p class="events__box__place">
           @講義棟
-        </p>
+        </p> -->
       </nuxt-link>
-      <nuxt-link to="/stage/" class="events__box">
+      <!-- <nuxt-link to="/stage/" class="events__box">
         <p class="events__box__title">
           団体紹介ステージ
         </p>
@@ -32,7 +32,7 @@
         <p class="events__box__place">
           @森戸記念体育館
         </p>
-      </nuxt-link>
+      </nuxt-link> -->
     </div>
   </div>
 </template>

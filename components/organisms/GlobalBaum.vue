@@ -28,12 +28,12 @@
             サークル紹介
           </nuxt-link>
         </li>
-        <li class="global-nav__list__item">
+        <!-- <li class="global-nav__list__item">
           <nuxt-link to="/stage/" class="global-nav__list__item__link">
             <fa icon="star" class="global-nav__list__item__icon" fixed-width />
             団体紹介ステージ
           </nuxt-link>
-        </li>
+        </li> -->
         <li class="global-nav__list__item">
           <nuxt-link to="/map/" class="global-nav__list__item__link">
             <fa icon="map" class="global-nav__list__item__icon" fixed-width />
@@ -197,7 +197,7 @@ export default {
     @include media-breakpoint-down(sm) {
       width: 100%;
       max-width: 100%;
-      $max-height: 223px;
+      $max-height: 169px;
       top: calc(100% - #{$max-height});
       bottom: 0;
       left: 0;

@@ -29,9 +29,9 @@
       <p class="circle-card__subtitle">
         {{ subtitle }}
       </p>
-      <p v-if="booth" class="circle-card__booth">
+      <!-- <p v-if="booth" class="circle-card__booth">
         <fa icon="map-pin" fixed-width />{{ booth }}
-      </p>
+      </p> -->
     </div>
   </component>
 </template>
