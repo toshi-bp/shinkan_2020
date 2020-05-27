@@ -17,7 +17,7 @@ export default function(title, description, image) {
         name: "description",
         content:
           description ||
-          "2020年度東京理科大学野田地区新入生歓迎ガイダンス公式ウェブサイト。本年度は4月11日(土)開催。"
+          "2020年度東京理科大学野田地区新入生歓迎ガイダンス公式ウェブサイト。新型コロナウイルス感染拡大防止のため本年度の新歓は中止となりました。"
       },
       // Twitter Card
       {
@@ -36,7 +36,7 @@ export default function(title, description, image) {
         name: "twitter:descripton",
         content:
           description ||
-          "2020年度東京理科大学野田地区新入生歓迎ガイダンス公式ウェブサイト。本年度は4月11日(土)開催。"
+          "2020年度東京理科大学野田地区新入生歓迎ガイダンス公式ウェブサイト。新型コロナウイルス感染拡大防止のため本年度の新歓は中止となりました。"
       },
       { hid: "twitter:image", name: "twitter:image", content: imageUrl }
     ]
